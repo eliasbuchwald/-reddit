@@ -1,1 +1,1 @@
-Stub.
+https://gist.github.com/922144
