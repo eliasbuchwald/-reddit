@@ -1,3 +1,5 @@
+<img src="opensourceaward-big.png" align="right" height="125" width="125">
+
 We've always strived to be as open and transparent with our users as possible, and this is the next logical step. When we say 'open-source' we mean specifically that the code behind reddit is available to the public for download, and we're inviting the public to submit code to help improve the site.
 
 Reddit is unique in the social news scene in that we have a huge community of developers. It seems only natural that we give you all in that community a chance to contribute back to reddit and make it a better place for everyone. We know reddit's success has less to do with our technology than it does with you, our community, and now we want to let our community improve our technology. 
