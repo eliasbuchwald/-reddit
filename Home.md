@@ -1,4 +1,4 @@
-<img src="opensourceaward-big.png" align="right" height="125" width="125">
+[[opensourceaward-big.png|align=right|float]]
 
 We've always strived to be as open and transparent with our users as possible, and this is the next logical step. When we say 'open-source' we mean specifically that the code behind reddit is available to the public for download, and we're inviting the public to submit code to help improve the site.
 
