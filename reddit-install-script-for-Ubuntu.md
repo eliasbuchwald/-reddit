@@ -37,4 +37,4 @@ reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, 
 
 ### Why doesn't subreddit search or the "related" tab work?
 
-Solr is still used for subreddit search and the "related" tab. This is transitional until we convert completely to IndexTank. The install script does not currently install or configure Solr and so neither of these features will work until that is done. If you want to set it up, you can [[Configure Solr]].
+Solr is still used for subreddit search and the "related" tab. This is transitional until we convert completely to IndexTank. The install script does not currently install or configure Solr and so neither of these features will work until that is done. 
