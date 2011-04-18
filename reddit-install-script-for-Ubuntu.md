@@ -30,3 +30,11 @@ Most browsers won't deal with cookies from a domain that doesn't contain dots. F
 ### How do I make subreddits show up in the top bar?
 
 `update_reddits.sh` needs to be run. See [[Cron Jobs]] for more information on what this does.
+
+### Why doesn't search work? 
+
+reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. The code for searching with Solr still exists in the repository, but is inactive. A third party running a reddit clone could either create a patch that reactivates Solr, or get an IndexTank account.
+
+### Why doesn't subreddit search or the "related" tab work?
+
+Solr is still used for subreddit search and the "related" tab. This is transitional until we convert completely to IndexTank. The install script does not currently install or configure Solr and so neither of these features will work until that is done. If you want to set it up, you can [[Configure Solr]].
