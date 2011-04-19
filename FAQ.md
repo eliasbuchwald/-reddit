@@ -1,3 +1,13 @@
+## Basic Information
+
+### Under what license is reddit released?
+
+The CPAL. See <https://github.com/reddit/reddit/blob/master/LICENSE>
+
+### Is this all of the code?
+
+Our anti-cheating/spam code is not public. In the source itself, anything under the package r2admin falls under this, so it's easy to see where that begins and ends. Our private code is not required to run a successful clone. 
+
 ## Installation Troubleshooting
 
 ### I'm seeing an error. What should I do?
@@ -30,6 +40,10 @@ $ sudo easy_install "webhelpers==0.6.4"
 </tr>
 </tbody>
 </table> 
+
+### Do I need to use S3 to run reddit?
+
+At the moment, yes. But we are willing to accept patches that would allow you to choose where to store thumbnails.
 
 ### What is the administrator account?
 
