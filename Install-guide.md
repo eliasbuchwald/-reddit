@@ -161,7 +161,7 @@ $ paster serve --reload example.ini http_port=8080
 
 You should be able to access reddit at <http://127.0.0.1:8080/>.
 
-### Quick troubleshooting
+### Troubleshooting
 
 Following are some of the more commonly seen problems at this point in the installation.
 
@@ -195,3 +195,36 @@ $ sudo easy_install "webhelpers==0.6.4"
 </table>
 
 ## Services and Cron Jobs
+
+### Configuration
+
+The various services and cron jobs in the repository expect the existence of `run.ini` in `~/reddit/r2`. 
+
+In `~/reddit/r2`, there is a script called `updateini.py` which reads ini files and applies differences from a specified `.update` file. This means that you can make changes to the provided `example.ini` by modifying a `.update` file without worrying about merge issues down the line. 
+
+To take advantage of this infrastructure do the following.
+
+```bash
+$ cd ~/reddit/r2
+$ touch run.update
+$ make 
+```
+
+### Services
+
+TODO
+
+### Crons
+
+There are several jobs that need to be run periodically to update the site. Following is a recommended crontab.
+
+```cron
+# m   h dom mon dow    command
+*/5   *   *   *   *    ~/reddit/scripts/rising.sh
+*/4   *   *   *   *    ~/reddit/scripts/send_mail.sh
+*/3   *   *   *   *    ~/reddit/scripts/broken_things.sh
+1     *   *   *   *    ~/reddit/scripts/update_promos.sh
+0    23   *   *   *    ~/reddit/scripts/update_reddits.sh
+```
+
+## Enjoy
