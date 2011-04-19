@@ -15,8 +15,18 @@ Before continuing with this guide, make sure you have all of reddit's many depen
 
 Clone the git repository available here on github.
 
-    reddit:~$ git clone git://github.com/reddit/reddit.git
+```bash
+reddit:~$ git clone git://github.com/reddit/reddit.git
+```
 
+Once this is done, you'll need to install the python module dependencies.
+
+```bash
+$ cd reddit/r2
+$ sudo python setup.py develop
+$ make
+```
+    
 ## PostgreSQL
 
 ## Cassandra
