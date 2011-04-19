@@ -212,11 +212,18 @@ $ make
 
 ### Services
 
-TODO
+The reddit repository includes a `srv/` directory where [daemontools](http://cr.yp.to/daemontools.html) runscripts are kept. To set these up, you must point daemontools at the runscripts.
+
+```bash
+# the /service/ path may vary. on debian/ubuntu use /etc/service instead. 
+$ sudo ln -s ~/reddit/srv/* /service/
+```
+
+This will run two instances of the reddit app as well as an haproxy instance to balance between them. Runscripts are included for memcached and cassandra as well. If you are already running these services through another method, you can delete the symlinks to avoid issues.
 
 ### Crons
 
-There are several jobs that need to be run periodically to update the site. Following is a recommended crontab.
+There are several jobs that need to be run periodically to update the site. Following is a recommended crontab. See [[Cron Jobs]] for information on what each of these does.
 
 ```cron
 # m   h dom mon dow    command
@@ -227,4 +234,6 @@ There are several jobs that need to be run periodically to update the site. Foll
 0    23   *   *   *    ~/reddit/scripts/update_reddits.sh
 ```
 
-## Enjoy
+## Troubleshooting
+
+Check the [[FAQ]] for help with any issues you may be encountering at this point.
