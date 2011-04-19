@@ -68,7 +68,7 @@ Create a database for reddit's data.
 
 ```bash
 $ createdb -E utf8 reddit
-``` 
+```
 
 Then add reddit's SQL functions to the schema.
 
@@ -90,7 +90,37 @@ $ paster shell example.ini
 >>> populatedb.populate()
 ```
 
+Note: this will also create a user named `reddit` with password `password`.
+
 ## Cassandra
+
+Cassandra is currently used primarily as a permanent cache, but the goal is for it to become our primary data store. As such, it is a vital component the reddit architecture.
+
+To configure Cassandra for reddit, set up the necessary directories and replace the default `storage.yaml` with the one that comes with reddit. 
+
+```bash
+# the /cassandra directory is configured in reddit's cassandra.yaml. you may change it if desired.
+$ sudo mkdir /cassandra
+
+# make sure the cassandra directory is accessible to the user cassandra will run as. 
+$ sudo chown cassandra /cassandra
+
+# the path to cassandra.yaml may vary depending on your system. change as necessary.
+$ sudo mv /etc/cassandra/cassandra.yaml /etc/cassandra/cassandra.yaml.bak 
+$ sudo ln -s ~/reddit/config/cassandra/cassandra.yaml /etc/cassandra/
+```
+
+Next, you need to create the keyspace for reddit and the `permacache` column family.
+
+```
+$ cassandra-cli 
+[default@unknown] connect localhost/9160;
+[default@unknown] create keyspace reddit with replication_factor = 1;
+[default@unknown] use reddit;
+[default@unknown] create column family permacache with column_type = 'Standard' and comparator = 'BytesType';
+```
+
+The reddit application will create the rest of the required column families automatically.
 
 ## RabbitMQ 
 
