@@ -163,19 +163,35 @@ You should be able to access reddit at <http://127.0.0.1:8080/>.
 
 ### Quick troubleshooting
 
-Following are some of the more commonly seen problems at this point.
+Following are some of the more commonly seen problems at this point in the installation.
 
-#### `ImportError: No module named wrapped`
-
-You need to run `make` in `~/reddit/r2` to compile the Cython modules.
-
-#### `ImportError: No module named rails.asset_tag`
-
-setup.py installed newer versions than we can handle of some dependencies, run the following commands to resolve the issue.
+<table>
+<thead>
+<tr><th>Error</th><th>Resolution</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td>ImportError: No module named wrapped</td>
+    <td>
+         You need to compile the Cython modules.
 
 ```bash
-sudo easy_install "Paste==1.7.2-reddit-0.1"
-sudo easy_install "webhelpers==0.6.4"
+$ cd ~/reddit/r2
+$ make
 ```
+    </td>
+</tr>
+<tr>
+    <td>ImportError: No module named rails.asset_tag</td>
+    <td>setup.py installed the wrong versions of some dependencies. You must downgrade them.
+
+```bash
+$ sudo easy_install "Paste==1.7.2-reddit-0.2"
+$ sudo easy_install "webhelpers==0.6.4"
+```
+</td>
+</tr>
+</tbody>
+</table>
 
 ## Services and Cron Jobs
