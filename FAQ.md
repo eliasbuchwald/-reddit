@@ -1,5 +1,36 @@
 ## Installation Troubleshooting
 
+### I'm seeing an error. What should I do?
+
+<table>
+<thead>
+<tr><th>Error</th><th>Resolution</th></tr>
+</thead>
+<tbody>
+<tr>
+    <td>ImportError: No module named wrapped</td>
+    <td>
+         You need to compile the Cython modules.
+
+```bash
+$ cd ~/reddit/r2
+$ make
+```
+    </td>
+</tr>
+<tr>
+    <td>ImportError: No module named rails.asset_tag</td>
+    <td>setup.py installed the wrong versions of some dependencies. You must downgrade them.
+
+```bash
+$ sudo easy_install "Paste==1.7.2-reddit-0.2"
+$ sudo easy_install "webhelpers==0.6.4"
+```
+</td>
+</tr>
+</tbody>
+</table> 
+
 ### What is the administrator account?
 
 By default, there are no accounts. Create an account and add it to the `admins` line in `example.ini`. If you populate the database using `populatedb` it will generate an account called `reddit` with password `password` which is in the list of admins by default.
