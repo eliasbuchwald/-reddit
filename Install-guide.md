@@ -124,8 +124,58 @@ The reddit application will create the rest of the required column families auto
 
 ## RabbitMQ 
 
+RabbitMQ is used for asynchronous job processing. Jobs are pushed onto a set of queues by user actions (such as creating a post or comment) for tasks that need not be done during the POST. As such, in addition to getting rabbit running, there are a set of services responsible for removing jobs from these queues covered under the services section. 
+
+Configuration of rabbit is relatively simple.
+
+```bash
+$ sudo rabbitmqctl add_vhost /
+$ sudo rabbitmqctl add_user reddit reddit
+$ sudo rabbitmqctl set_permissions -p / reddit ".*" ".*" ".*"
+```
+
 ## memcached
 
-## Cron Jobs
+Almost everything in reddit depends on memcached running, and you won't be able to do much without it. 
 
-## Test it out
+Most package managers will set up run scripts for memcached automatically. To check if it is already running, use telnet.
+
+```bash
+$ telnet localhost 11211
+```
+
+If that is unable to connect, you must start the memcache daemon.
+
+```bash
+$ memcached 
+```
+
+## Test your installation
+
+Before continuing, make sure that reddit is able to start up and connect to the databases.
+
+```bash
+$ cd ~/reddit/r2
+$ paster serve --reload example.ini http_port=8080
+```
+
+You should be able to access reddit at <http://127.0.0.1:8080/>.
+
+### Quick troubleshooting
+
+Following are some of the more commonly seen problems at this point.
+
+#### `ImportError: No module named wrapped`
+
+You need to run `make` in `~/reddit/r2` to compile the Cython modules.
+
+#### `ImportError: No module named rails.asset_tag`
+
+setup.py installed newer versions than we can handle of some dependencies, run the following commands to resolve the issue.
+
+```bash
+sudo easy_install "Paste==1.7.2-reddit-0.1"
+sudo easy_install "webhelpers==0.6.4"
+```
+
+## Services and Cron Jobs
