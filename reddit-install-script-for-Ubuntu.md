@@ -2,7 +2,7 @@ The reddit install script is a bash script designed for use on Ubuntu Linux. It 
 
 ## Usage
 ```bash
-curl https://gist.github.com/raw/922144/install-reddit.sh | sudo sh
+$ curl https://gist.github.com/raw/922144/install-reddit.sh | sudo sh
 ```
 
 -- or --
@@ -15,12 +15,12 @@ curl https://gist.github.com/raw/922144/install-reddit.sh | sudo sh
 To populate the database with test data, including a variety of Accounts, Subreddits, Links and Comments do the following as user `reddit`.
 
 ```bash
-cd ~/reddit/r2
-paster shell run.ini
+$ cd ~/reddit/r2
+$ paster shell run.ini
 ```
 ```python
-from r2.models import populatedb
-populatedb.populate()
+>>> from r2.models import populatedb
+>>> populatedb.populate()
 ```
 
 This will take a while and spew a lot of trace to the console, but the result is a reddit with plenty of test data.
