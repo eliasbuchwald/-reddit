@@ -11,7 +11,7 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 
 ### Install reddit
 * For Ubuntu 10.04 (Lucid Lynx) and 10.10 (Maverick Meerkat) we have an [[automated install script|reddit install script for Ubuntu]].
-* Otherwise, see our [[Install Guide]]
+* Otherwise, see our [[Install Guide]].
 
 ## Make changes
 ### How-Tos and Tutorials
