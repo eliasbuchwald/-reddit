@@ -219,7 +219,7 @@ The reddit repository includes a `srv/` directory where [daemontools](http://cr.
 $ sudo ln -s ~/reddit/srv/* /service/
 ```
 
-This will run two instances of the reddit app as well as an haproxy instance to balance between them. Runscripts are included for memcached and cassandra as well. If you are already running these services through another method, you can delete the symlinks to avoid issues.
+This will run two instances of the reddit app as well as an haproxy instance to balance between them. Runscripts are included for memcached and cassandra as well. If you are already running these services through another method, you can delete the symlinks to avoid issues. There are also several runscripts for queue processors and the like. See [[Services]] for more detalis on what these do.
 
 ### Crons
 
