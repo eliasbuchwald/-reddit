@@ -18,4 +18,4 @@ Processes pending actions for self-serve promotions.
 
 ## ~/reddit/scripts/update_reddits.sh
 
-Updates the list of subreddits. In the open source code, subreddits are ordered by number of subscribers. This script must be run to have new subreddits show up in the /reddits listing or the top bar. 
+Updates the list of subreddits. In the open source code, subreddits are ordered by number of subscribers. This script must be run to have new subreddits show up in the `/reddits` listing or the top bar. 
