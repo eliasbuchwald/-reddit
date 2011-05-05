@@ -1,4 +1,4 @@
-There are several runscripts in the [/srv/](https://github.com/reddit/reddit/tree/master/srv) directory of the repository. 
+There are several runscripts in the [/srv/](https://github.com/reddit/reddit/tree/master/srv) directory of the repository. This page aims to document what they do. 
 
 ## Daemons
 
