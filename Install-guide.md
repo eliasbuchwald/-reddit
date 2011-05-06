@@ -2,12 +2,7 @@ These instructions will guide you through the process of setting up a reddit clo
 
 ## Prerequisites 
 
-Before continuing with this guide, make sure you have all of reddit's many dependencies installed. See one of the following guides for details.
-
-* [[Basic list of dependencies|Dependencies]]
-* [[Debian Dependencies]]
-* [[Fedora Dependencies]]
-* [[Mac OS X Dependencies]]
+Before continuing with this guide, make sure you have all of [[reddit's many dependencies|Dependencies]] installed.
 
 **This guide will assume that you are installing reddit as user `reddit` in the directory `/home/reddit`.** If this is not the case, modify the examples accordingly.
 
