@@ -65,7 +65,7 @@ Check that `domain` in the ini file matches the domain that you're accessing you
 
 reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. The code for searching with Solr still exists in the repository, but is inactive. A third party running a reddit clone could either create a patch that reactivates Solr, or get an IndexTank account.
 
-If you don't have `INDEXTANK_API_URL` set to a valid URL, searching will result in the following failure.
+If you don't have `INDEXTANK_API_URL` set to a valid URL, searching will fail on the following line.
 
 ```python
 netloc = splits.hostname + (':%s' % splits.port if splits.port else '')
