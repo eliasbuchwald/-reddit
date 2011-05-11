@@ -43,7 +43,7 @@ $ sudo easy_install "webhelpers==0.6.4"
 
 ### Do I need to use S3 to run reddit?
 
-At the moment, yes. But we are willing to accept patches that would allow you to choose where to store thumbnails.
+At the moment, S3 is required for thumbnails. We are willing to accept patches that would allow you to choose where to store them.
 
 ### What is the administrator account?
 
@@ -60,6 +60,10 @@ Most browsers won't deal with cookies from a domain that doesn't contain dots. F
 ### What if the top bar isn't showing up at all?
 
 Check that `domain` in the ini file matches the domain that you're accessing your reddit clone with.
+
+### Why doesn't the "My Reddits" dropdown show up?
+
+The dropdown is only rendered if the current user is subscribed to more than `sr_dropdown_threshold` subreddits (see `example.ini`. This defaults to 15.
 
 ### Why doesn't search work? 
 
