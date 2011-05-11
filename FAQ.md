@@ -69,10 +69,10 @@ The dropdown is only rendered if the current user is subscribed to more than `sr
 
 reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. The code for searching with Solr still exists in the repository, but is inactive. A third party running a reddit clone could either create a patch that reactivates Solr, or get an IndexTank account.
 
-If you don't have `INDEXTANK_API_URL` set to a valid URL, searching will fail on the following line.
+If you don't have `INDEXTANK_API_URL` set to a valid URL, searching will fail with the following error.
 
 ```python
-netloc = splits.hostname + (':%s' % splits.port if splits.port else '')
+<type 'exceptions.TypeError'>: unsupported operand type(s) for +: 'NoneType' and 'str'
 ```
 
 ### Why doesn't subreddit search or the "related" tab work?
