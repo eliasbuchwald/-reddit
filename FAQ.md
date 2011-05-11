@@ -63,7 +63,7 @@ Check that `domain` in the ini file matches the domain that you're accessing you
 
 ### Why doesn't the "My Reddits" dropdown show up?
 
-The dropdown is only rendered if the current user is subscribed to more than `sr_dropdown_threshold` subreddits (see `example.ini`. This defaults to 15.
+The dropdown is only rendered if the current user is subscribed to more than `sr_dropdown_threshold` subreddits (see `example.ini`.) The default threshold is 15 subreddits.
 
 ### Why doesn't search work? 
 
