@@ -72,21 +72,6 @@ $ cd ~/reddit/
 $ psql -U reddit reddit < sql/functions.sql
 ```
 
-### Populate with test data
-
-For testing purposes, you can generate random test data for your reddit install.
-
-```bash
-$ cd ~/reddit/r2
-$ paster shell example.ini
-```
-```python
->>> from r2.models import populatedb
->>> populatedb.populate()
-```
-
-Note: this will also create a user named `reddit` with password `password`.
-
 ## Cassandra
 
 Cassandra is currently used primarily as a permanent cache, but the goal is for it to become our primary data store. As such, it is a vital component the reddit architecture.
@@ -186,8 +171,35 @@ $ sudo easy_install "webhelpers==0.6.4"
 ```
 </td>
 </tr>
+<tr>
+    <td>(OperationalError) FATAL:  password authentication failed for user "reddit"</td>
+    <td>
+        The postgres user "reddit" has the wrong password. You should recreate the postgres user "reddit" with password "reddit".
+
+```bash
+reddit$ su postgres
+postgres$ dropuser reddit
+postgres$ createuser -P reddit
+```
+    </td>
+</tr>
 </tbody>
 </table>
+
+## Populate with test data
+
+For testing purposes, you can generate random test data for your reddit install.
+
+```bash
+$ cd ~/reddit/r2
+$ paster shell example.ini
+```
+```python
+>>> from r2.models import populatedb
+>>> populatedb.populate()
+```
+
+Note: this will also create a reddit account named `reddit` with password `password`.
 
 ## Services and Cron Jobs
 
