@@ -38,6 +38,18 @@ $ sudo easy_install "webhelpers==0.6.4"
 ```
 </td>
 </tr>
+<tr>
+    <td>(OperationalError) FATAL:  password authentication failed for user "reddit"</td>
+    <td>
+        The postgres user "reddit" has the wrong password. You should recreate the postgres user "reddit" with password "reddit".
+
+```bash
+reddit$ su postgres
+postgres$ dropuser reddit
+postgres$ createuser -P reddit
+```
+    </td>
+</tr>
 </tbody>
 </table> 
 
