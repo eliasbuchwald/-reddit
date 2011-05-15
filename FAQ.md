@@ -53,6 +53,8 @@ postgres$ createuser -P reddit
 </tbody>
 </table> 
 
+## Other Questions
+
 ### Do I need to use S3 to run reddit?
 
 At the moment, S3 is required for thumbnails. We are willing to accept patches that would allow you to choose where to store them.
