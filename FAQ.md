@@ -67,6 +67,10 @@ By default, there are no accounts. Create an account and add it to the `admins` 
 
 Most browsers won't deal with cookies from a domain that doesn't contain dots. For example, `http://localhost` will not work, while `http://reddit.local` or `http://127.0.0.1` will. Make sure you update the .ini file accordingly!
 
+### How do I create a subreddit?
+
+By default, the link to the form for subreddit creation is hidden for accounts newer than 30 days. This was done because a large number of new users were confused about what creating a reddit meant and would use the form to try and post links. The form can be accessed at any time by going to `/reddits/create`. It's also possible to configure the minimum age an account must have to be able to see the link by tweaking the [`min_membership_create_community`](https://github.com/reddit/reddit/blob/master/r2/example.ini#L326) property. Setting this value to 0 will allow all users to see the link.
+
 ### How do I make subreddits show up in the top bar?
 
 `update_reddits.sh` needs to be run. See [[Cron Jobs]] for more information on what this does.
