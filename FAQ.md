@@ -87,12 +87,13 @@ The dropdown is only rendered if the current user is subscribed to more than `sr
 
 reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. The code for searching with Solr still exists in the repository, but is inactive. A third party running a reddit clone could either create a patch that reactivates Solr, or get an IndexTank account.
 
-If you don't have `INDEXTANK_API_URL` set to a valid URL, searching will fail with the following error.
+If you don't have `INDEXTANK_API_URL` in run.ini set to a valid URL, searching will fail with the following error.
 
 ```python
 <type 'exceptions.TypeError'>: unsupported operand type(s) for +: 'NoneType' and 'str'
 ```
 
+To use IndexTank, you must create an index named "main" on IndexTank, or change the name of the index in /r2/r2/lib/indextank.py to your index's name.
 ### Why doesn't subreddit search or the "related" tab work?
 
 Solr is still used for subreddit search and the "related" tab. This is transitional until we convert completely to IndexTank. The install script does not currently install or configure Solr and so neither of these features will work until that is done. 
