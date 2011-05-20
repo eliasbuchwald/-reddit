@@ -93,7 +93,7 @@ If you don't have `INDEXTANK_API_URL` in run.ini set to a valid URL, searching w
 <type 'exceptions.TypeError'>: unsupported operand type(s) for +: 'NoneType' and 'str'
 ```
 
-To use IndexTank, you must create an index named "main" on IndexTank, or change the name of the index in /r2/r2/lib/indextank.py to your index's name.
+To use IndexTank, you must create an index named "main" on IndexTank, or change the name of the index in /r2/r2/lib/indextank.py line 45 from "main" to your index's name.
 ### Why doesn't subreddit search or the "related" tab work?
 
 Solr is still used for subreddit search and the "related" tab. This is transitional until we convert completely to IndexTank. The install script does not currently install or configure Solr and so neither of these features will work until that is done. 
