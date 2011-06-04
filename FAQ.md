@@ -10,6 +10,18 @@ Our anti-cheating/spam code is not public. In the source itself, anything under 
 
 ## Installation Troubleshooting
 
+### How can I figure out which part of the system is broken?
+
+```bash
+$ sudo svstat /service/*
+```
+
+Look for services that have an uptime much smaller than the rest of the services. Once you've found one, check its logs for errors
+
+```bash
+$ tail -F /service/broken-service/log/main/current
+```
+
 ### I'm seeing an error. What should I do?
 
 <table>
