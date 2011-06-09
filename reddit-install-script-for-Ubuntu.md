@@ -2,7 +2,7 @@ The reddit install script is a bash script designed for use on Ubuntu Linux. It 
 
 ## Usage
 ```bash
-$ curl https://gist.github.com/raw/922144/install-reddit.sh | sudo sh
+$ curl https://raw.github.com/gist/922144/install-reddit.sh | sudo sh
 ```
 
 -- or --
