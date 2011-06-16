@@ -16,6 +16,7 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 ## Make changes
 ### How-Tos and Tutorials
 * [[FAQ]]
+* [[API]]
 * **Code Walkthroughs**
     * [[Cron Jobs]]
     * [[Services]]
