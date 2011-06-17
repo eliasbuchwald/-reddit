@@ -5,9 +5,7 @@ In general, and especially for crawlers, make fewer than one request per two sec
 
 * Respect robots.txt
 
-* Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the 
-
-* same page more than once per 30 seconds
+* Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the same page more than once per 30 seconds
 
 * NEVER lie about your user-agent. We will ban such clients outright if we catch them.
 
