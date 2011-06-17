@@ -35,7 +35,7 @@ Otherwise, the API will return something like the following about the currently 
 
 - ###kind  *(string)*
 
-     Description
+    The type of thing (see **glossary** on the [[API]] page) this is, which translates to *account*.
 
 - ###data *(object)*
 
@@ -55,7 +55,7 @@ Otherwise, the API will return something like the following about the currently 
 
     - ###modhash *(string)*
 
-        The user's modhash (see **glossary** on the [[API|]] page)
+        The user's modhash (see **glossary** on the [[API]] page)
 
     - ###created_utc *(string)*
 
