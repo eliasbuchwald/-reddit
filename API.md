@@ -27,33 +27,33 @@ A key which reddit requires for API functions modifying state to protect against
 
 ### Fullname ###
 
-A base-36 id of the form "t[0-9]+_[a-z0-9]+" (e.g. "[t3_6nw57](http://www.reddit.com/r/programming/comments/6nw57/)") that reddit associates with every Thing. In the example, the type prefix "t3_" specifies that the fullname is for a Link, and the id "6nw57" specifies the Link's id36. (Note: the numbers according to id type are not constant, and may vary between reddit installations.)
+A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.com/r/programming/comments/6nw57/)) that reddit associates with every Thing. In the example, the type prefix `t3_` specifies that the fullname is for a Link, and the id `6nw57` specifies the Link's id36. (Note: the numbers according to id type are not constant, and may vary between reddit installations.)
 
 ## Fetching Information ##
 
 To download raw data from reddit, simply find the page that contains the desired data, and append an extension to the URL:
 
-* Adding ".json" to the URL will return raw data in JSON form. Example: <http://www.reddit.com/r/programming/comments/6nw57/.json>
+* Adding `.json` to the URL will return raw data in JSON form. Example: <http://www.reddit.com/r/programming/comments/6nw57/.json>
 
-* Adding ".rss" or ".xml" to the URL will return the data formatted as an RSS feed. Example: <http://www.reddit.com/.rss>
+* Adding `.rss` or `.xml` to the URL will return the data formatted as an RSS feed. Example: <http://www.reddit.com/.rss>
 
 In many applications, it is useful to query reddit Links by URL or Fullname. This is possible using the following queries, followed by an extension of your choice:
 
 #### Link by URL ####
 
-http://www.reddit.com/api/info.EXTENSION?url=URL
+`http://www.reddit.com/api/info.EXTENSION?url=URL`
 
 #### Link by Fullname ####
 
-http://www.reddit.com/by_id/FULLNAME.EXTENSION
+`http://www.reddit.com/by_id/FULLNAME.EXTENSION`
 
 #### Link by Fullname (With Comments) ####
 
-http://www.reddit.com/comments/ID36.EXTENSION
+`http://www.reddit.com/comments/ID36.EXTENSION`
 
 #### Getting User "About" Page (Includes Karma Totals) ####
 
-http://www.reddit.com/user/USERNAME/about.json
+`http://www.reddit.com/user/USERNAME/about.json`
 
 TODO: Clarify licensing of reddit.com information
 
@@ -61,13 +61,15 @@ TODO: Clarify licensing of reddit.com information
 
 If you're fetching comments from a thread with more comments than the API will return in a single response, the last comment will look like this:
 
-    {'data': {'id': 'abc1010', 'name': 't1_abc1010'}, 'kind': 'more'}
+```javascript
+{'data': {'id': 'abc1010', 'name': 't1_abc1010'}, 'kind': 'more'}
+```
 
-To get these comments, you can fetch the url http://reddit.com/comments/FULLNAME/abc1010.json, where FULLNAME is the FULLNAME of the story.
+To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAME/abc1010.json`, where FULLNAME is the FULLNAME of the story.
 
 ### Logging In ###
 
-To to a simple login, send an HTTP POST to http://www.reddit.com/api/login Must include two POST parameters - username and passwd
+To to a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `username` and `passwd`
 
 This will return a [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_a_cookie) line. It is best to manage this cookie with some automated tool or framework
 
@@ -77,37 +79,43 @@ Here are some examples made using the [curl](http://curl.haxx.se/) command from 
 
 Making the request to <http://www.reddit.com/api/login>. We set two POST parameters: `user=some_user` and `passwd=correct_passwd`. curl automatically converts returned HTTP headers into cookies, so the [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_a_cookie) is converted into a cookie. The `-c` option requests that curl print all cookies associated with this request into Cookie.txt
 
-    $> 
-    $> curl -d user=some_user -d passwd=correct_passwd -c Cookie.txt http://www.reddit.com/api/login
+```
+$> curl -d user=some_user -d passwd=correct_passwd -c Cookie.txt http://www.reddit.com/api/login
+```
 
 The server returns some JSON which curl prints to stdout for us.
 
-    {"jquery": [[0, 1, "call", ["body"]], [1, 2, "attr", "find"], [2, 3, "call", [".status"]], [3, 4, "attr", "hide"], [4, 5, "call", []], [5, 6, "attr", "html"], [6, 7, "call", [""]], [7, 8, "attr", "end"], [8, 9, "call", []], [1, 10, "attr", "redirect"], [10, 11, "call", ["/"]]]}
-    
-    $> 
+```javascript
+{"jquery": [[0, 1, "call", ["body"]], [1, 2, "attr", "find"], [2, 3, "call", [".status"]], [3, 4, "attr", "hide"], [4, 5, "call", []], [5, 6, "attr", "html"], [6, 7, "call", [""]], [7, 8, "attr", "end"], [8, 9, "call", []], [1, 10, "attr", "redirect"], [10, 11, "call", ["/"]]]}
+```
 
 Now let's look at what the returned cookie contains! Hopefully it is a session ID that we can now pass to other parts of the reddit API...
 
-    $> cat Cookie.txt
-    # Netscape HTTP Cookie File
-    # http://curl.haxx.se/rfc/cookie_spec.html
-    # This file was generated by libcurl! Edit at your own risk.
-    
-    .reddit.com	TRUE	/	FALSE	0	reddit_session	4029916%2C2010-04-30T22%3A51%3A52%2C1243925043100000000000000000000000000000
+```
+$> cat Cookie.txt
+```
+
+```
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This file was generated by libcurl! Edit at your own risk.
+
+.reddit.com	TRUE	/	FALSE	0	reddit_session	4029916%2C2010-04-30T22%3A51%3A52%2C1243925043100000000000000000000000000000
+```
 
 As hoped, we see a reddit_session (Note that I changed the ending chars to zero's for this example).
 
 Breaking down what you are looking at here - 
 
-| **attribute** | **value**            |
-|:-----------   |:--------------------:|
-| domain        | .reddit.com          |
-| tailmatch     | TRUE                 |
-| path          | /                    |
-| secure        | FALSE                |
-| expires       | 0                    |
-| name          | reddit_session       |
-| value         | long-alphanumeric :) |
+| **attribute**   | **value**              |
+|:----------------|:-----------------------|
+| `domain`        | `.reddit.com`          |
+| `tailmatch`     | `TRUE`                 |
+| `path`          | `/`                    |
+| `secure`        | `FALSE`                |
+| `expires`       | `0`                    |
+| `name`          | `reddit_session`       |
+| `value`         | long-alphanumeric :) |
 
 If you are not sure what all this means, then either [read up](http://en.wikipedia.org/wiki/HTTP_cookie), or use a framework to manage the cookie.
 
@@ -115,17 +123,26 @@ If you are not sure what all this means, then either [read up](http://en.wikiped
 
 Similar to correct example above, so I am just going to show you the results
 
+```
+$> curl -d user=some_user -d passwd=wrong_password -c Cookie.txt http://www.reddit.com/api/login
+```
 
-    $> curl -d user=some_user -d passwd=wrong_password -c Cookie.txt http://www.reddit.com/api/login
-    {"jquery": [[0, 1, "call", ["body"]], [1, 2, "attr", "find"], [2, 3, "call", [".status"]], [3, 4, "attr", "hide"], [4, 5, "call", []], [5, 6, "attr", "html"], [6, 7, "call", [""]], [7, 8, "attr", "end"], [8, 9, "call", []], [1, 10, "attr", "find"], [10, 11, "call", [".error.WRONG_PASSWORD.field-passwd"]], [11, 12, "attr", "show"], [12, 13, "call", []], [13, 14, "attr", "html"], [14, 15, "call", ["invalid password"]], [15, 16, "attr", "end"], [16, 17, "call", []]]}
-    
-    $> cat rCookie 
-    # Netscape HTTP Cookie File
-    # http://curl.haxx.se/rfc/cookie_spec.html
-    # This file was generated by libcurl! Edit at your own risk.
-    
-    .reddit.com	TRUE	/	FALSE	2145916799	reddit_first	%7B%22firsttime%22%3A%20%22first%22%7D
-    $>  
+```javascript
+{"jquery": [[0, 1, "call", ["body"]], [1, 2, "attr", "find"], [2, 3, "call", [".status"]], [3, 4, "attr", "hide"], [4, 5, "call", []], [5, 6, "attr", "html"], [6, 7, "call", [""]], [7, 8, "attr", "end"], [8, 9, "call", []], [1, 10, "attr", "find"], [10, 11, "call", [".error.WRONG_PASSWORD.field-passwd"]], [11, 12, "attr", "show"], [12, 13, "call", []], [13, 14, "attr", "html"], [14, 15, "call", ["invalid password"]], [15, 16, "attr", "end"], [16, 17, "call", []]]}
+```
+
+```
+$> cat Cookie
+```
+
+```
+# Netscape HTTP Cookie File
+# http://curl.haxx.se/rfc/cookie_spec.html
+# This file was generated by libcurl! Edit at your own risk.
+ 
+.reddit.com	TRUE	/	FALSE	2145916799	reddit_first	%7B%22firsttime%22%3A%20%22first%22%7D
+$> 
+```
 
 As you can see, it lets you know the password was wrong, and the reddit_session is not set (reddit_first is, however).
 
@@ -141,18 +158,22 @@ For voting to work, the `reddit_session` cookie needs to be present in the reque
 
 Post the following fields to <http://www.reddit.com/api/vote>:
 
-    id=t1_abc1010&dir=1&vh=f0f0f0f0f&&uh=f0f0f0f0f0f0f0f0f0f0f0&renderstyle=html
+```
+id=t1_abc1010&dir=1&vh=f0f0f0f0f&uh=f0f0f0f0f0f0f0f0f0f0f0&renderstyle=html
+```
 
-| **field** | **value**                                         |
-|:----------|:--------------------------------------------------|
-| id        | the thing you want to vote for                    |
-| dir       | 1 means upvote, -1 means downvote, 0 means unvote |
-| vh        | the vote hash associated with the thing           |
-| uh        | the user modhash                                  |
+| **field**   | **value**                                         |
+|:------------|:--------------------------------------------------|
+| `id`        | the thing you want to vote for                    |
+| `dir`       | 1 means upvote, -1 means downvote, 0 means unvote |
+| `vh`        | the vote hash associated with the thing           |
+| `uh`        | the user modhash                                  |
 
 The JSON will return a very short reply of:
 
-    {}
+```javascript
+{}
+```
 
 ### Submitting New Stories ###
 
@@ -160,17 +181,19 @@ For submitting to work, the `reddit_session` cookie needs to be present in the r
 
 It is possible to submit without a cookie, but that requires supplying the answer to the captcha.
 
-Post the following to <http://www.reddit.com/api/submit>:
+Post the following to `http://www.reddit.com/api/submit`:
 
-    uh=f0f0f0f0&kind=link&url=yourlink.com&sr=funny&title=omg-look-at-this&id%23newlink&r=funny&renderstyle=html"
+```
+uh=f0f0f0f0&kind=link&url=yourlink.com&sr=funny&title=omg-look-at-this&id%23newlink&r=funny&renderstyle=html
+```
 
-| **field** | **value**                                      |
-|:----------|:-----------------------------------------------|
-| uh        | the user modhash                               |
-| kind      | either "link" or "self"                        |
-| sr        | the subreddit                                  |
-| title     | the text to appear as a link to your new story |
-| r         | appears to be the subreddit again **(?)**      |
+| **field**   | **value**                                      |
+|:------------|:-----------------------------------------------|
+| `uh`        | the user modhash                               |
+| `kind`      | either "link" or "self"                        |
+| `sr`        | the subreddit                                  |
+| `title`     | the text to appear as a link to your new story |
+| `r`         | appears to be the subreddit again **(?)**      |
 
 Setting "kind" to "self" means that the "url" field becomes a "text" field.
 
@@ -188,22 +211,26 @@ The idea here is that we want to have reddit email a story to a friend on our be
 
 For sharing to work, the `reddit_session` cookie needs to be present in the request.
 
-Post the following to <http://www.reddit.com/api/share>:
+Post the following to `http://www.reddit.com/api/share`:
 
-    parent=t1_abc1010&share_from=Foo&replyto=foo@bar.org&share_to=afriend@example.com&message=i+share+this&id%23sharelink_t1_abc1010&uh=f0f0f0f0f0&renderstyle=html
+```
+parent=t1_abc1010&share_from=Foo&replyto=foo@bar.org&share_to=afriend@example.com&message=i+share+this&id%23sharelink_t1_abc1010&uh=f0f0f0f0f0&renderstyle=html
+```
 
-| **field**  | **value**                                                   |
-|:-----------|:------------------------------------------------------------|
-| parent     | the thing you want to share                                 |
-| share_from | the name of the person who is sending the message           |
-| replyto    | the email address of the person who is sending the message  |
-| share_to   | the email address of the recipient of the message           |
-| message    | the text that precedes the link to the story in the message |
-| uh         | the user modhash                                            |
+| **field**    | **value**                                                   |
+|:-------------|:------------------------------------------------------------|
+| `parent`     | the thing you want to share                                 |
+| `share_from` | the name of the person who is sending the message           |
+| `replyto`    | the email address of the person who is sending the message  |
+| `share_to`   | the email address of the recipient of the message           |
+| `message`    | the text that precedes the link to the story in the message |
+| `uh`         | the user modhash                                            |
 
 The JSON reply is another short one:
 
-    {}
+```javascript
+{}
+```
 
 ## Changes to the API ##
 
