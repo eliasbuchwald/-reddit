@@ -55,7 +55,7 @@ Otherwise, the API will return something like the following about the currently 
 
     - ###modhash *(string)*
 
-        The user's modhash (see [[API/glossary]])
+        The user's modhash (see **glossary** on the [[API|]] page)
 
     - ###created_utc *(string)*
 
