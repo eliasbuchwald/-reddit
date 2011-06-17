@@ -67,7 +67,7 @@ If you're fetching comments from a thread with more comments than the API will r
 
 To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAME/abc1010.json`, where FULLNAME is the FULLNAME of the story.
 
-### Logging In ###
+## Logging In ##
 
 To to a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `username` and `passwd`
 
@@ -75,7 +75,7 @@ This will return a [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_
 
 Here are some examples made using the [curl](http://curl.haxx.se/) command from a unix/linux terminal
 
-#### Correct Login ####
+### Correct Login ###
 
 Making the request to <http://www.reddit.com/api/login>. We set two POST parameters: `user=some_user` and `passwd=correct_passwd`. curl automatically converts returned HTTP headers into cookies, so the [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_a_cookie) is converted into a cookie. The `-c` option requests that curl print all cookies associated with this request into Cookie.txt
 
@@ -119,7 +119,7 @@ Breaking down what you are looking at here -
 
 If you are not sure what all this means, then either [read up](http://en.wikipedia.org/wiki/HTTP_cookie), or use a framework to manage the cookie.
 
-#### Incorrect Login ####
+### Incorrect Login ###
 
 Similar to correct example above, so I am just going to show you the results
 
@@ -175,7 +175,7 @@ The JSON will return a very short reply of:
 {}
 ```
 
-### Submitting New Stories ###
+## Submitting New Stories ##
 
 For submitting to work, the `reddit_session` cookie needs to be present in the request.
 
@@ -205,7 +205,7 @@ Here's one error message:
 
 If the submission worked, the JSON reply will contain the link to the newly created story.
 
-### Sharing Stories ###
+## Sharing Stories ##
 
 The idea here is that we want to have reddit email a story to a friend on our behalf.
 
