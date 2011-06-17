@@ -27,6 +27,10 @@ A key which reddit requires for API functions modifying state to protect against
 
 A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.com/r/programming/comments/6nw57/)) that reddit associates with every Thing. In the example, the type prefix `t3_` specifies that the fullname is for a Link, and the id `6nw57` specifies the Link's id36. (Note: the numbers according to id type are not constant, and may vary between reddit installations.)
 
+## API References ##
+
+- [[API: me.json]]
+
 ## Fetching Information ##
 
 To download raw data from reddit, simply find the page that contains the desired data, and append an extension to the URL:
