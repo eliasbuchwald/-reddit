@@ -8,9 +8,9 @@ Use `http://www.reddit.com/api/info.json` to grab information about a URL's subm
 
 ## Example Response
 
-If the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, and `null` for `likes`.
+If the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, and `null` for `likes`, but the rest of the information returned will be the same as if the user was logged in.
 
-Otherwise, the API will return something like the following about the currently logged in user:
+Otherwise, the API will return something like the following about the submissions with `saved` and `null` customized for the currently logged in user:
 
 ```javascript
 {
