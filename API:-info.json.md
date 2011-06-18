@@ -178,7 +178,7 @@ Otherwise, the API will return something like the following about the submission
 
                 Otherwise, this will indicate whether the currently logged in user has hidden the story.
 
-            - ### thumbnail *[(string, enumerated string [`"/static/nsfw2.png"`, `""`, `"/static/noimage.png"`]])*
+            - ### thumbnail *([ string, enumerated string [ `"/static/nsfw2.png"`, `""`, `"/static/noimage.png"` ] ])*
 
                 If the `reddit_session` cookie *is* present in the request **and** the post *has* been marked NSFW **and** the user *does have* the "make safe(r) for work" preference checked, the API will return [`"/static/nsfw2.png"`](http://www.reddit.com/static/nsfw2.png), which is 70px square.
 
