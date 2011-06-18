@@ -116,6 +116,48 @@ Otherwise, the API will return something like the following about the submission
 
                 The domain of the page that was submitted, *not* including the protocol.
 
+            - ### meda_embed *(object)*
+
+                **What is this for?**
+
+            - ### levenshtein *(null)*
+
+                This is always null. Apparently, it was an experiment that got removed from everything but `jsontemplates`.
+
+            - ### subreddit *(string)*
+
+                The name of the subreddit this post was submitted to.
+
+            - ### selftext_html *(null)*
+
+                This would hold the HTML-formatted text of the post if this was a self post, but since `info.json` always serves information about link posts, it is always null.
+
+            - ### selftext *(null)*
+
+                This would hold the plaintext of the post if this was a self post, but since `info.json` always serves information about link posts, it is always null.
+
+            - ### likes *([null, boolean])*
+
+                If the 'reddit_session` cookie is not present in the request, the API will return null.
+
+                Otherwise, this will indicate how the currently logged in user has voted the story: `true` for an up vote, `false` for a down vote, or `null` for no vote.
+
+            - ### name *(type)*
+
+                Description
+
+            - ### name *(type)*
+
+                Description
+
+            - ### name *(type)*
+
+                Description
+
+            - ### name *(type)*
+
+                Description
+
     - ### after *([null, string])*
 
         If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the post previous to the first one in `children` if what the API returns is paginated.
