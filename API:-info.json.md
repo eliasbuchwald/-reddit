@@ -1,4 +1,4 @@
-Use `http://www.reddit.com/api/info.json` to grab information about a URL's submissions on reddit.
+Use `http://www.reddit.com/api/info.json?url=` to grab information about a URL's submissions on reddit.
 
 **Note:** For the same data in XML, please see [[API: info.xml]].
 
