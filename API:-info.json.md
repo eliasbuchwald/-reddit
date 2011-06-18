@@ -1,6 +1,10 @@
-Use `http://www.reddit.com/api/me.json` to grab information about the currently logged in user.
+Use `http://www.reddit.com/api/info.json` to grab information about a URL's submissions on reddit.
 
 **Note:** For the same data in XML, please see [[API: info.xml]].
+
+## GET Data
+
+- `url` - The URL of the page you are requesting information about.
 
 ## Example Response
 
