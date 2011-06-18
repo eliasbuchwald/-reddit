@@ -142,17 +142,19 @@ Otherwise, the API will return something like the following about the submission
 
                 Otherwise, this will indicate how the currently logged in user has voted the story: `true` for an up vote, `false` for a down vote, or `null` for no vote.
 
-            - ### name *(type)*
+            - ### saved *(boolean)*
 
-                Description
+                If the 'reddit_session` cookie is not present in the request, the API will return false.
 
-            - ### name *(type)*
+                Otherwise, this will indicate whether the currently logged in user has saved the story.
 
-                Description
+            - ### id *(string)*
 
-            - ### name *(type)*
+                The link's id36 (see **glossary** on the [[API]] page). This is also used for short URLs (e.g. <http://redd.it/6nw57>) and toolbar URLs (e.g. <http://www.reddit.com/tb/6nw57/>).
 
-                Description
+            - ### clicked *(boolean)*
+
+                **Is this really always false?**
 
             - ### name *(type)*
 
