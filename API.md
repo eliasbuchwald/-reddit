@@ -31,6 +31,8 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 
 - [[API: me.json]]
 
+- [[API: info.json]]
+
 ## Fetching Information ##
 
 To download raw data from reddit, simply find the page that contains the desired data, and append an extension to the URL:
@@ -40,10 +42,6 @@ To download raw data from reddit, simply find the page that contains the desired
 * Adding `.rss` or `.xml` to the URL will return the data formatted as an RSS feed. Example: <http://www.reddit.com/.rss>
 
 In many applications, it is useful to query reddit Links by URL or Fullname. This is possible using the following queries, followed by an extension of your choice:
-
-#### Link by URL ####
-
-`http://www.reddit.com/api/info.EXTENSION?url=URL`
 
 #### Link by Fullname ####
 
