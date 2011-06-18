@@ -8,7 +8,21 @@ Use `http://www.reddit.com/api/info.json?url=` to grab information about a URL's
 
 ## Example Response
 
-If the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, `null` for `likes`, and `created` in UTC, but the rest of the information returned will be the same as if the user was logged in.
+If the `url` query string and its value are not present in the request, or if the page has never been submitted to reddit, the API will return something like the following:
+
+```javascript
+{
+    "kind": "Listing",
+    "data": {
+        "modhash": "f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
+        "children": [],
+        "after": null,
+        "before": null
+    }
+}
+```
+
+Otherwise, if the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, `null` for `likes`, and `created` in UTC, but the rest of the information returned will be the same as if the user was logged in.
 
 Otherwise, the API will return something like the following about the submissions with `saved`, `null`, and `created` customized for the currently logged in user:
 
@@ -102,7 +116,7 @@ Otherwise, the API will return something like the following about the submission
 
     - ### children *(array)*
 
-        An array that holds each post that was submitted for this URL.
+        An array that holds each post that was submitted for this URL, if any.
 
         - ### kind *(string)*
 
