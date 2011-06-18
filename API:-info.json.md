@@ -138,13 +138,13 @@ Otherwise, the API will return something like the following about the submission
 
             - ### likes *([null, boolean])*
 
-                If the 'reddit_session` cookie is not present in the request, the API will return null.
+                If the `reddit_session` cookie is not present in the request, the API will return null.
 
                 Otherwise, this will indicate how the currently logged in user has voted the story: `true` for an up vote, `false` for a down vote, or `null` for no vote.
 
             - ### saved *(boolean)*
 
-                If the 'reddit_session` cookie is not present in the request, the API will return false.
+                If the `reddit_session` cookie is not present in the request, the API will return false.
 
                 Otherwise, this will indicate whether the currently logged in user has saved the story.
 
@@ -155,6 +155,42 @@ Otherwise, the API will return something like the following about the submission
             - ### clicked *(boolean)*
 
                 **Is this really always false?**
+
+            - ### author *(string)*
+
+                The username of the user who submitted the post.
+
+            - ### media *(null)*
+
+                **What is this for?**
+
+            - ### score *(number)*
+
+                The current score (based on up votes minus down votes)  of the post.
+
+            - ### over_18 *(boolean)*
+
+                Says whether the post has been marked NSFW.
+
+            - ### hidden *(boolean)*
+
+                If the `reddit_session` cookie is not present in the request, the API will return false.
+
+                Otherwise, this will indicate whether the currently logged in user has hidden the story.
+
+            - ### thumbnail *(string, enumerated string [`"/static/nsfw2.png"`, `""`, `"/static/noimage.png"`])*
+
+                If the `reddit_session` cookie *is* present in the request **and** the post *has* been marked NSFW **and** the user *does have* the "make safe(r) for work" preference checked, the API will return [`"/static/nsfw2.png"`](http://www.reddit.com/static/nsfw2.png), which is 70px square.
+
+                Otherwise, if the `reddit_session` cookie *is not* present in the request **and** the post has been marked NSFW, the API will return `""`.
+
+                Otherwise, if the post has no thumbnail, the API will return [`"/static/noimage.png"`](http://www.reddit.com/static/noimage.png), which is 70px wide by 50px tall.
+
+                Otherwise, the API will return a full URL to a thumbnail that is 70px wide.
+
+            - ### name *(type)*
+
+                Description
 
             - ### name *(type)*
 
