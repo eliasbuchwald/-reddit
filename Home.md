@@ -18,6 +18,7 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 - [[FAQ]]
 - **[[API]]**
     - [[API: me.json]]
+    - [[API: info.json]]
 - **Code Walkthroughs**
     - [[Cron Jobs]]
     - [[Services]]
