@@ -8,9 +8,9 @@ Use `http://www.reddit.com/api/info.json?url=` to grab information about a URL's
 
 ## Example Response
 
-If the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, and `null` for `likes`, but the rest of the information returned will be the same as if the user was logged in.
+If the `reddit_session` cookie is not present in the request, the API will return `false` for `saved` and `hidden`, `null` for `likes`, and `created` in UTC, but the rest of the information returned will be the same as if the user was logged in.
 
-Otherwise, the API will return something like the following about the submissions with `saved` and `null` customized for the currently logged in user:
+Otherwise, the API will return something like the following about the submissions with `saved`, `null`, and `created` customized for the currently logged in user:
 
 ```javascript
 {
@@ -178,28 +178,68 @@ Otherwise, the API will return something like the following about the submission
 
                 Otherwise, this will indicate whether the currently logged in user has hidden the story.
 
-            - ### thumbnail *([ string, enumerated string [ `"/static/nsfw2.png"`, `""`, `"/static/noimage.png"` ] ])*
+            - ### thumbnail *([ string, enumerated string [ `"/static/nsfw2.png"`, `""`, `"/static/noimage.png"`, `"/static/self_default2.png"` ] ])*
 
                 If the `reddit_session` cookie *is* present in the request **and** the post *has* been marked NSFW **and** the user *does have* the "make safe(r) for work" preference checked, the API will return [`"/static/nsfw2.png"`](http://www.reddit.com/static/nsfw2.png), which is 70px square.
 
                 Otherwise, if the `reddit_session` cookie *is not* present in the request **and** the post has been marked NSFW, the API will return `""`.
 
+                Otherwise, if the post is a self post, the API will return [`"/static/self_default2.png"`](http://www.reddit.com/static/self_default2.png), which is 70px wide by 50px tall. However, since `info.json` always serves information about link posts, it will never return this.
+
                 Otherwise, if the post has no thumbnail, the API will return [`"/static/noimage.png"`](http://www.reddit.com/static/noimage.png), which is 70px wide by 50px tall.
 
                 Otherwise, the API will return a full URL to a thumbnail that is 70px wide.
 
-            - ### name *(type)*
+            - ### subreddit_id *(string)*
 
-                Description
+                This is the ID of the subreddit this post was submitted to. **This is only used internally, right?**
 
-            - ### name *(type)*
+            - ### downs *(number)*
 
-                Description
+                This is the number of down votes the post has gotten, [according to reddit](http://www.reddit.com/r/WTF/comments/eaqnf/pardon_me_but_5000_downvotes_wtf_is_worldnews_for/c16omup).
+
+            - ### is_self *(boolean)*
+
+                Says whether a post is a self post, but since `info.json` always serves information about link posts, it is always false.
+
+            - ### permalink *(string)*
+
+                Holds a [relative URL](http://en.wikipedia.org/wiki/Uniform_Resource_Locator#Absolute_vs_relative_URLs) to the comments page for the post.
+
+            - ### name *(string)*
+
+                The FULLNAME (see **glossary** on the [[API]] page) of the post. It is also `kind` + `_` + `id`.
+
+            - ### created *(number)*
+
+                If the `reddit_session` cookie is not present in the request, this is the [unix time](http://en.wikipedia.org/wiki/Unix_time) that the post was created in [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+
+                Otherwise, this is the [unix time](http://en.wikipedia.org/wiki/Unix_time) that the post was created in **the currently logged in user's time zone?**.
+
+            - ### url *(string)*
+
+                The full URL of the page the post is about, including protocol.
+
+            - ### title *(string)*
+
+                The title of the post, as written by the submitter of the post.
+
+            - ### created_utc *(number)*
+
+                This is the [unix time](http://en.wikipedia.org/wiki/Unix_time) that the post was created in [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+
+            - ### num_comments *(number)*
+
+                The number of comments the post currently has.
+
+            - ### ups *(num)*
+
+                This is the number of up votes the post has gotten, [according to reddit](http://www.reddit.com/r/WTF/comments/eaqnf/pardon_me_but_5000_downvotes_wtf_is_worldnews_for/c16omup).
 
     - ### after *([null, string])*
 
-        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the post previous to the first one in `children` if what the API returns is paginated.
+        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the post previous to the first one in `children` if what the API returns is paginated. However, `info.json` does not seem to paginate things, so the API will always return `null`.
 
     - ###before *([null, string])*
 
-        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the post after the last one in `children` if what the API returns is paginated.
+        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the post after the last one in `children` if what the API returns is paginated. However, `info.json` does not seem to paginate things, so the API will always return `null`.
