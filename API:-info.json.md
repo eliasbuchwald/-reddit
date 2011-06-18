@@ -102,11 +102,19 @@ Otherwise, the API will return something like the following about the submission
 
     - ### children *(array)*
 
-        [Unix time](http://en.wikipedia.org/wiki/Unix_time) that the user's account was created in [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time)
+        An array that holds each post that was submitted for this URL.
 
-        - ### domain *(string)*
+        - ### kind *(string)*
 
-            The domain of the page that was submitted, *not* including the protocol.
+            The type of thing (see **glossary** on the [[API]] page) this is, which translates to *Link*.
+
+        - ### data *(object)*
+
+            Holds relevant post data.
+
+            - ### domain *(string)*
+
+                The domain of the page that was submitted, *not* including the protocol.
 
     - ### after *([null, string])*
 
