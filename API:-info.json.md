@@ -16,7 +16,7 @@ Otherwise, the API will return something like the following about the submission
 {
     "kind": "Listing",
     "data": {
-        "modhash": "a4isjdlbe719c86ee9747ac18ac076e9c9de2e6683d32ad564",
+        "modhash": "f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
         "children": [{
             "kind": "t3",
             "data": {
