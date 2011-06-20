@@ -118,7 +118,7 @@ Otherwise, the API will return something like the following about the submission
 
     - ### children *(array)*
 
-        An array that holds each post that was submitted for this URL, if any.
+        An array that holds an object for each post that was submitted for this URL, if any.
 
         - ### kind *(string)*
 
