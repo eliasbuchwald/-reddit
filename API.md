@@ -32,6 +32,7 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 - [[API: me.json]]
 
 - [[API: info.json]]
+- [[API: vote]]
 
 ## Fetching Information ##
 
@@ -151,29 +152,6 @@ Note that if you enter a username that does not exist, it still returns the "inv
 Now that you have successfully logged-in, pages served from reddit will contain a "user modhash". This hash is required in making other calls to the api. You can find it by looking for a variable named "uh".
 
 TODO: Clean this section up and make more user friendly
-
-### Voting ###
-
-For voting to work, the `reddit_session` cookie needs to be present in the request.
-
-Post the following fields to <http://www.reddit.com/api/vote>:
-
-```
-id=t1_abc1010&dir=1&vh=f0f0f0f0f&uh=f0f0f0f0f0f0f0f0f0f0f0&renderstyle=html
-```
-
-| **field**   | **value**                                         |
-|:------------|:--------------------------------------------------|
-| `id`        | the thing you want to vote for                    |
-| `dir`       | 1 means upvote, -1 means downvote, 0 means unvote |
-| `vh`        | the vote hash associated with the thing           |
-| `uh`        | the user modhash                                  |
-
-The JSON will return a very short reply of:
-
-```javascript
-{}
-```
 
 ## Submitting New Stories ##
 
