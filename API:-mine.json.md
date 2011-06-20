@@ -16,7 +16,7 @@ Otherwise, the API will return something like the following about the subreddits
 {
     "kind":"Listing",
     "data":{
-        "modhash":"tvjq8no3pp67e786c7f88c579fc4a1e2a5da94979adace3df2",
+        "modhash":"f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0f0",
         "children":[
             {
                 "kind":"t5",
