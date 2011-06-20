@@ -101,7 +101,7 @@ Otherwise, the API will return something like the following about the subreddits
 
     - ### children *(array)*
 
-        An array that holds each subreddit that the currently logged in user is subscribed to, if any.
+        An array that holds an object for each subreddit that the currently logged in user is subscribed to, if any.
 
         - ### kind *(string)*
 
