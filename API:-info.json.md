@@ -4,7 +4,9 @@ Use `http://www.reddit.com/api/info.json?url=` to grab information about a URL's
 
 ## GET Data
 
-- `url` - The URL of the page you are requesting information about.
+| **field** | **sample value** | **explanation** |
+|:----------|:-----------------|:----------------|
+| `url`     | `https://github.com/reddit/reddit/` | The URL of the page you are requesting information about. |
 
 ## Example Response
 
