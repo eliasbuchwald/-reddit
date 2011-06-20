@@ -1,4 +1,4 @@
-Use `http://www.reddit.com/api/vote' to send or rescind a vote for a post or comment.
+Use `http://www.reddit.com/api/vote` to send or rescind a vote for a post or comment.
 
 **Note:** Even though there is no extension, the API still returns JSON.
 
