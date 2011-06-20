@@ -113,4 +113,48 @@ Otherwise, the API will return something like the following about the subreddits
 
             - ### display_name *(string)*
 
-                The name of the subreddit as found in the subreddit's URL, header, and sidebar
+                The name of the subreddit as found in the subreddit's URL, header, and sidebar.
+
+            - ### name *(string)*
+
+                The FULLNAME (see **glossary** on the [[API]] page) of the subreddit.
+
+            - ### title *(string)*
+
+                The title of the subreddit as found in the subreddit's `<title>` tag.
+
+            - ### url *(string)*
+
+                The [relative URL](http://en.wikipedia.org/wiki/Uniform_Resource_Locator#Absolute_vs_relative_URLs) to the subreddit.
+
+            - ### created *(number)*
+
+                This is the [unix time](http://en.wikipedia.org/wiki/Unix_time) that the subreddit was created in **[the currently logged in user's time zone?](https://github.com/reddit/reddit/wiki/API%3A-mine.json/_edit)**.
+
+            - ### created_utc *(number)*
+
+                This is the [unix time](http://en.wikipedia.org/wiki/Unix_time) that the subreddit was created in [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+
+            - ### over18 *(boolean)*
+
+                Indicates whether the subreddit has been marked as NSFW.
+
+            - ### subscribers *(number)*
+
+                The number of subscribers the subreddit currently has.
+
+            - ### id *(string)*
+
+                The subreddit's id36 (see **glossary** on the [[API]] page). This is only used internally**[, right?](https://github.com/reddit/reddit/wiki/API%3A-mine.json/_edit)**.
+
+            - ### description *(string)*
+
+                The description of the subreddit, as written by its moderators, formatted in [reddit flavored markdown](http://www.reddit.com/help/commenting). Newlines are escaped as `\n`.
+
+    - ### after *([null, string])*
+
+        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the subreddit previous to the first one in `children` if what the API returns is paginated. However, `mine.json` does not seem to paginate things, so the API will always return `null`.
+
+    - ###before *([null, string])*
+
+        If not `null`, it is the FULLNAME (see **glossary** on the [[API]] page) of the subreddit after the last one in `children` if what the API returns is paginated. However, `mine.json` does not seem to paginate things, so the API will always return `null`.
