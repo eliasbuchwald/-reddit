@@ -73,7 +73,7 @@ To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAM
 
 ## Logging In ##
 
-To to a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `username` and `passwd`
+To to a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `user` and `passwd`
 
 This will return a [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_a_cookie) line. It is best to manage this cookie with some automated tool or framework
 
