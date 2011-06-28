@@ -239,6 +239,7 @@ There are several jobs that need to be run periodically to update the site. Foll
 */3   *   *   *   *    ~/reddit/scripts/broken_things.sh
 1     *   *   *   *    ~/reddit/scripts/update_promos.sh
 0    23   *   *   *    ~/reddit/scripts/update_reddits.sh
+30   23   *   *   *    ~/reddit/scripts/update_sr_names.sh
 ```
 
 ## Troubleshooting
