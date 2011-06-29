@@ -1,4 +1,4 @@
-The reddit install script is a bash script designed for use on Ubuntu Linux. It has been tested with [Ubuntu 10.04 LTS (Lucid Lynx)](http://releases.ubuntu.com/lucid/). The script will install the majority of the reddit stack from scratch. **IT DOES NOT WORK ON NATTY NARWHAL AT THE MOMENT**.
+The reddit install script is a bash script designed for use on Ubuntu Linux. It has been tested with [Ubuntu 10.04 LTS (Lucid Lynx)](http://releases.ubuntu.com/lucid/). The script will install the majority of the reddit stack from scratch. **IT DOES NOT WORK ON 11.04 (NATTY NARWHAL) AT THE MOMENT**.
 
 ## Usage
 ```bash
