@@ -37,6 +37,14 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 
 - [[API: vote]]
 
+- [[API: comment]]
+
+- [[API: login]]
+
+- [[API: save]]
+
+- [[API: unsave]]
+
 ## Fetching Information ##
 
 To download raw data from reddit, simply find the page that contains the desired data, and append an extension to the URL:
