@@ -8,8 +8,7 @@ Use `http://www.reddit.com/api/save` to save a post.
 |:----------|:-----------------|:----------------|
 | `id`      | `t3_6nw57`       | The FULLNAME (see **glossary** on the [[API]] page) of the post you are saving. |
 | `executed`| `saved`          | Not sure if needed. Testing is pending. |
-| `r`     | `blog`              | The name of the subreddit this post was submitted to.
-Not sure if needed. Testing is pending. |
+| `r`     | `blog`              | The name of the subreddit this post was submitted to. Not sure if needed. Testing is pending. |
 | `uh`      | `f0f0f0f0`...     | The currently logged in user's modhash (see **glossary** on the [[API]] page). |
 
 ## Example Response
