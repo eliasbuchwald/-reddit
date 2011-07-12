@@ -17,6 +17,8 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 ### How-Tos and Tutorials
 - [[FAQ]]
 - **[[API]]**
+    - [[API: login]]
+    - [[API: comment]]
     - [[API: me.json]]
     - [[API: mine.json]]
     - [[API: info.json]]
