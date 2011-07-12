@@ -25,11 +25,13 @@ The top level object has a single attribute, `json`, which maps to an object wit
 
 ### Success
 
-A successful authentication attempt will have a zero-length `json.errors` array, and a `data` attribute containing the user's cookie and modhash ((see **glossary** on the [[API]] page).
+A successful authentication attempt will have a zero-length `json.errors` array, and a `data` attribute containing the user's cookie and modhash (see **glossary** on the [[API]] page).
 
 ```
 {"json": {"errors": [], "data": {"modhash": "u4abc21302316ad40013feb16cfccb0b11b786596e5194de14", "cookie": "1234567,2011-07-12T14:53:59,0200b365fa02c61f9532ab244b214bd481941492"}}}
 ```
+
+The cookie and modhash can be treated as lasting forever at the moment.
 
 ### Failure
 
