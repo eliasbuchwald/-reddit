@@ -23,6 +23,9 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
     - [[API: mine.json]]
     - [[API: info.json]]
     - [[API: vote]]
+    - [[API: save]]
+    - [[API: unsave]]
+
 - **Code Walkthroughs**
     - [[Cron Jobs]]
     - [[Services]]
