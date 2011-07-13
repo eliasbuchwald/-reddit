@@ -30,20 +30,15 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 ## API References ##
 
 - [[API: me.json]]
-
 - [[API: mine.json]]
-
 - [[API: info.json]]
-
 - [[API: vote]]
-
 - [[API: comment]]
-
 - [[API: login]]
-
 - [[API: save]]
-
 - [[API: unsave]]
+- [[API: hide]]
+- [[API: unhide]]
 
 ## Fetching Information ##
 
