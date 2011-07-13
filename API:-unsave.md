@@ -1,4 +1,4 @@
-Use `http://www.reddit.com/api/unsave` to save a post.
+Use `http://www.reddit.com/api/unsave` to unsave a post.
 
 **Note:** Even though there is no extension, the API still returns JSON.
 
