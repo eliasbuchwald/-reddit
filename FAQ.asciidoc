@@ -42,10 +42,9 @@ $ make
 </tr>
 <tr>
     <td>ImportError: No module named rails.asset_tag</td>
-    <td>setup.py installed the wrong versions of some dependencies. You must downgrade them.
+    <td>setup.py installed the wrong version of webhelpers. You must downgrade it.
 
 ```bash
-$ sudo easy_install "Paste==1.7.2-reddit-0.2"
 $ sudo easy_install "webhelpers==0.6.4"
 ```
 </td>
