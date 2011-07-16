@@ -109,7 +109,7 @@ Note: This reference ignores the serialized data and assumes you begin at `jquer
 
         If the comment was a root comment on a post, this is the FULLNAME (see **glossary** on the [[API]] page) of the link that was commented on.
 
-    - # replies *(string)*
+    - ### replies *(string)*
 
         This will always be an empty string, because a brand new comment cannot have any replies.
 
