@@ -74,3 +74,45 @@ Otherwise, the API will return JSON data with a series of serialized jquery comm
    ]
 }
 ```
+
+## API Reference: comment
+
+Note: This reference ignores the serialized data and assumes you begin at `jquery[18][3][0][0]`.
+
+- ### data *(object)*
+
+    Holds relevant data about the comment.
+
+    - ### content *(string)*
+
+        Holds the HTML markup to insert into the reddit.com website.
+
+    - ### contentHTML *(string)*
+
+        Holds the HTML markup of the comment.
+
+    - ### contentText *(string)*
+
+        Holds the original source (in markdown) of the comment.
+
+    - ### id *(string)*
+
+        The FULLNAME (see **glossary** on the [[API]] page) of the comment.
+
+    - ### link *(string)*
+
+        The FULLNAME (see **glossary** on the [[API]] page) of the link the comment belongs to.
+
+    - ### parent *(string)*
+
+        If the comment was a reply, this is the FULLNAME (see **glossary** on the [[API]] page) of the comment that was replied to.
+
+        If the comment was a root comment on a post, this is the FULLNAME (see **glossary** on the [[API]] page) of the link that was commented on.
+
+    - # replies *(string)*
+
+        This will always be an empty string, because a brand new comment cannot have any replies.
+
+- ### kind *(string)*
+
+    The type of thing (see **glossary** on the [[API]] page) this is, which translates to *Comment*.
