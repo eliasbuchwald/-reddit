@@ -4,13 +4,9 @@ We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts, b
 In general, and especially for crawlers, make fewer than one request per two seconds
 
 * Respect robots.txt
-
 * Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the same page more than once per 30 seconds
-
 * NEVER lie about your user-agent. We will ban such clients outright if we catch them.
-
 * Requests for multiple resources at a time are always better than requests for single-resources in a loop. Talk to us on the mailing list if we don't have a batch API for what you're trying to do.
-
 * If you need help testing your API client or assessing its impact on us, please ask on [the mailing list](http://groups.google.com/group/reddit-dev). If your API client could hurt reddit, and we catch it before you do, we'll have to ban it. It's nothing personal, but we have to keep the site up and 50% of the time when something goes wrong it's a badly written robot.
 
 ## Glossary ##
@@ -25,7 +21,15 @@ A key which reddit requires for API functions modifying state to protect against
 
 ### Fullname ###
 
-A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.com/r/programming/comments/6nw57/)) that reddit associates with every Thing. In the example, the type prefix `t3_` specifies that the fullname is for a Link, and the id `6nw57` specifies the Link's id36. (Note: the numbers according to id type are not constant, and may vary between reddit installations.)
+A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.com/r/programming/comments/6nw57/)) that reddit associates with every Thing. In the example, the type prefix `t3_` specifies that the fullname is for a Link, and the id `6nw57` specifies the Link's id36. The type IDs may vary among different reddit clones, but here are the possible values for reddit.com.
+
+| **id** | **name** |
+|:---|:---------|
+|  1 | comment
+|  2 | account
+|  3 | link
+|  4 | message
+|  5 | subreddit
 
 ## API References ##
 
