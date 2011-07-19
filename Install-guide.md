@@ -136,10 +136,10 @@ Before continuing, make sure that reddit is able to start up and connect to the 
 
 ```bash
 $ cd ~/reddit/r2
-$ paster serve --reload example.ini http_port=8080
+$ paster serve --reload example.ini http_port=8081
 ```
 
-You should be able to access reddit at <http://127.0.0.1:8080/>.
+You should be able to access reddit at <http://127.0.0.1:8081/>.
 
 ### Troubleshooting
 
