@@ -43,6 +43,9 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 - [[API: unsave]]
 - [[API: hide]]
 - [[API: unhide]]
+- [[API: flairlist]]
+- [[API: flair]]
+- [[API: flaircsv]]
 
 ## Fetching Information ##
 
