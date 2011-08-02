@@ -27,6 +27,10 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
     - [[API: unsave]]
     - [[API: hide]]
     - [[API: unhide]]
+    - [[API: flairlist]]
+    - [[API: flair]]
+    - [[API: flaircsv]]
+
 - **Code Walkthroughs**
     - [[Cron Jobs]]
     - [[Services]]
