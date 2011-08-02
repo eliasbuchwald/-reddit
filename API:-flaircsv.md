@@ -1,6 +1,6 @@
-Use `http://www.reddit.com/api/flaircsv` to post a CSV file of flair settings to a subreddit.
+Use `http://www.reddit.com/api/flaircsv.json` to post a CSV file of flair settings to a subreddit.
 
-**Note:** Even though there is no extension, the API still returns JSON.
+**Note:** If you post without the `.json` extension, you'll receive a 404 response with no useful data, but your changes will still take effect.
 
 ## POST Data
 
