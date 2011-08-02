@@ -4,7 +4,7 @@ This is a "paginated" API. If your subreddit has a lot of flair, you won't be ab
 
 **Note:** Even though there is no extension, the API still returns JSON.
 
-## POST Data
+## GET Data
 
 | **field** | **sample value** | **explanation** |
 |:----------|:-----------------|:----------------|
