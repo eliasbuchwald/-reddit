@@ -1,19 +1,5 @@
 There are several runscripts in the [/srv/](https://github.com/reddit/reddit/tree/master/srv) directory of the repository. This page aims to document what they do. 
 
-## Daemons
-
-### cassandra and memcached
-
-These runscripts are provided in case your platform does not provide runscripts for Cassandra and memcached. If they are provided, you can elect not to use these.
-
-### haproxy and reddit-app0{1,2}
-
-In an effort to better mimic the reddit.com production environment, these runscripts create two separate app processes which are load balanced by haproxy. haproxy will bind to port 80, while the two apps will be bound to 8001 and 8002 respectively. 
-
-### servicemonitor
-
-The service monitor system is designed to maintain information on the status and load of various servers. By default, these runscripts monitor the reddit apps and cassandra.  If a master/slave replication scheme is used for postgres, the service monitor can watch the loads on the slaves and help the apps balance their reads across the slaves.
-
 ## Queue Processors
 
 ### vote_link_q and vote_comment_q
