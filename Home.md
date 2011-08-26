@@ -10,7 +10,7 @@ Reddit is unique in the social news scene in that we have a huge community of de
 Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 
 ### Install reddit
-* For Ubuntu 10.04 (Lucid Lynx) and 10.10 (Maverick Meerkat) we have an [[automated install script|reddit install script for Ubuntu]].
+* For Ubuntu 11.04 (Natty Narwhal) we have an [[automated install script|reddit install script for Ubuntu]]. ***UPDATED***
 * Otherwise, see our [[Install Guide]].
 
 ## Make changes
