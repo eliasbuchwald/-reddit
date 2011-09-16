@@ -1,10 +1,7 @@
 
-
 [[opensourceaward-big.png|align=right|float]]
 
 
-Rishi Sachdev
-grunsab@gmail.com
 
 
 We've always strived to be as open and transparent with our users as possible, and this is the next logical step. When we say 'open-source' we mean specifically that the code behind reddit is available to the public for download, and we're inviting the public to submit code to help improve the site.
