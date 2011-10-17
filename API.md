@@ -43,6 +43,7 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 - [[API: vote]]
 - [[API: comment]]
 - [[API: login]]
+- [[API: submit]]
 - [[API: save]]
 - [[API: unsave]]
 - [[API: hide]]
