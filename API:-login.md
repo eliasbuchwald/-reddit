@@ -6,6 +6,8 @@ Use a POST to `/api/login/USERNAME` to authenticate with reddit, where `USERNAME
 | `passwd`  | `hunter2`        | The plain-text password for the account. |
 | `api_type`| `json`           | Must be `json` for the style of auth used in this documentation. |
 
+Login now supports SSL, use a POST to: `https://ssl.redddit.com/api/login/USERNAME`
+
 ## POST Example
 
 ```
