@@ -92,6 +92,8 @@ To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAM
 
 To do a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `user` and `passwd`
 
+Login now supports SSL, send an HTTP POST to `https://ssl.redddit.com/api/login`
+
 This will return a [SetCookie](http://en.wikipedia.org/wiki/HTTP_cookie#Setting_a_cookie) line. It is best to manage this cookie with some automated tool or framework
 
 Here are some examples made using the [curl](http://curl.haxx.se/) command from a unix/linux terminal
