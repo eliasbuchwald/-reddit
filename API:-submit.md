@@ -111,7 +111,7 @@ At `jquery[18][3][0]`, there is a string that represents the newly created posts
 | `title`   | `Look at this!`  | The text that the user submits as the post's title. |
 | `text`     | `Markdown **rocks**!\n\nಠ_ಠ` | The body of the text post being submitted, with support for markdown.  |
 | `sr`      | `programming`    | The subreddit the post is being submitted to. |
-| `kind`    | `text`           | This must always be `text` for text posts. For link posts, see the previous section. |
+| `kind`    | `self`           | This must always be `self` for text posts. For link posts, see the previous section. |
 | `uh`      | `f0f0f0f0`...    | The currently logged in user's modhash (see **glossary** on the [[API]] page). |
 
 ## Example Response
