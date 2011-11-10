@@ -1,7 +1,7 @@
 ## Rules ##
 We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts, but they have to obey some rules:
 
-In general, and especially for crawlers, make fewer than one request per two seconds
+In general, and especially for crawlers, **make fewer than one request per two seconds**
 
 * Respect robots.txt
 * Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the same page more than once per 30 seconds
