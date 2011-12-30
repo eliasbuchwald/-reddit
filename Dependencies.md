@@ -2,8 +2,8 @@
 
 Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
-PostgreSQL   | 8.3+    | `postgresql`                           | Robust RDBMS. Used as primary data store.
-Cassandra    | 0.7.2+  | `cassandra` in `ppa:cassandra-ubuntu`  | Distributed database. Slowly becoming primary data store. 
+PostgreSQL   | 9.0+    | `postgresql`                           | Robust RDBMS. Used as primary data store.
+Cassandra    | 0.8+  | `cassandra` in `ppa:cassandra-ubuntu`  | Distributed database. Slowly becoming primary data store. 
 memcached    | 1.4+    | `memcached`                            | Fast in-memory caching server. Used throughout reddit.
 RabbitMQ     | 2.0+    | `rabbitmq-server`                      | AMQP server. Used for offline processing.
 HAProxy      |         | `haproxy`                              | Load balancer for distributing requests to app servers.
