@@ -12,7 +12,7 @@ HAProxy      |         | `haproxy`                              | Load balancer 
 
 Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
-Python       | 2.6.x   | `python-dev`                           | Headers for building python modules.
+Python       | 2.7.x   | `python-dev`                           | Headers for building python modules.
 Setuptools   |         | `python-setuptools`                    | Provides `easy_install` and support for `setup.py`.
 Profiler     |         | `python-profiler`                      | Enables reddit app to provide profile information.
 PIL          |         | `python-imaging`                       | Used for image manipulation (thumbnails, CAPTCHAs, etc.)
