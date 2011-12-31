@@ -18,6 +18,7 @@ Once this is done, you'll need to install the python module dependencies.
 
 ```bash
 $ cd reddit/r2
+$ make pyx
 $ python setup.py build
 $ sudo python setup.py develop
 $ make
