@@ -11,3 +11,5 @@ Below is a list of unofficial clients for the Reddit API for various languages a
 
 ## PHP
 * [PHP Reddit API Client](https://github.com/henry-smith/Reddit-API-Client), License: __unknown__
+
+Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
