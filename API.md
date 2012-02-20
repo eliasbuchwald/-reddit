@@ -37,6 +37,8 @@ A base-36 id of the form `t[0-9]+_[a-z0-9]+` (e.g. [t3_6nw57](http://www.reddit.
 
 ## API References ##
 
+Below is an incomplete list of operations you can perform using the Reddit API. For reference examples of using such API operations, take a look at some of the [[third party clients | API: Third Party Clients]].
+
 - [[API: me.json]]
 - [[API: mine.json]]
 - [[API: info.json]]
