@@ -8,6 +8,7 @@ Below is a list of unofficial clients for the Reddit API for various languages a
 
 ## Ruby
 * [Ruby Reddit Client](https://github.com/jamescook/RubyRedditAPI), License: MIT
+* [Snooby](https://github.com/andkerosine/snooby), License: GPLv3, [HazierPhonics](http://www.reddit.com/user/HazierPhonics)
 
 ## PHP
 * [PHP Reddit API Client](https://github.com/henry-smith/Reddit-API-Client), License: __unknown__
