@@ -3,7 +3,7 @@ We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts, b
 
 In general, and especially for crawlers, **make fewer than one request per two seconds**
 
-* Respect robots.txt
+* Respect [robots.txt](http://www.reddit.com/robots.txt)
 * Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the same page more than once per 30 seconds
 * NEVER lie about your user-agent. We will ban such clients outright if we catch them.
 * Requests for multiple resources at a time are always better than requests for single-resources in a loop. Talk to us on the mailing list if we don't have a batch API for what you're trying to do.
