@@ -74,7 +74,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `over_18`                | true if the post is tagged as NSFW.  False if otherwise |
 | `String`  | `permalink`              | relative url of the permanent link for this link |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
-| `int`     | `score`                  | the net-score of the link |
+| `int`     | `score`                  | the net-score of the link.  **note:** A submission's score is simply the number of upvotes minus the number of downvotes. If five users like the submission and three users don't it will have a score of 2. Please note that the vote numbers are not "real" numbers, they have been "fuzzed" to prevent spam bots etc. So taking the above example, if five users upvoted the submission, and three users downvote it, the upvote/downvote numbers may say 23 upvotes and 21 downvotes, or 12 upvotes, and 10 downvotes. The points score is correct, but the vote totals are "fuzzed".|
 | `String`  | `selftext`               | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. |
 | `String`  | `selftext_html`          | the formatted escaped html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html.|
 | `String`  | `subreddit`              |  |
