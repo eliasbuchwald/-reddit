@@ -115,6 +115,7 @@ All `thing`s that implement `created` have these attributes:
 |:---------------|:-------------------------|:----------------|
 | `List<String>` | `children`               | A list of String `id`s that are the additional `thing`s that can be downloaded but are not because there are too many to list. |
 
+
 Example: 
 ```Json example of more
 {
