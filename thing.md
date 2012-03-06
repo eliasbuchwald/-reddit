@@ -19,8 +19,8 @@ Used to [paginate](http://en.wikipedia.org/wiki/Pagination) content that is too 
 
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `String`  | `before`                 | The fullname of the listing that follows before this page. |
-| `String`  | `after`                  | The fullname of the listing that follows after this page. |
+| `String`  | `before`                 | The fullname of the listing that follows before this page.  `null` if there is no previous page. |
+| `String`  | `after`                  | The fullname of the listing that follows after this page. `null` if there is no next page. |
 | `String`  | `modhash`                | This modhash is not the same modhash provided upon login.  You do not need to update your user's modhash everytime you get a new modhash.  You can reuse the modhash given upon login. |
 
 ### votable (implementation)
