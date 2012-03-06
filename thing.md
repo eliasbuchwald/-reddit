@@ -1,6 +1,6 @@
 The following documentation describes the data structure of object returned when using the Reddit API.  Items attached with a `?` are not definite and are subject to change.  Validation and peer review are needed for those items.  However, they should not be taken as literal question marks.
 
-### thing (superclass)
+## thing (superclass) ##
 All `thing`s except listing have these attributes:
 
 | **type**  | **name**                 | **description** |
@@ -10,9 +10,9 @@ All `thing`s except listing have these attributes:
 | `String`  | `kind`                   | All `thing`s have a `kind`.  The kind is a String identifier that denotes the object's type.  Some examples: `Listing`, `more`, `t1`, `t2` |
 | `Object`  | `data`                   | A custom data structure used to hold valuable information.  This object's format will follow the data structure respective of it's kind.  See below for specific structures.  Some `thing`s do not use data structures.  Ex: More|
 
+**Exception**: Listing `thing`s have neither `name` nor `id` because they are indefinite objects.  That is, they are generated/compiled and not user submitted and are subject to change quickly and expire.
 
-
-### Listing
+## Listing ##
 Used to [paginate](http://en.wikipedia.org/wiki/Pagination) content that is too long to display in one go.  Add the query argument `before` or `after` with the value given to get the previous or next page.  This is usually used in conjunction with a `count` argument.
 
 **Exception**:  This `thing` does not seem to subclass `thing`.  Although it does have `data` and `kind` as parameters, it does not have `id` and `name`.  A listing's `kind` will always be `Listing` and it's data will be a List of `thing`s.
@@ -22,8 +22,9 @@ Used to [paginate](http://en.wikipedia.org/wiki/Pagination) content that is too 
 | `String`  | `before`                 | The fullname of the listing that follows before this page.  `null` if there is no previous page. |
 | `String`  | `after`                  | The fullname of the listing that follows after this page. `null` if there is no next page. |
 | `String`  | `modhash`                | This modhash is not the same modhash provided upon login.  You do not need to update your user's modhash everytime you get a new modhash.  You can reuse the modhash given upon login. |
+| `List<thing>`|  `data`               | A list of `thing`s that this Listing wraps. |
 
-### votable (implementation)
+## votable (implementation) ##
 All `thing`s that implement `votable` have these attributes:
 
 | **type**  | **name**                 | **description** |
@@ -32,7 +33,7 @@ All `thing`s that implement `votable` have these attributes:
 | `int`     | `downs`                  | the number of downvote.  does this include one's own downvote? |
 | `Boolean` | `likes`                  | true if thing is liked by the user.  false if thing is disliked.  null if the user is neutral on the thing.  Certain languages such as Java may need to use a boolean wrapper that supports null assignment.|
 
-### created (implementation)
+## created (implementation) #
 All `thing`s that implement `created` have these attributes:
 
 | **type**  | **name**                 | **description** |
@@ -41,9 +42,8 @@ All `thing`s that implement `created` have these attributes:
 | `long`?   | `created_utc`            | the UTC time this item was created since the unix start time in seconds. "1331017571.0"|
 
 
-### Data Structures
-
-##### comment (implements votable | created)
+## Data Structures ##
+### comment (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `String`  | `author`                 | the account name of the poster |
@@ -56,7 +56,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           |  |
 
-##### link (implements votable | created)
+### link (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `String`  | `author`                 | the account name of the poster |
@@ -82,7 +82,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 
 
-##### subreddit
+### subreddit ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `String`  | `description`            |  |
@@ -92,7 +92,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `title`                  |  |
 | `String`  | `url`                    | The relative URL of the subreddit.  Ex: "/r/pics/" |
 
-##### message (implements created)
+### message (implements created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `String`  | `author`                 |  |
@@ -109,7 +109,25 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `was_comment`            |  |
 
 
-##### account
+### account
+### more
+| **type**       | **name**                 | **description** |
+|:---------------|:-------------------------|:----------------|
+| `List<String>` | `children`               | A list of String `id`s that are the additional `thing`s that can be downloaded but are not because there are too many to list. |
 
-
-##### more
+Example: 
+```Json example of more
+{
+	"kind": "more",
+	"data": {
+		"children": [
+			"c3y9tyh",
+			"c3y9ul7", 
+			"c3y9unp", 
+			"c3y9uoi"
+		], 
+		"name": "t1_c3y9tyh", 
+		"id": "c3y9tyh"
+	}
+}
+```
