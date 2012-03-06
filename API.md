@@ -186,6 +186,8 @@ TODO: Clean this section up and make more user friendly
 
 ## Submitting New Stories ##
 
+See also [[API:-submit]].
+
 For submitting to work, the `reddit_session` cookie needs to be present in the request.
 
 It is possible to submit without a cookie, but that requires supplying the answer to the captcha.
