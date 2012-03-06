@@ -91,6 +91,10 @@ If you're fetching comments from a thread with more comments than the API will r
 
 To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAME/abc1010.json`, where FULLNAME is the FULLNAME of the story.
 
+### Fix Listing Size ###
+
+You can specify how many `thing`s you want listed by adding the url query `limit`.  For example, a GET to `http://www.reddit.com/.json?limit=5` will return a listing of 5 `link`s instead of the default 25 or whatever the user has set as the default.  Note that many listings have a built in max for the limit parameter.  For example, you can only fetch 100 links and 500 comments (1500 for RedditGold members).
+
 ## Logging In ##
 
 To do a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `user` and `passwd`
