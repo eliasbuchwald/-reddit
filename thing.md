@@ -43,6 +43,7 @@ All `thing`s that implement `created` have these attributes:
 
 
 ## Data Structures ##
+***
 ### comment (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
@@ -56,6 +57,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           |  |
 
+***
 ### link (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
@@ -81,7 +83,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `title`                  |  |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 
-
+***
 ### subreddit ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
@@ -92,6 +94,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `title`                  |  |
 | `String`  | `url`                    | The relative URL of the subreddit.  Ex: "/r/pics/" |
 
+***
 ### message (implements created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
@@ -108,8 +111,42 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `subreddit`              | null if not a comment. |
 | `boolean` | `was_comment`            |  |
 
+***
+### account ###
+| **type**       | **name**                 | **description** |
+|:---------------|:-------------------------|:----------------|
+| `int`          | `comment_karma`          |  |
+| `long`         | `created`                |  |
+| `long`         | `created_utc`            |  |
+| `boolean`      | `has_mail`               | does the user have unread mail? |
+| `boolean`      | `has_mod_mail`           |  |
+| `String`       | `id`                     |  |
+| `boolean`      | `is_gold`                |  |
+| `boolean`      | `is_mod`                 |  |
+| `int`          | `link_karma`             |  |
+| `String`       | `modhash`                |  |
+| `String`       | `name`                   | the username |
 
-### account
+Example:
+```Raw account data
+{	"kind": "t2", 
+	"data": {
+		"has_mail": false, 
+		"name": "fooBar", 
+		"created": 123456789.0, 
+		"modhash": "f0f0f0f0f0f0f0f0...", 
+		"created_utc": 1315269998.0, 
+		"link_karma": 31, 
+		"comment_karma": 557, 
+		"is_gold": false, 
+		"is_mod": false, 
+		"id": "5sryd", 
+		"has_mod_mail": false
+	}
+}
+```
+
+***
 ### more
 | **type**       | **name**                 | **description** |
 |:---------------|:-------------------------|:----------------|
