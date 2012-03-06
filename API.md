@@ -95,6 +95,8 @@ To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAM
 
 You can specify how many `thing`s you want listed by adding the url query `limit`.  For example, a GET to `http://www.reddit.com/.json?limit=5` will return a listing of 5 `link`s instead of the default 25 or whatever the user has set as the default.  Note that many listings have a built in max for the limit parameter.  For example, you can only fetch 100 links and 500 comments (1500 for RedditGold members).
 
+This also works with any extension as well as for regular browsing.  Eg. `http://www.reddit.com/?limit=5`.
+
 ## Logging In ##
 
 To do a simple login, send an HTTP POST to `http://www.reddit.com/api/login` Must include two POST parameters - `user` and `passwd`
