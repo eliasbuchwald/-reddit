@@ -1,4 +1,4 @@
-Use `http://www.reddit.com/reddits/mine.json` to grab information about the subreddits the currently logged in user subscribes to.
+Use `http://www.reddit.com/reddits/mine.json` to grab information about the subreddits the currently logged in user subscribes to.  On a related note, simply using a GET on `http://www.reddit.com/reddits/.json` will give you a Listing of subreddits on the default front page.
 
 **Note:** For the same data in XML, please see [[API: mine.xml]].
 
