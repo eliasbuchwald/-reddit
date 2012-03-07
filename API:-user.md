@@ -1,3 +1,5 @@
+# API: user
+
 # Documentation
 API: `http://www.reddit.com/user/USERNAME/` where `USERNAME` is the username of the account in question.
 
