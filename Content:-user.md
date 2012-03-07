@@ -1,4 +1,4 @@
-# API: user
+# Content: user
 
 # Documentation
 API: `http://www.reddit.com/user/USERNAME/` where `USERNAME` is the username of the account in question.  Format extensions such as `.json` or `.xml` can be appended to specify a template for the data. 
