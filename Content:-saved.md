@@ -1,4 +1,4 @@
-# API: saved
+# Content: saved
 # Documentation
 `http://www.reddit.com/saved/` will return links saved by the user in order of most recently saved first.
 
