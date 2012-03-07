@@ -125,7 +125,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean`      | `is_mod`                 |  |
 | `int`          | `link_karma`             |  |
 | `String`       | `modhash`                |  |
-| `String`       | `name`                   | the username |
+| `String`       | `name`                   | The username of the account in question.  This attribute overrides the superclass's `name` attribute.  Do not confuse an account's `name` which is the account's username with a thing's `name` which is the thing's FULLNAME.  See [API: Glossary](API) for details on what FULLNAMEs are. |
 
 Example:
 ```Raw account data
