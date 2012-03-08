@@ -1,4 +1,4 @@
-Use a GET to `/domain/DOMAIN` where `DOMAIN` is the domain to filter for.  You can append `/.json` or `/.xml` to the path in order to retrieve a JSON or XML object instead.
+Use a GET to `/domain/DOMAIN/` where `DOMAIN` is the domain to filter for.  You can append `.json` or `.xml` to the path in order to retrieve a JSON or XML object instead.
 
 ## Response
 
