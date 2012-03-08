@@ -7,7 +7,7 @@ Use `http://www.reddit.com/api/me.json` to grab information about the currently 
 If the `reddit_session` cookie is not present in the request, the API will return the following:
 
 ```javascript
-{}
+{"json": {"errors": []}}
 ```
 
 Otherwise, the API will return something like the following about the currently logged in user:
