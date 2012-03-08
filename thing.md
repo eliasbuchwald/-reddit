@@ -8,7 +8,7 @@ All `thing`s except listing have these attributes:
 | `String`  | `id`                     | this item's identification ex: "8xwlg" |
 | `String`  | `name`                   | Fullname of comment.  Ex: "t1_c3v7f8u" |
 | `String`  | `kind`                   | All `thing`s have a `kind`.  The kind is a String identifier that denotes the object's type.  Some examples: `Listing`, `more`, `t1`, `t2` |
-| `Object`  | `data`                   | A custom data structure used to hold valuable information.  This object's format will follow the data structure respective of it's kind.  See below for specific structures.  Some `thing`s do not use data structures.  Ex: More|
+| `Object`  | `data`                   | A custom data structure used to hold valuable information.  This object's format will follow the data structure respective of it's kind.  See below for specific structures. |
 
 **Exception**: Listing `thing`s have neither `name` nor `id` because they are indefinite objects.  That is, they are generated/compiled and not user submitted and are subject to change quickly and expire.
 
