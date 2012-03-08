@@ -1,6 +1,29 @@
-Use `http://www.reddit.com/reddits/mine.json` to grab information about the subreddits the currently logged in user subscribes to.  On a related note, simply using a GET on `http://www.reddit.com/reddits/.json` will give you a Listing of subreddits on the default front page.
+# Content: reddits
 
-**Note:** For the same data in XML, please see [[API: mine.xml]].
+# Documentation
+`http://www.reddit.com/reddits/`
+
+| **path**				| **description** |
+|:-------------------------|:----------------|
+| `/`					| Returns the subreddits that make up the default front page of reddit. Same as `/popular/`. |
+| `/popular/`			| Returns the subreddits that make up the default front page of reddit. Same as `/`. |
+| `/new/`				| Returns the newly created subreddits |
+| `/mine/`				| Returns the subreddits the currently logged in user subscribes to.  Requires cookie be set in request header. |
+| `/mine/subscriber/`		| Returns the subreddits the currently logged in user subscribes to.  Requires cookie be set in request header. |
+| `/mine/contributor/`	| Returns the subreddits the currently logged in user is an approved submitter on.  Requires cookie be set in request header. |
+| `/mine/moderator/`		| Returns the subreddits the currently logged in user is a moderator of.  Requires cookie be set in request header. |
+
+Returned information can be formatted into templates.  Append a format extension such as `.json` or `.xml` to the path in order to retrieve a JSON or XML object instead.
+
+
+# How To Use
+
+Submit a GET to `http://www.reddit.com/reddits/`.
+
+Submit a GET to `http://www.reddit.com/reddits/mine/` with `reddit_session` set in the `cookie` request properties.
+
+You can format the infomation by appending a format extension such as `.json` or `.xml` to the path in order to retrieve a JSON or XML object instead.
+
 
 ## Example Response
 
