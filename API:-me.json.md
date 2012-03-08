@@ -84,3 +84,6 @@ Otherwise, the API will return something like the following about the currently 
     - ###has_mod_mail *(boolean)*
 
         Says whether the user has unread [moderator mail](http://www.reddit.com/help/moderation#Whatismoderatormail).
+
+# See Also
+* [[Content: user]]
