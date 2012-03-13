@@ -89,7 +89,7 @@ If you're fetching comments from a thread with more comments than the API will r
 {'data': {'id': 'abc1010', 'name': 't1_abc1010'}, 'kind': 'more'}
 ```
 
-To get these comments, you can fetch the url `http://reddit.com/comments/FULLNAME/abc1010.json`, where FULLNAME is the FULLNAME of the story.
+To get these comments, you can fetch the url `http://reddit.com/comments/ID/.../abc1010.json`, where ID is the base-36 ID of the story and `...` can be any non-breaking string (a-z, A-Z, _).  Example: `http://www.reddit.com/comments/quxda/_/c40oyqc` loads the comment who's id is `c40oyqc` from the story who's ID is`quxda`.  The filler string we used in place of `...` is an underscore character, but i can be any alpha-numeric that includes underscores.
 
 ### Fix Listing Size ###
 
