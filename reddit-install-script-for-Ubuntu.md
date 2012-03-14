@@ -10,7 +10,7 @@ $ chmod +x install-reddit.sh
 $ sudo ./install-reddit.sh
 ```
 
-Reddit is now available and listening on http://0.0.0.0:8000/, although many of the links will be broken unless you change the domain key in ~/reddit/r2/run.ini to accurately reflect your environment.
+Reddit is now available and listening on http://0.0.0.0:8000/, although many of the links will be broken unless you change the domain key in `~/reddit/r2/run.ini` to accurately reflect your environment.
 
 ## Test data
 
