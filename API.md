@@ -4,7 +4,7 @@ We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts, b
 
 * **Make no more than one request every two seconds.** There's some allowance for bursts of requests, but keep it sane. In general, keep it to no more than 30 requests in a minute.
 * Change your client's User-Agent string to something unique and descriptive, preferably referencing your reddit username. 
-    * Example: "super happy flair bot by /u/spladug".
+    * Example: `User-Agent: super happy flair bot by /u/spladug`
     * Many default User-Agents (like "Python/urllib" or "Java") are drastically limited to encourage unique and descriptive user-agent strings.
     * **NEVER lie about your user-agent.** This includes spoofing popular browsers and spoofing other bots. We will ban liars with extreme prejudice.
 * Most pages are cached for 30 seconds, so you won't get fresh data if you request the same page that often. So don't hit the same page more than once per 30 seconds
