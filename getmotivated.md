@@ -49,15 +49,15 @@
 ##Do your goal
 
 
-1. Get active!
+* Get active!
 
 You will never achieve your goal unless you start acting action.
 
-2. Do it everyday
+* Do it everyday
 
 The only way to make consistent progress towards your goals is to take action every day.
 
-3. Chart your success
+* Chart your success
 
 Keep a log of the time you're spending working towards your goals and allow yourself to feel pride as you climb that mountain towards your goals.
 
