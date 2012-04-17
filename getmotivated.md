@@ -13,7 +13,7 @@ Draft sections from m_bird:
 3. Tips and tricks
 
 
-== Emotions ==
+##Emotions
 
 
 1. How to change your attitude
@@ -25,7 +25,7 @@ Draft sections from m_bird:
 4. Depressed?
 
 
-== Life style ==
+##Life style
 
 
 1. How much sleep you need and how it affects your lack of motivation
@@ -33,7 +33,7 @@ Draft sections from m_bird:
 2. How eating affects your lack of motivation/
 
 
-== Procrastination ==
+##Procrastination
 
 
 1. How to get out of that slump
@@ -41,7 +41,7 @@ Draft sections from m_bird:
 2. Organize your life
 
 
-== Goals ==
+##Goals
 
 
 1. Establishing goals
@@ -49,7 +49,7 @@ Draft sections from m_bird:
 2. Write your goals
 
 
-== Do your goal ==
+##Do your goal
 
 
 1. Get active!
@@ -59,7 +59,7 @@ Draft sections from m_bird:
 3. Chart your success
 
 
-== When You Feel Like Giving Up. ==
+##When You Feel Like Giving Up
 
 
 1. Keep Going
