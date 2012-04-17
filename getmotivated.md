@@ -1,8 +1,5 @@
 #Get Motivated
 
-Draft sections from m_bird:
-
-
 ##Getting Started
 
 
