@@ -1,10 +1,9 @@
-
-== Get Motivated ==
+#Get Motivated
 
 Draft sections from m_bird:
 
 
-== Getting Started ==
+##Getting Started
 
 
 1. What do I do first
