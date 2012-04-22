@@ -40,5 +40,5 @@ The cookie and modhash can be treated as lasting forever at the moment.
 After an invalid login attempt, the `json.errors` array will have entries, and no other attributes will be present.
 
 ```
-{"json": {"errors": [["WRONG_PASSWORD", "invalid password"]]}}
+{"json": {"errors": [["WRONG_PASSWORD", "invalid password"]]}} 
 ```
