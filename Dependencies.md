@@ -25,7 +25,6 @@ Dependency   | Version | Ubuntu Package(s)                      | Description
 Git          |         | `git-core`                             | reddit code is stored in Git.
 GCC / G++    |         | `g++`                                  | GNU C++ Compiler. Used for compiling python modules etc.
 Cython       |         | `cython`                               | Performance-intensive code is in Cython for speed.
-Subversion   |         | `subversion`                           | Needed to install some python dependencies.
 daemontools  |         | `daemontools` and `daemontools-run`    | Simple daemon management system.
 optipng      |         | `optipng`                              | Used to compress auto-generated CSS spritemap.
 psql         |         | `postgresql-client`                    | CLI client for managing PostgreSQL.
