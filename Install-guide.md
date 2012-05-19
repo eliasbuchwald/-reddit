@@ -85,7 +85,7 @@ $ psql -U reddit reddit < sql/functions.sql
 
 ## Cassandra
 
-Cassandra is currently used primarily as a permanent cache, but the goal is for it to become our primary data store. As such, it is a vital component the reddit architecture.
+Cassandra is a vital component the reddit architecture that stores many pieces of data used throughout the site.
 
 You must create the keyspace for reddit and the `permacache` column family.
 
