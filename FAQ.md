@@ -84,7 +84,9 @@ By default, the link to the form for subreddit creation is hidden for accounts n
 
 ### How do I make subreddits show up in the top bar?
 
-`update_reddits.sh` needs to be run. See [[Cron Jobs]] for more information on what this does.
+`update_reddits` needs to be run. See [[Cron Jobs]] for more information on what this does. To run it manually:
+
+    sudo start reddit-job-update_reddits 
 
 ### What if the top bar isn't showing up at all?
 
