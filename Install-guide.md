@@ -1,10 +1,15 @@
-These instructions will guide you through the process of setting up a reddit clone for the first time. We also have an [[automated install script for Ubuntu Linux|reddit install script for Ubuntu]].
+These instructions will guide you through the process of setting up a
+reddit clone for the first time. We also have an [[automated install
+script for Ubuntu Linux|reddit install script for Ubuntu]].
 
-## Prerequisites 
+## Prerequisites
 
-Before continuing with this guide, make sure you have all of [[reddit's many dependencies|Dependencies]] installed.
+Before continuing with this guide, make sure you have all of [[reddit's
+many dependencies|Dependencies]] installed.
 
-**This guide will assume that you are installing reddit as user `reddit` in the directory `/home/reddit`.** If this is not the case, modify the examples accordingly.
+**This guide will assume that you are installing reddit as user `reddit`
+in the directory `/home/reddit`.** If this is not the case, modify the
+examples accordingly.
 
 ## Get the code
 
@@ -24,17 +29,25 @@ $ sudo python setup.py develop
 $ make
 ```
 
-The `setup.py` script only needs to be run at installation time, but the Makefile will need to be rerun any time you modify a Cython file (`*.pyx`) so that the code can be compiled.     
+The `setup.py develop` command only needs to be run at installation time,
+but the Makefile will need to be rerun any time you modify a Cython file
+(`*.pyx`) so that the code can be compiled.
 
 ## PostgreSQL
 
-PostgreSQL is reddit's primary data store. It is used for storing data on Accounts, Subreddits, Links, Comments, Votes, etc. In production, we use many separate database clusters, but for sites with less traffic (or test instances) a single postgres database should suffice.
+PostgreSQL is reddit's primary data store. It is used for storing data
+on Accounts, Subreddits, Links, Comments, Votes, etc. In production,
+we use many separate database clusters, but for sites with less traffic
+(or test instances) a single postgres database should suffice.
 
 ### Initialize postgres
 
-*This section may be unnecessary on your system. Check if your installation of postgres created a default database and start scripts for you.*
+*This section may be unnecessary on your system. Check if your
+installation of postgres created a default database and start scripts
+for you.*
 
-If one doesn't already exist, create an account for postgres to run under. This guide will assume the name `postgres`.
+If one doesn't already exist, create an account for postgres to run
+under. This guide will assume the name `postgres`.
 
 ```bash
 $ adduser postgres
@@ -85,7 +98,8 @@ $ psql -U reddit reddit < sql/functions.sql
 
 ## Cassandra
 
-Cassandra is a vital component the reddit architecture that stores many pieces of data used throughout the site.
+Cassandra is a vital component the reddit architecture that stores many
+pieces of data used throughout the site.
 
 You must create the keyspace for reddit and the `permacache` column family.
 
@@ -100,7 +114,11 @@ The reddit application will create the rest of the required column families auto
 
 ## RabbitMQ 
 
-RabbitMQ is used for asynchronous job processing. Jobs are pushed onto a set of queues by user actions (such as creating a post or comment) for tasks that need not be done during the POST. As such, in addition to getting rabbit running, there are a set of services responsible for removing jobs from these queues covered under the services section. 
+RabbitMQ is used for asynchronous job processing. Jobs are pushed onto
+a set of queues by user actions (such as creating a post or comment)
+for tasks that need not be done during the POST. As such, in addition
+to getting rabbit running, there are a set of services responsible for
+removing jobs from these queues covered under the services section.
 
 Configuration of rabbit is relatively simple.
 
@@ -112,9 +130,11 @@ $ sudo rabbitmqctl set_permissions -p / reddit ".*" ".*" ".*"
 
 ## memcached
 
-Almost everything in reddit depends on memcached running, and you won't be able to do much without it. 
+Almost everything in reddit depends on memcached running, and you won't
+be able to do much without it.
 
-Most package managers will set up run scripts for memcached automatically. To check if it is already running, use telnet.
+Most package managers will set up run scripts for memcached
+automatically. To check if it is already running, use telnet.
 
 ```bash
 $ telnet localhost 11211
@@ -128,7 +148,8 @@ $ memcached
 
 ## Test your installation
 
-Before continuing, make sure that reddit is able to start up and connect to the databases.
+Before continuing, make sure that reddit is able to start up and connect
+to the databases.
 
 ```bash
 $ cd ~/reddit/r2
@@ -139,7 +160,8 @@ You should be able to access reddit at <http://127.0.0.1:8081/>.
 
 ### Troubleshooting
 
-Following are some of the more commonly seen problems at this point in the installation.
+Following are some of the more commonly seen problems at this point in
+the installation.
 
 <table>
 <thead>
@@ -195,49 +217,83 @@ $ paster shell example.ini
 >>> populatedb.populate()
 ```
 
-Note: this will also create a reddit account named `reddit` with password `password`.
+Note: this will also create a reddit account named `reddit` with password
+`password`.
 
 ## Services and Cron Jobs
 
 ### Configuration
 
-The various services and cron jobs in the repository expect the existence of `run.ini` in `~/reddit/r2`. 
-
-In `~/reddit/r2`, there is a script called `updateini.py` which reads ini files and applies differences from a specified `.update` file. This means that you can make changes to the provided `example.ini` by modifying a `.update` file without worrying about merge issues down the line. 
+In `~/reddit/r2`, there is a script called `updateini.py` which reads ini
+files and applies differences from a specified `.update` file. This means
+that you can make changes to the provided `example.ini` by modifying a
+`.update` file without worrying about merge issues down the line.
 
 To take advantage of this infrastructure do the following.
 
 ```bash
 $ cd ~/reddit/r2
 $ touch run.update
-$ make 
+$ make
 ```
 
 ### Services
 
-The reddit repository includes a `srv/` directory where [daemontools](http://cr.yp.to/daemontools.html) runscripts are kept. To set these up, you must point daemontools at the runscripts.
+reddit's various services are managed with Upstart. You need a little bit of
+configuration to get started, change the settings according to your configuration:
 
 ```bash
-# the /service/ path may vary. on debian/ubuntu use /etc/service instead. 
-$ sudo ln -s ~/reddit/srv/* /service/
+# cat > /etc/default/reddit <<REDDIT
+export REDDIT_ROOT=$REDDIT_HOME/reddit
+export REDDIT_INI=$REDDIT_HOME/reddit/r2/run.ini
+export REDDIT_USER=$REDDIT_USER
+export REDDIT_CONSUMER_CONFIG=$REDDIT_HOME/consumer-counts
+alias wrap-job=$REDDIT_HOME/reddit/scripts/wrap-job
+alias manage-consumers=$REDDIT_HOME/reddit/scripts/manage-consumers
+REDDIT
 ```
 
-This will run two instances of the reddit app as well as an haproxy instance to balance between them. Runscripts are included for memcached and cassandra as well. If you are already running these services through another method, you can delete the symlinks to avoid issues. There are also several runscripts for queue processors and the like. See [[Services]] for more detalis on what these do.
+In the `consumer-counts` file mentioned above, put the number of queue processors
+you'd like for each type:
+
+```
+scraper_q       1
+commentstree_q  1
+newcomments_q   1
+vote_comment_q  1
+vote_link_q     1
+```
+
+Then, copy the job configuration files from the upstart/ directory to
+`/etc/init`.
+
+```bash
+$ sudo cp ~/reddit/ubuntu/* /etc/init/
+```
+
+You can then start up all the processors with:
+
+```bash
+$ sudo initctl emit reddit-start
+```
 
 ### Crons
 
-There are several jobs that need to be run periodically to update the site. Following is a recommended crontab. See [[Cron Jobs]] for information on what each of these does.
+There are several jobs that need to be run periodically to update the
+site. These jobs are also managed with upstart. Following is a recommended
+cron setup. See [[Cron Jobs]] for information on what each of these does.
 
 ```cron
-# m   h dom mon dow    command
-*/5   *   *   *   *    ~/reddit/scripts/rising.sh
-*/4   *   *   *   *    ~/reddit/scripts/send_mail.sh
-*/3   *   *   *   *    ~/reddit/scripts/broken_things.sh
-1     *   *   *   *    ~/reddit/scripts/update_promos.sh
-0    23   *   *   *    ~/reddit/scripts/update_reddits.sh
-30   23   *   *   *    ~/reddit/scripts/update_sr_names.sh
+0    3 * * * root /sbin/start --quiet reddit-job-update_sr_names
+30  16 * * * root /sbin/start --quiet reddit-job-update_reddits
+0    * * * * root /sbin/start --quiet reddit-job-update_promos
+*/5  * * * * root /sbin/start --quiet reddit-job-clean_up_hardcache
+*    * * * * root /sbin/start --quiet reddit-job-email
+*/2  * * * * root /sbin/start --quiet reddit-job-broken_things
+*/2  * * * * root /sbin/start --quiet reddit-job-rising
 ```
 
 ## Troubleshooting
 
-Check the [[FAQ]] for help with any issues you may be encountering at this point.
+Check the [[FAQ]] for help with any issues you may be encountering at
+this point.
