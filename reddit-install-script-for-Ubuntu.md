@@ -1,11 +1,11 @@
 The reddit install script is a bash script designed for use on Ubuntu Linux. It is designed for 11.04 (Natty Narwhal). The script will install the majority of the reddit stack from scratch. ***Don't run this on a production system or anything with valuable data.***
 
 ## Usage
-1. Get the [latest version of the install script](https://gist.github.com/922144).
+1. Get the [latest version of the install script](https://github.com/reddit/reddit/blob/master/install-reddit.sh).
 2. Run the script as root.
 
 ```bash
-$ wget https://raw.github.com/gist/922144/install-reddit.sh
+$ wget https://raw.github.com/reddit/reddit/master/install-reddit.sh
 $ chmod +x install-reddit.sh
 $ sudo ./install-reddit.sh
 ```
