@@ -268,7 +268,7 @@ Then, copy the job configuration files from the upstart/ directory to
 `/etc/init`.
 
 ```bash
-$ sudo cp ~/reddit/ubuntu/* /etc/init/
+$ sudo cp ~/reddit/upstart/* /etc/init/
 ```
 
 You can then start up all the processors with:
