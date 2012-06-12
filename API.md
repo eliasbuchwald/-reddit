@@ -11,6 +11,9 @@ We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts, b
 * Requests for multiple resources at a time are always better than requests for single-resources in a loop. Talk to us on the mailing list or in #reddit-dev if we don't have a batch API for what you're trying to do.
 * If you need help testing your API client or assessing its impact on us, please ask on [the mailing list](http://groups.google.com/group/reddit-dev). If your API client could hurt reddit, and we catch it before you do, we'll have to ban it. It's nothing personal, but we have to keep the site up and 50% of the time when something goes wrong it's a badly written robot.
 
+## See Also ##
+* [reddit API Documentation](http://www.reddit.com/dev/api)
+
 ## API Console ##
 
 You can try out the API with Apigee's API console: https://apigee.com/console/reddit
