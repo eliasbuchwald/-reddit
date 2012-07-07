@@ -7,7 +7,7 @@ Below is a list of unofficial clients for the Reddit API for various languages a
 * [Perl Reddit API Wrapper](https://github.com/three18ti/Reddit.pm), License: Perl, GPLv3 [three18ti](http://www.reddit.com/user/three18ti)
 
 ## Ruby
-* [Snoo](https://github.com/paradox460snoo), License: MIT, [Paradox](http://www.reddit.com/user/Paradox)
+* [Snoo](https://github.com/paradox460/snoo), License: MIT, [Paradox](http://www.reddit.com/user/Paradox)
 * [Ruby Reddit Client](https://github.com/jamescook/RubyRedditAPI), License: MIT
 * [Snooby](https://github.com/andkerosine/snooby), License: GPLv3, [HazierPhonics](http://www.reddit.com/user/HazierPhonics)
 
