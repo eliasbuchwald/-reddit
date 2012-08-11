@@ -1,7 +1,7 @@
 Below is a list of unofficial clients for the Reddit API for various languages along with their license and maintainer. This list should provide a good reference for usage of the Reddit API.
 
 ## Python
-* [Python Reddit API Wrapper](https://github.com/mellort/reddit_api), License: GPLv3, [bboe](http://www.reddit.com/user/bboe)
+* [PRAW](https://github.com/praw-dev/praw), License: GPLv3, [bboe](http://www.reddit.com/user/bboe)
 * [ReddiWrap](https://github.com/derv82/reddiwrap/), another reddit API wrapper. author: [freshbreath](http://www.reddit.com/user/freshbreath)
 
 ## Perl
