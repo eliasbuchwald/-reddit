@@ -14,6 +14,7 @@ Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
 Python       | 2.7.x   | `python-dev`                           | Headers for building python modules.
 Setuptools   |         | `python-setuptools`                    | Provides `easy_install` and support for `setup.py`.
+Pylons       |         | `python-pylons`                        | Python Web application framework
 libmemcached | 0.32+   | `libmemcached5` and `libmemcached-dev` | For communication with memcached.
 libpqxx      |         | `libpqxx-dev`                          | C++ library for PostgreSQL.
 gettext      |         | `gettext`                              | Used for i18n support.
