@@ -18,6 +18,7 @@ Pylons       |         | `python-pylons`                        | Python Web app
 libmemcached | 0.32+   | `libmemcached5` and `libmemcached-dev` | For communication with memcached.
 libpqxx      |         | `libpqxx-dev`                          | C++ library for PostgreSQL.
 gettext      |         | `gettext`                              | Used for i18n support.
+PyCAPTCHA    |         | http://pypi.python.org/pypi/PyCAPTCHA  |
 
 ## Misc. Utilities
 
