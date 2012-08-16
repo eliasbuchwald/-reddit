@@ -1,6 +1,6 @@
 These instructions will guide you through the process of setting up a
 reddit clone for the first time. We also have an [[automated install
-script for Ubuntu Linux|reddit install script for Ubuntu]].
+script for Ubuntu Linux 11.04|reddit install script for Ubuntu]].
 
 ## Prerequisites
 
