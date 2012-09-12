@@ -1,4 +1,3 @@
-
 ## Ordering of `import` statements
 
 In general [PEP-8 import ordering](http://www.python.org/dev/peps/pep-0008/#imports) should be used.  However there are a few additions.
@@ -36,7 +35,7 @@ It should look as follows:
 * This should only be used if there are 10 or fewer symbols to import.  Otherwise consider using an `import <module> as <alias>` and prefixing all symbols from that module with the appropriate alias.
 
 ## Symbol exporting, `__all__` and @export
-* Each file should have an `__all__` declaration
+* Each file should have an `__all__` declaration for constants and variables that are needed outside of the current module. 
 
 It should look like:
 
