@@ -22,7 +22,6 @@ This is information that you'll need in addition to your consumer key and secret
 Here is example code on using OAuth in various languages:
 
 * [Python](OAuth2-Python-Example)
-
 * [PHP](OAuth2-PHP-Example)
 
 ## Other resources
