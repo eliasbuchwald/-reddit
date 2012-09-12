@@ -5,8 +5,8 @@ In general [PEP-8 import ordering](http://www.python.org/dev/peps/pep-0008/#impo
 * Imports should be grouped in the following order:
    1. standard library imports
    2. related third party imports
-   3. Reddit packages not part of the local package scope
-   4. Reddit packages part of the the local package scope or sub scopes of the current package.
+   3. reddit packages not part of the local package scope
+   4. reddit packages part of the the local package scope or sub scopes of the current package.
 * No relative imports:  All imports should have fully qualified package names.
 * for each imported group the order of imports should be:
    1. `import <package>.<module>` style lines in alphabetical order
