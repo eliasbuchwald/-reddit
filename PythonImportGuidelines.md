@@ -33,7 +33,7 @@ It should look as follows:
 
 
 
-* This should only be used if there are 10 or fewer symbols to import.  Otherwise consider using an `import <module> as <alias>` and prefixing all symbols from that module with the appropriate alias.
+* This should only be used if there are 10 or fewer symbols to import.  Otherwise consider using an `import <module> as <alias>` and prefixing all symbols from that module with the appropriate alias.  If this is done due to there being too many Classes, but only a few functions are needed, then Classes can be prefixed with <alias> and functions can still be imported via `from` syntax.
 
 ## Symbol exporting, `__all__` and @export
 * Each file should have an `__all__` declaration for constants and variables that are needed outside of the current module. 
