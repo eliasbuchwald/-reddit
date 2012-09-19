@@ -1,21 +1,21 @@
-The following documentation describes the data structure of object returned when using the Reddit API.  Items attached with a `?` are not definite and are subject to change.  Validation and peer review are needed for those items.  However, they should not be taken as literal question marks.
+This document describes the data structure of an object returned when using the Reddit API.  Items attached with a `?` are not definite and are subject to change.  Validation and peer review are needed for those items.  They should not be taken as literal question marks.
 
-## thing (superclass) ##
-All `thing`s except listing have these attributes:
+## `thing` (reddit base class) ##
+All `thing`s have these attributes:
 
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `String`  | `id`                     | this item's identification ex: "8xwlg" |
-| `String`  | `name`                   | Fullname of comment.  Ex: "t1_c3v7f8u" |
+| `String`  | `id`                     | this item's identifier, e.g. "8xwlg" |
+| `String`  | `name`                   | Fullname of comment, e.g. "t1_c3v7f8u" |
 | `String`  | `kind`                   | All `thing`s have a `kind`.  The kind is a String identifier that denotes the object's type.  Some examples: `Listing`, `more`, `t1`, `t2` |
-| `Object`  | `data`                   | A custom data structure used to hold valuable information.  This object's format will follow the data structure respective of it's kind.  See below for specific structures. |
+| `Object`  | `data`                   | A custom data structure used to hold valuable information.  This object's format will follow the data structure respective of its kind.  See below for specific structures. |
 
-**Exception**: Listing `thing`s have neither `name` nor `id` because they are indefinite objects.  That is, they are generated/compiled and not user submitted and are subject to change quickly and expire.
+**Exception**: Listing `thing`s have neither `name` nor `id` because they are indefinite objects.  That is, they are system generated, not user submitted, and are subject to change quickly and expire.
 
-## Listing ##
+## `listing` ##
 Used to [paginate](http://en.wikipedia.org/wiki/Pagination) content that is too long to display in one go.  Add the query argument `before` or `after` with the value given to get the previous or next page.  This is usually used in conjunction with a `count` argument.
 
-**Exception**:  This `thing` does not seem to subclass `thing`.  Although it does have `data` and `kind` as parameters, it does not have `id` and `name`.  A listing's `kind` will always be `Listing` and it's data will be a List of `thing`s.
+**Exception**:  Unlike the other classes documented on this page, `Listing` is [not a `thing` subclass](https://github.com/reddit/reddit/blob/master/r2/r2/models/listing.py#L36), as it inherits directly from the Python base class, Object.  Although it does have `data` and `kind` as parameters, it does not have `id` and `name`.  A listing's `kind` will always be `Listing` and its data will be a List of `thing`s.
 
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
