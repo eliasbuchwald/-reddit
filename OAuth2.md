@@ -14,8 +14,15 @@ The part underlined in red is your consumer key (also called the client id), and
 
 This is information that you'll need in addition to your consumer key and secret to set up an OAuth app:
 
-* Access token url: `https://oauth.reddit.com/api/v1/access_token` (Also known as the token endpoint)
-* Authorize url: `https://oauth.reddit.com/api/v1/authorize` (Also known as the authorization endpoint)
+* Authorization url: `https://ssl.reddit.com/api/v1/authorize` (Also known as the authorization endpoint)
+* Access token url: `https://ssl.reddit.com/api/v1/access_token` (Also known as the token endpoint)
+
+The authorization url is where you send a user's browser, so they can grant limited access to their account to your application. If the user grants access, they are redirected to your redirect uri with a code. Your app then makes a call to the access token url, using the code it received, to obtain the access token.
+
+Once your app receives an access token, it can use it on the https://oauth.reddit.com domain to make API calls as that user (until the token expires or is revoked by the user). Note the different domains involved:
+
+* https://ssl.reddit.com - for authorization and access_token fetching
+* https://oauth.reddit.com - for API calls with an access token
 
 # Examples
 
