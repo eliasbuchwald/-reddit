@@ -10,8 +10,8 @@ It will authenticate the user and print out the results of their me.json:
         die;
     }
 
-    $authorizeUrl = 'https://oauth.reddit.com/api/v1/authorize';
-    $accessTokenUrl = 'https://oauth.reddit.com/api/v1/access_token';
+    $authorizeUrl = 'https://ssl.reddit.com/api/v1/authorize';
+    $accessTokenUrl = 'https://ssl.reddit.com/api/v1/access_token';
     $clientId = 'CLIENT_ID';
     $clientSecret = 'CLIENT_SECRET';
 
