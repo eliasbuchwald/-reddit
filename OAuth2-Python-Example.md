@@ -4,8 +4,8 @@ Here is an incomplete sample of Python code using the [rauth](https://github.com
         name="reddit",
         consumer_key=CLIENT_ID,
         consumer_secret=CLIENT_SECRET,
-        access_token_url="https://oauth.reddit.com/api/v1/access_token",
-        authorize_url="https://oauth.reddit.com/api/v1/authorize")
+        access_token_url="https://ssl.reddit.com/api/v1/access_token",
+        authorize_url="https://ssl.reddit.com/api/v1/authorize")
 
     # first, make the user follow this link:
     authorize_url = auth.get_authorize_url(
