@@ -41,6 +41,11 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 ### Submitting Patches
 When you've finished working on your patch, send us a pull request and we'll look at merging up your changes. For simpler changes (template tweaks, CSS fixes, etc.) you're welcome to send unsolicited pull requests. For larger, more core, changes make sure to check with us first so you don't waste any time if we don't feel it's the right direction to go down.
 
+- **Please follow the guidelines below in your submissions**
+    - [[Python Import Guidelines|PythonImportGuidelines]]
+    - [PEP-8 (Style Guide for Python)](http://www.python.org/dev/peps/pep-0008/) 
+    - [PEP-257 (Docstring Conventions)](http://www.python.org/dev/peps/pep-0257/)
+
 ## Community
 ### Connect with other reddit developers
 * Subscribe to [/r/redditdev](http://www.reddit.com/r/redditdev).
