@@ -19,6 +19,7 @@ Clone or fork [our repository here on github](http://github.com/reddit/reddit).
 ## Make changes
 ### How-Tos and Tutorials
 - [[FAQ]]
+- [[The Beauty Salon -- our code review process|The Beauty Salon]]
 - **[[API]]**
     - [[API: login]]
     - [[API: comment]]
