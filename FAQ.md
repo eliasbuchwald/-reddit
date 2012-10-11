@@ -13,14 +13,10 @@ Our anti-cheating/spam code is not public. In the source itself, anything under 
 ### How can I figure out which part of the system is broken?
 
 ```bash
-$ sudo svstat /service/*
+$ sudo tail -f /var/log/syslog
 ```
 
-Look for services that have an uptime much smaller than the rest of the services. Once you've found one, check its logs for errors
-
-```bash
-$ tail -F /service/broken-service/log/main/current
-```
+This is where all of the services' logs are sent and should give you a stack trace if something's breaking.
 
 ### I'm seeing an error. What should I do?
 
@@ -68,7 +64,7 @@ postgres$ createuser -P reddit
 
 ### Do I need to use S3 to run reddit?
 
-At the moment, S3 is required for thumbnails. We are willing to accept patches that would allow you to choose where to store them.
+At the moment, S3 is required for thumbnails and subreddit images. We are willing to accept patches that would allow you to choose where to store them.
 
 ### What is the administrator account?
 
@@ -98,4 +94,4 @@ The dropdown is only rendered if the current user is subscribed to more than `sr
 
 ### Why doesn't search work? 
 
-reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. They currently use [Amazon CloudSearch](http://aws.amazon.com/cloudsearch/). Kemitche has provided [instructions](http://www.reddit.com/r/redditdev/comments/wqx7o/does_reddit_using_amazon_cloud_search/c5fut4i) on how to set up a clone to use your own instance.
+reddit used to use [Solr](http://lucene.apache.org/solr/) for its search needs, but [switched](http://blog.reddit.com/2010/07/new-search.html) to using [IndexTank](http://indextank.com/) in July 2010. They currently use [Amazon CloudSearch](http://aws.amazon.com/cloudsearch/). /u/kemitche has provided [instructions](http://www.reddit.com/r/redditdev/comments/wqx7o/does_reddit_using_amazon_cloud_search/c5fut4i) on how to set up a clone to use your own instance.
