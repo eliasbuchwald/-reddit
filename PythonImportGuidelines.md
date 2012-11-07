@@ -15,21 +15,19 @@ In general [PEP-8 import ordering](http://www.python.org/dev/peps/pep-0008/#impo
 ## Importing multiple symbols `from <module> import <multiple>`
 * Only one `from` line per module is permitted
 * If there are too many symbols for a single line of < 80 characters then the import should be indented as shown below.
-* Indented imports should be broken into 3 groups of symbol types Classes, functions, Constants/Variables.  Each grouping should have a comment header and the items in the group be in alphabetical order.  See below.
+* The symbols should be sorted alphabetically.
 
 It should look as follows:
 
-    from foo import (#Classes
-                     Bar,
-                     Baz,
-                     Foo,
-                     #Functions
-                     lookup_all,
-                     lookup_foo,
-                     #Constants/Variables
-                     ALL_USERS,
-                     OTHER_THING,
-                     )
+    from foo import (
+        ALL_USERS,
+        Bar,
+        Baz,
+        Foo,
+        lookup_all,
+        lookup_foo,
+        OTHER_THING,
+    )
 
 
 
