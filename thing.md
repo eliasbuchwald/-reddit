@@ -82,7 +82,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `thumbnail`              | full url to the thumbnail for this link |
 | `String`  | `title`                  |  |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
-| `long`    | `edited`                 | Indicates if link has been edited. will be the edit timestamp |
+| `long`    | `edited`                 | Indicates if link has been edited. will be the edit timestamp https://github.com/reddit/reddit/issues/581 |
 
 ***
 ### subreddit ###
