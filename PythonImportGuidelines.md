@@ -5,8 +5,7 @@ In general [PEP-8 import ordering](http://www.python.org/dev/peps/pep-0008/#impo
 * Imports should be grouped in the following order:
    1. standard library imports
    2. related third party imports
-   3. reddit packages not part of the local package scope
-   4. reddit packages part of the the local package scope or sub scopes of the current package.
+   3. reddit modules
 * No relative imports:  All imports should have fully qualified package names.
 * for each imported group the order of imports should be:
    1. `import <package>.<module>` style lines in alphabetical order
@@ -29,17 +28,4 @@ It should look as follows:
         OTHER_THING,
     )
 
-
-
-* This should only be used if there are 10 or fewer symbols to import.  Otherwise consider using an `import <module> as <alias>` and prefixing all symbols from that module with the appropriate alias.  If this is done due to there being too many Classes, but only a few functions are needed, then Classes can be prefixed with <alias> and functions can still be imported via `from` syntax.
-
-## Symbol exporting, `__all__` and @export
-* Each file should have an `__all__` declaration for constants and variables that are needed outside of the current module. 
-
-It should look like:
-
-    __all__ = [
-               #Constants Only, use @export for functions/classes
-               ]
-
-* Any functions or classes the need to be exported should use the @export decorator found in r2.lib.export
+* This should only be used if there are 10 or fewer symbols to import.  Otherwise consider using an `import <module> as <alias>` and prefixing all symbols from that module with the appropriate alias.
