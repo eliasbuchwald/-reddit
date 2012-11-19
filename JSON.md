@@ -1,4 +1,4 @@
-This document describes the data structure of an object returned when using the Reddit API.  Items attached with a `?` are not definite and are subject to change.  Validation and peer review are needed for those items.  They should not be taken as literal question marks.
+This document describes the data structure of an object returned when using the reddit JSON API.  Items attached with a `?` are not definite and are subject to change.  Validation and peer review are needed for those items.  They should not be taken as literal question marks.
 
 ## `thing` (reddit base class) ##
 All `thing`s have these attributes:
