@@ -31,7 +31,7 @@ Here is example code on using OAuth in various languages:
 * [Python](OAuth2-Python-Example)
 * [PHP](OAuth2-PHP-Example)
 
-# What can I once I have access?
+# What can I do once I have access?
 
 Right now  not quite all of the Reddit API is available to OAuth clients, furthermore OAuth tokens only last a short amount of time. This is slated to change in the future, but for the meantime this means OAuth is not the ideal solution for things like mobile Reddit apps.
 
