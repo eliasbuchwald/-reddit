@@ -1,1 +1,0 @@
-we are expertise in the share market, we provide share tips, and advice on nifty future, nifty option, intraday stock, stock tips, call, put tips, and equity stock also, our call is based on tech research and our call 89-95% accurate for trading
