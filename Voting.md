@@ -1,4 +1,1 @@
 The front page of reddit is made up of posts submitted by tons of different users. But how does a user make it to the front page exactly? This depends on the number of Upvotes and Downvotes a post has. You can Upvote a post by clicking the triangle pointing up on the side of the post. You can Downvote a post by clicking the triangle pointing down on the side of the post. You will usually see posts on the front page with thousands of upvotes, but this depends if you are subscribed to big or small subreddits. Upvoting a post will increase it's chance of reaching the front page of Reddit, or the front page for that subreddit. Downvoting a post will decrease it's chance of reaching the front page of Reddit, or the front page for that subreddit. Vote wisely!
-
-
-                          ![Voting](http://i.imgur.com/OR8l6.jpg)
