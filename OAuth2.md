@@ -24,6 +24,14 @@ Once your app receives an access token, it can use it on the https://oauth.reddi
 * https://ssl.reddit.com - for authorization and access_token fetching
 * https://oauth.reddit.com - for API calls with an access token
 
+# Authorization Parameters
+
+In addition to the standard authorization parameters (response_type, client, redirect_uri), you may specify these additional parameters that may be important to the development and usage of your application:
+
+* <u>scope</u> - In order to use oauth approved calls on [this page](http://www.reddit.com/dev/api/oauth), you must specify the scope from which the call originates from. For example, if you wish to use the '/api/v1/me' call, you must specify the **identity** scope. If you wish to use '/api/approve' and '/api/remove', specify the **modposts** scope. If you need to use more than one scope, they should be specified in a comma delimited manner.
+* <u>state</u> - You can specify pre-authorization that upon authorization a state parameter is returned. For example your token is returned with redirecturl.com/examplepage.php?code=XXXXXX, you can specify state as authorizationSuccessful and it will be present as redirecturl.com/examplepage.php?code=XXXXX&state=authorizationSuccessful.
+* <u>duration</u> - Duration is useful if you require a permanent token. By default if duration is not specified, _temporary_ will be chosen. The alternative is to specify _permanent_ and a permanent token will be issued. The user will also be aware you are requesting permanent access. Learn more about refreshing that token [here](http://www.reddit.com/r/changelog/comments/11jab9/reddit_change_permanent_oauth_grants_using/).
+
 # Examples
 
 Here is example code on using OAuth in various languages:
@@ -33,7 +41,7 @@ Here is example code on using OAuth in various languages:
 
 # What can I do once I have access?
 
-Right now  not quite all of the Reddit API is available to OAuth clients, furthermore OAuth tokens only last a short amount of time. This is slated to change in the future, but for the meantime this means OAuth is not the ideal solution for things like mobile Reddit apps.
+Right now  not quite all of the Reddit API is available to OAuth clients, <strike>furthermore OAuth tokens only last a short amount of time. This is slated to change in the future, but for the meantime this means OAuth is not the ideal solution for things like mobile Reddit apps</strike> (permanent tokens are [now available](http://www.reddit.com/r/changelog/comments/11jab9/reddit_change_permanent_oauth_grants_using/).
 
 You can look at [the Reddit API documentation page](http://www.reddit.com/dev/api) to see if a particular API has oauth support.
 
