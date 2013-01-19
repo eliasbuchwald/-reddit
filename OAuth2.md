@@ -17,7 +17,7 @@ This is information that you'll need in addition to your consumer key and secret
 * Authorization url: `https://ssl.reddit.com/api/v1/authorize` (Also known as the authorization endpoint)
 * Access token url: `https://ssl.reddit.com/api/v1/access_token` (Also known as the token endpoint)
 
-The authorization url is where you send a user's browser, so they can grant limited access to their account to your application. If the user grants access, they are redirected to your redirect uri with a code. Your app then makes a call to the access token url, using the code it received, to obtain the access token.
+The authorization url is where you send a user's browser, so they can grant limited access to their account to your application. If the user grants access, they are redirected to your redirect uri with a code. Your app then makes a call to the access token url, using the code it received, to obtain the access token. Note that the request to the access token url must use [Basic HTTP authentication](http://en.wikipedia.org/wiki/Basic_access_authentication) with the consumer key as the username and the consumer secret as the password. If you do not provide the authentication header, or the information is incorrect, then you will receive an HTTP 401 Unauthorized response.
 
 Once your app receives an access token, it can use it on the https://oauth.reddit.com domain to make API calls as that user (until the token expires or is revoked by the user). Note the different domains involved:
 
