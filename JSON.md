@@ -96,11 +96,17 @@ All `thing`s that implement `created` have these attributes:
 ### subreddit ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `String`  | `description`            |  |
-| `String`  | `display_name`           |  |
+| `int`     | `accounts_active`        | number of users active in last 15 minutes |
+| `String`  | `description`            | sidebar text |
+| `String`  | `description_html`       | sidebar text, escaped HTML format |
+| `String`  | `display_name`           | human name of the subreddit |
+| `String`  | `header_img`             | full URL to the header image, or null |
+| `array`   | `header_size`            | width and height of the header image, or null |
+| `String`  | `header_title`           | description of header image shown on hover, or null |
 | `boolean` | `over18`                 | is_nsfw? |
+| `String`  | `public_description`     | Description shown in subreddit search results? |
 | `long`    | `subscribers`            | the number of redditors subscribed to this subreddit |
-| `String`  | `title`                  |  |
+| `String`  | `title`                  | title of the main page |
 | `String`  | `url`                    | The relative URL of the subreddit.  Ex: "/r/pics/" |
 
 ***
@@ -111,7 +117,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `body`                   |  |
 | `String`  | `body_html`              |  |
 | `String`  | `context`                | does not seem to return null but an empty string instead. |
-| `Message`?| `first_message`          |  |
+| `Message`?| `first_message`          | either null or the first message's ID represented as base 10 (wtf) |
 | `String`  | `name`                   | ex: "t4_8xwlg" |
 | `boolean` | `new`                    | unread?  not sure |
 | `String`  | `parent_id`              | null if no parent is attached |
@@ -129,7 +135,7 @@ All `thing`s that implement `created` have these attributes:
 | `long`         | `created_utc`            | registration date in epoch-seconds, UTC |
 | `boolean`      | `has_mail`               | user has unread mail? null if not your account |
 | `boolean`      | `has_mod_mail`           | user has unread mod mail? null if not your account |
-| `String`       | `id`                     |  |
+| `String`       | `id`                     | ID of the account; prepend `t2_` to get fullname |
 | `boolean`      | `is_friend`              | whether the logged-in user has this user set as a friend |
 | `boolean`      | `is_gold`                | reddit gold status |
 | `boolean`      | `is_mod`                 | whether this account moderates any subreddits |
