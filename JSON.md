@@ -116,17 +116,19 @@ All `thing`s that implement `created` have these attributes:
 ### account ###
 | **type**       | **name**                 | **description** |
 |:---------------|:-------------------------|:----------------|
-| `int`          | `comment_karma`          |  |
-| `long`         | `created`                |  |
-| `long`         | `created_utc`            |  |
-| `boolean`      | `has_mail`               | does the user have unread mail? |
-| `boolean`      | `has_mod_mail`           |  |
+| `int`          | `comment_karma`          | user's comment karma |
+| `long`         | `created`                | registration date in epoch-seconds, local |
+| `long`         | `created_utc`            | registration date in epoch-seconds, UTC |
+| `boolean`      | `has_mail`               | user has unread mail? null if not your account |
+| `boolean`      | `has_mod_mail`           | user has unread mod mail? null if not your account |
 | `String`       | `id`                     |  |
-| `boolean`      | `is_gold`                |  |
-| `boolean`      | `is_mod`                 |  |
-| `int`          | `link_karma`             |  |
-| `String`       | `modhash`                |  |
+| `boolean`      | `is_friend`              | whether the logged-in user has this user set as a friend |
+| `boolean`      | `is_gold`                | reddit gold status |
+| `boolean`      | `is_mod`                 | whether this account moderates any subreddits |
+| `int`          | `link_karma`             | user's link karma |
+| `String`       | `modhash`                | current modhash. not present if not your account |
 | `String`       | `name`                   | The username of the account in question.  This attribute overrides the superclass's `name` attribute.  Do not confuse an account's `name` which is the account's username with a thing's `name` which is the thing's FULLNAME.  See [API: Glossary](API) for details on what FULLNAMEs are. |
+| `boolean`      | `over_18`                | whether this account is set to be over 18 |
 
 Example:
 ```Raw account data
