@@ -67,26 +67,28 @@ All `thing`s that implement `created` have these attributes:
 ### link (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `String`  | `author`                 | the account name of the poster |
-| `String`  | `author_flair_css_class` | the css class of the author's flair.  subreddit specific |
+| `String`  | `author`                 | the account name of the poster. null if this is a promotional link |
+| `String`  | `author_flair_css_class` | the CSS class of the author's flair.  subreddit specific |
 | `String`  | `author_flair_text`      | the text of the author's flair.  subreddit specific |
 | `boolean` | `clicked`                | probably always returns false |
 | `String`  | `domain`                 | the domain of this link.  Self posts will be `self.reddit.com` while other examples include `en.wikipedia.org` and `s3.amazon.com` |
 | `boolean` | `hidden`                 | true if the post is hidden by the logged in user.  false if not logged in or not hidden. |
 | `boolean` | `is_self`                | true if this link is a selfpost |
+| `String`  | `link_flair_css_class`   | the CSS class of the link's flair. |
+| `String`  | `link_flair_text`        | the text of the link's flair. |
 | `Object`  | `media`                  | unknown.  I need someone else to document this as I haven't done much research into this |
 | `Object`  | `media_embed`            | unknown.  I need someone else to document this as I haven't done much research into this |
-| `int`     | `num_comments`           | the number of comments that belong to this link |
+| `int`     | `num_comments`           | the number of comments that belong to this link. includes removed comments. |
 | `boolean` | `over_18`                | true if the post is tagged as NSFW.  False if otherwise |
 | `String`  | `permalink`              | relative url of the permanent link for this link |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
 | `int`     | `score`                  | the net-score of the link.  **note:** A submission's score is simply the number of upvotes minus the number of downvotes. If five users like the submission and three users don't it will have a score of 2. Please note that the vote numbers are not "real" numbers, they have been "fuzzed" to prevent spam bots etc. So taking the above example, if five users upvoted the submission, and three users downvote it, the upvote/downvote numbers may say 23 upvotes and 21 downvotes, or 12 upvotes, and 10 downvotes. The points score is correct, but the vote totals are "fuzzed".|
-| `String`  | `selftext`               | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. |
-| `String`  | `selftext_html`          | the formatted escaped html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html.|
-| `String`  | `subreddit`              |  |
+| `String`  | `selftext`               | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. Empty if not present. |
+| `String`  | `selftext_html`          | the formatted escaped html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html. Null if not present. |
+| `String`  | `subreddit`              | |
 | `String`  | `subreddit_id`           |  |
-| `String`  | `thumbnail`              | full url to the thumbnail for this link |
-| `String`  | `title`                  |  |
+| `String`  | `thumbnail`              | full url to the thumbnail for this link; "self" if this is a self post |
+| `String`  | `title`                  | the title of the link. may contain newlines for some reason |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 | `long`    | `edited`                 | Indicates if link has been edited. Will be the edit timestamp if the link has been edited and return false otherwise. https://github.com/reddit/reddit/issues/581 |
 
