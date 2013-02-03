@@ -47,12 +47,18 @@ All `thing`s that implement `created` have these attributes:
 ### comment (implements votable | created) ###
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
+| `String`  | `approved_by`            | who approved this comment. null if nobody or you are not a mod |
 | `String`  | `author`                 | the account name of the poster |
 | `String`  | `author_flair_css_class` | the CSS class of the author's flair.  subreddit specific |
 | `String`  | `author_flair_text`      | the text of the author's flair.  subreddit specific |
+| `String`  | `banned_by`              | who removed this comment. null if nobody or you are not a mod |
 | `String`  | `body`                   | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. |
-| `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped. You must unescape to get the raw html. |
+| `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. **NOTE:** The html string will be escaped. You must unescape to get the raw html. |
+| `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise |
+| `int`     | `gilded`                 | the number of times this comment received reddit gold |
 | `String`  | `link_id`                | ID of the link this comment is in |
+| `String`  | `link_title`             | only present at `/r/subreddit/comments/.json`, contains what it says |
+| `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           |  |
