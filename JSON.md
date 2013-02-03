@@ -29,17 +29,17 @@ All `thing`s that implement `votable` have these attributes:
 
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `int`     | `ups`                    | the number of upvotes.  does this include one's own upvote? |
-| `int`     | `downs`                  | the number of downvote.  does this include one's own downvote? |
-| `Boolean` | `likes`                  | true if thing is liked by the user.  false if thing is disliked.  null if the user is neutral on the thing.  Certain languages such as Java may need to use a boolean wrapper that supports null assignment.|
+| `int`     | `ups`                    | the number of upvotes. (includes own) |
+| `int`     | `downs`                  | the number of downvote. (includes own) |
+| `Boolean` | `likes`                  | `true` if thing is liked by the user, `false` if thing is disliked, `null` if the user has not voted or you are not logged in. Certain languages such as Java may need to use a boolean wrapper that supports null assignment.|
 
 ## created (implementation) #
 All `thing`s that implement `created` have these attributes:
 
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
-| `long`?   | `created`                | the localized time of creation. ex: "1331042771.0" |
-| `long`?   | `created_utc`            | the UTC time this item was created since the unix start time in seconds. "1331017571.0"|
+| `long`    | `created`                | the time of creation in local epoch-second format. ex: `1331042771.0` |
+| `long`    | `created_utc`            | the time of creation in UTC epoch-second format. Note that neither of these ever have a non-zero fraction. |
 
 
 ## Data Structures ##
@@ -48,12 +48,12 @@ All `thing`s that implement `created` have these attributes:
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `String`  | `author`                 | the account name of the poster |
-| `String`  | `author_flair_css_class` | the css class of the author's flair.  subreddit specific |
+| `String`  | `author_flair_css_class` | the CSS class of the author's flair.  subreddit specific |
 | `String`  | `author_flair_text`      | the text of the author's flair.  subreddit specific |
-| `String`  | `body`                   | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. |
-| `String`  | `body_html`              | the formatted html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html.|
-| `String`  | `link_id`                |  |
-| `String`  | `parent_id`              |  |
+| `String`  | `body`                   | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. |
+| `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped. You must unescape to get the raw html. |
+| `String`  | `link_id`                | ID of the link this comment is in |
+| `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           |  |
 
