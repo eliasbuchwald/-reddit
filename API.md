@@ -4,7 +4,7 @@
 * reddit supports [[OAuth for authentication|OAuth2]].
 * Don't forget the list of [[API Wrappers]].
 
-## Rules ##
+<h2 id="rules">Rules</h2>
 We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts,
 but they have to obey some rules:
 
