@@ -8,8 +8,7 @@ Here at reddit, we use the slightly batty and entirely made up Beauty Salon Code
 
 * ![haircut](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/haircut.png?v5) :haircut:
 
-  by the author: "I've considered your responses and taken appropriate action."
-
+  by the author: "I've responded or made appropriate changes and am ready for further review."
 
 * ![fish](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/fish.png?v5) :fish:
 
