@@ -37,7 +37,7 @@ In addition to the standard authorization parameters (response_type, client, red
 Here is example code on using OAuth in various languages:
 
 * [Python](OAuth2-Python-Example)
-* [Python (with PRAW)](https://github.com/praw-dev/praw/wiki/OAuth)
+* [Python (with PRAW)](https://praw.readthedocs.org/en/latest/pages/oauth.html)
 * [PHP](OAuth2-PHP-Example)
 
 # What can I do once I have access?
