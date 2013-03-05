@@ -62,7 +62,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           |  |
-| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished.  `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes (most commonly seen as the darker red [Δ] "admin emeritus" http://www.reddit.com/r/redditdev/comments/19ak1b/api_change_distinguished_is_now_available_in_the|
+| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://bit.ly/ZYI47B|
 
 ***
 ### link (implements votable | created) ###
@@ -92,7 +92,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `title`                  | the title of the link. may contain newlines for some reason |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 | `long`    | `edited`                 | Indicates if link has been edited. Will be the edit timestamp if the link has been edited and return false otherwise. https://github.com/reddit/reddit/issues/581 |
-| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished.  `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes (most commonly seen as the darker red [Δ] "admin emeritus" http://www.reddit.com/r/redditdev/comments/19ak1b/api_change_distinguished_is_now_available_in_the|
+| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://bit.ly/ZYI47B|
 
 ***
 ### subreddit ###
