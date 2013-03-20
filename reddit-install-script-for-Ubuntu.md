@@ -7,10 +7,16 @@ The reddit install script is a bash script designed for use on Ubuntu Linux. It 
 ```bash
 $ wget https://raw.github.com/reddit/reddit/master/install-reddit.sh
 $ chmod +x install-reddit.sh
+$ editor install-reddit.sh
+```
+
+Seriously, stop here and *read* the script. It's got some helpful information that can prevent common issues. This is also where you can change the domain name for your local reddit install. Resolving to the appropriate domain name is beyond the scope of this document, but the easiest thing is probably editing `/etc/hosts`. Then just run the script.
+
+```bash
 $ sudo ./install-reddit.sh
 ```
 
-reddit is now available and listening on http://0.0.0.0:8001/, although many of the links will be broken unless you change the domain key in `~/reddit/r2/run.ini` to accurately reflect your environment.
+reddit is now available and listening on port 80. If you used the default domain and have name resolution working correctly, try going to http://reddit.local/
 
 ## Test data
 
