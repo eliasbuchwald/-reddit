@@ -1,36 +1,58 @@
-Here is an incomplete sample of Python code using the [rauth](https://github.com/litl/rauth/) library, provided by [/u/intortus](http://www.reddit.com/user/intortus):
-
-```python
 from rauth import OAuth2Service
 
-reddit = OAuth2Service(name='reddit',
-                       client_id=CLIENT_ID,
-                       client_secret=CLIENT_SECRET,
-                       access_token_url='https://ssl.reddit.com/api/v1/access_token',
-                       authorize_url='https://ssl.reddit.com/api/v1/authorize',
-                       base_url='http://www.reddit.com/api/')
+from hashlib import sha1
+from random import random
 
-authorize_url = reddit.get_authorize_url(response_type='code',
-                                         scope='identity',
-                                         state='...',  # some unguessable value to prevent CSRF
-                                         redirect_uri=CLIENT_REDIRECT_URI)
+import re
+import json
+import webbrowser
 
-# The should now authorize the application by following this link:
-print authorize_url
+# Get a real client id and secret from:
+#
+#   https://ssl.reddit.com/prefs/apps
+#
+auth_url = 'https://ssl.reddit.com/api/v1/'
+reddit = OAuth2Service('HwDvGAXEIa1IPw',
+                       'tdlqGw72hvisj1EqvkWrDK8zRXM',
+                       authorize_url=auth_url + 'authorize',
+                       access_token_url=auth_url + 'access_token',
+                       base_url='https://oauth.reddit.com/api/v1/')
 
-...
+redirect_uri = 'https://github.com/litl/rauth'
 
-# The user will then be redirected back to our application:
-code = request.args.get('code')
+# CSRF protection; you app should check this value upon redirect!
+state = sha1(str(random())).hexdigest()
 
-if code is None:
-    print "Whoops, you didn't authorize the app!"
+params = {'scope': 'identity',
+          'response_type': 'code',
+          'redirect_uri': redirect_uri,
+          'state': state,
+          'duration': 'permanent'}
 
-s = reddit.get_auth_session(data={'grant_type': 'authorization_code',
-                                  'code': code,
-                                  'redirect_uri': CLIENT_REDIRECT_URI})
+authorize_url = reddit.get_authorize_url(**params)
 
-print s.access_token
+print 'Visit this URL in your browser: ' + authorize_url
+webbrowser.open(authorize_url)
 
-# Now make further requests with the `s` session object, e.g.: `r = s.get('me.json')`
-```
+url_with_code = raw_input('Copy URL from your browser\'s address bar: ')
+
+# Retrieve code parameter
+code = re.search('\code=([^&]*)', url_with_code).group(1)
+
+# Retrieve state parameter
+returned_state = re.search('\?state=([^&]*)', url_with_code).group(1)
+
+assert returned_state == state, 'State parameters do no match! Bailing out.'
+
+data = {'code': code,
+        'redirect_uri': redirect_uri,
+        'grant_type': 'authorization_code'}
+
+creds = (reddit.client_id, reddit.client_secret)
+
+s = reddit.get_auth_session(data=data,
+                            auth=creds,  # Basic Auth
+                            decoder=json.loads)
+
+user = s.get('me').json()
+print 'Currently logged in as {name}'.format(name=user['name'])
