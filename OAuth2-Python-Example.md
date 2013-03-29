@@ -29,7 +29,7 @@ reddit = OAuth2Service('HwDvGAXEIa1IPw',
 
 redirect_uri = 'https://github.com/litl/rauth'
 
-# CSRF protection; you app should check this value upon redirect!
+# CSRF protection; your app should check this value upon redirect!
 state = sha1(str(random())).hexdigest()
 
 params = {'scope': 'identity',
