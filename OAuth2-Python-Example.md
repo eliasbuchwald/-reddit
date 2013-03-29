@@ -1,3 +1,12 @@
+Here is a complete sample of Python code using the [rauth](https://github.com/litl/rauth) library.
+
+You will need to install rauth first, e.g.:
+
+    $ pip install rauth
+
+This example should run as-is.
+
+```python
 from rauth import OAuth2Service
 
 from hashlib import sha1
@@ -56,3 +65,4 @@ s = reddit.get_auth_session(data=data,
 
 user = s.get('me').json()
 print 'Currently logged in as {name}'.format(name=user['name'])
+```
