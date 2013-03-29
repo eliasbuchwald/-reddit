@@ -24,7 +24,7 @@ print authorize_url
 code = request.args.get('code')
 
 if code is None:
-    print 'Whoops, you didn\'t authorize the app!'
+    print "Whoops, you didn't authorize the app!"
 
 s = reddit.get_auth_session(data={'grant_type': 'authorization_code',
                                   'code': code,
