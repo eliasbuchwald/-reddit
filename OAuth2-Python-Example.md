@@ -43,7 +43,7 @@ authorize_url = reddit.get_authorize_url(**params)
 print 'Visit this URL in your browser: ' + authorize_url
 webbrowser.open(authorize_url)
 
-url_with_code = raw_input('Copy URL from your browser\'s address bar: ')
+url_with_code = raw_input("Copy URL from your browser's address bar: ")
 
 # Retrieve code parameter
 code = re.search('\code=([^&]*)', url_with_code).group(1)
