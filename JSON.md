@@ -137,6 +137,7 @@ All `thing`s that implement `created` have these attributes:
 | `long`         | `created_utc`            | registration date in epoch-seconds, UTC |
 | `boolean`      | `has_mail`               | user has unread mail? null if not your account |
 | `boolean`      | `has_mod_mail`           | user has unread mod mail? null if not your account |
+| `boolean`      | `has_verified_email`     | user has provided an email address and got it verified? |
 | `String`       | `id`                     | ID of the account; prepend `t2_` to get fullname |
 | `boolean`      | `is_friend`              | whether the logged-in user has this user set as a friend |
 | `boolean`      | `is_gold`                | reddit gold status |
@@ -159,6 +160,7 @@ Example:
 		"comment_karma": 557, 
 		"is_gold": false, 
 		"is_mod": false, 
+                "has_verified_email": false, 
 		"id": "5sryd", 
 		"has_mod_mail": false
 	}
