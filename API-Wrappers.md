@@ -43,6 +43,13 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a>
         <td><a href="http://reddit.com/u/SirCmpwn">/u/SirCmpwn</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+<tbody>
+    <tr>
+        <th colspan="3">NodeJS
+    <tr>
+        <td><a href="https://github.com/chuckpreslar/rereddit">rereddit</a>
+        <td>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 </table>
 
 Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
