@@ -56,6 +56,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. **NOTE:** The html string will be escaped. You must unescape to get the raw html. |
 | `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise |
 | `int`     | `gilded`                 | the number of times this comment received reddit gold |
+| `boolean` | `likes`                  | how the logged-in user has voted on the comment - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_id`                | ID of the link this comment is in |
 | `String`  | `link_title`             | only present at `/r/subreddit/comments/.json`, contains what it says |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
@@ -75,6 +76,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `domain`                 | the domain of this link.  Self posts will be `self.reddit.com` while other examples include `en.wikipedia.org` and `s3.amazon.com` |
 | `boolean` | `hidden`                 | true if the post is hidden by the logged in user.  false if not logged in or not hidden. |
 | `boolean` | `is_self`                | true if this link is a selfpost |
+| `boolean` | `likes`                  | how the logged-in user has voted on the link - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_flair_css_class`   | the CSS class of the link's flair. |
 | `String`  | `link_flair_text`        | the text of the link's flair. |
 | `Object`  | `media`                  | Used for streaming video. Detailed information about the video and it's origins are placed here |
@@ -120,6 +122,8 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `body_html`              | the message itself with html formatting |
 | `String`  | `context`                | does not seem to return null but an empty string instead. |
 | `Message`?| `first_message`          | either null or the first message's ID represented as base 10 (wtf) |
+| `boolean` | `likes`                  | how the logged-in user has voted on the message - `True` = upvoted, `False` = downvoted, `null` = no vote |
+| `String`  | `link_title`             | if the message is actually a comment, contains the title of the thread it was posted in |
 | `String`  | `name`                   | ex: "t4_8xwlg" |
 | `boolean` | `new`                    | unread?  not sure |
 | `String`  | `parent_id`              | null if no parent is attached |
