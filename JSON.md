@@ -61,6 +61,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `link_title`             | only present at `/r/subreddit/comments/.json`, contains what it says |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
+| `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
 | `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://bit.ly/ZYI47B|
