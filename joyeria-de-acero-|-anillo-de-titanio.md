@@ -1,7 +1,7 @@
 Qué es un anillo de matrimonio de cerámica? Los anillos de bodas de cerámica están hechos de una combinación de zirconio y materiales puros de cerámica en polvo, los cuales son luego calentados a más de 600 grados, convirtiéndolos en un líquido fundido(<a href="http://www.slgold.com/ceramic-and-silver-jewelry-a102-1.html">Ceramic and silver Ring</a>). A este líquido se le da forma, se corta, es enfriado, y luego pulido para dar origen al anillo. Los anillos de casamiento de cerámica son más duros que el titanio, y casi siempre tan resistentes como las alianzas de carburo de tungsteno(<a href="http://www.ceramicring.es/anillos-de-cer-mica-anillos-negros-de-cer-mica-c-2_37.html">anillos de porcelana</a>).
 
 Anillo de Bodas de Tungsteno
-
+![anillo de titanio](http://www.ceramicring.es/images/s/201204/13354966820.jpg)
 
 Son a prueba de rayas. El color de un anillo de matrimonio de cerámica es sólidamente contenido a lo largo de todo el anillo. El toque de color final no es una capa industrial de negro o blanco, cubriendo un metal de distinto color, como pasa en algunos anillos de titanio. Aquellas personas con estilos de vida activos, trabajos, o hobbies pueden estar tranquilos que los anillos de bodas de cerámica son prácticamente imposibles de rayar(<a href="http://www.ceramicring.es/anillo-de-tungsteno-y-cer-mica-c-30.html">anillo de tungsteno</a>).
 
