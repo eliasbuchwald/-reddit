@@ -1,4 +1,3 @@
-
 Anillos de compromiso de oro.
 
 Siempre el glorioso y codiciado oro. Quizá sea su color, o su brillo lo que le imprime una belleza y un atractivo único al ojo humano. Estas son las características de los anillos de compromiso de oro:
@@ -15,7 +14,9 @@ Tipos de anillos de compromiso de oro
 · Anillos de compromiso de oro Rojo: Es una combinación de oro y cobre.
 · Anillos de compromiso de oro Blanco: Mezcla de oro, zinc, cobre, y níquel o paladio.
 
+![anillos de porcelana](http://www.ceramicring.es/images/s/201205/13364454610.jpg)
+![anillo de   tungsteno](http://www.ceramicring.es/images/s/201204/13354966820.jpg)
+
 [anillo de tungsteno](http://www.ceramicring.es/anillo-de-tungsteno-y-cer-mica-c-30.html)
 [anillos baratos](http://www.ceramicring.es/anillos-de-cer-mica-anillos-negros-de-cer-mica-c-2_37.html)
 [anillo para hombre](http://www.ceramicring.es/anillos-de-cer-mica-anillos-de-cer-mica-de-hombres-c-  2_42.html)
-
