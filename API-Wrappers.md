@@ -54,6 +54,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/Stebon24/redwrap">redwrap</a>
         <td><a href="http://www.reddit.com/user/Stebon24">/u/Stebon24</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
+        <td><a href="https://github.com/timisbusy/handson-reddit">handson-reddit</a>
+        <td><i>unknown</i>
+        <td><i>unknown</i>
 </table>
 
 Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
