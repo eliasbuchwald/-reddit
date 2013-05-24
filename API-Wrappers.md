@@ -41,14 +41,18 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <th colspan="3">C#
     <tr>
         <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a>
-        <td><a href="http://reddit.com/u/SirCmpwn">/u/SirCmpwn</a>
+        <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 <tbody>
     <tr>
         <th colspan="3">NodeJS
     <tr>
         <td><a href="https://github.com/chuckpreslar/rereddit">rereddit</a>
-        <td>
+        <td><i>unknown</i>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
+        <td><a href="https://github.com/Stebon24/redwrap">redwrap</a>
+        <td><a href="http://www.reddit.com/user/Stebon24">/u/Stebon24</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 </table>
 
