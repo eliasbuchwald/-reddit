@@ -13,7 +13,7 @@ but they have to obey some rules:
   one request every two seconds from you.
 * Change your client's User-Agent string to something unique and descriptive,
   preferably referencing your reddit username.
-    * Example: `User-Agent: super happy flair bot v1.0 by /u/spladug`
+    * Example: `User-Agent: flairbot/1.0 by spladug`
     * Many default User-Agents (like "Python/urllib" or "Java") are drastically
       limited to encourage unique and descriptive user-agent strings.
     * If you're making an application for others to use, please include a
