@@ -39,9 +39,4 @@ See [[JSON]] for an overview of some of the response types.
 
 ## Changes to the API ##
 
-Changes to the API can happen without warning, though we try to document
-changes in [/r/redditdev](http://www.reddit.com/r/redditdev). Use the Firefox
-add-on
-[LiveHeaders](https://addons.mozilla.org/en-us/firefox/addon/live-http-headers/)
-or the Webkit inspector's Network section to see what fields are being posted
-this week.
+Changes to the API can happen without warning if necessary, subscribe to [/r/redditdev](http://www.reddit.com/r/redditdev) for announcements of changes.
