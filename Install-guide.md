@@ -253,15 +253,18 @@ alias manage-consumers=$REDDIT_HOME/reddit/scripts/manage-consumers
 REDDIT
 ```
 
-In the `consumer-counts` file mentioned above, put the number of queue processors
-you'd like for each type:
+Create the `consumer-counts.d` directory mentioned above. For each asynchronous
+job queue, create a file with the queue job's name in it in the
+`consumer-counts.d` directory and make the contents of the file the number of
+processors to run. For example:
 
-```
-scraper_q       1
-commentstree_q  1
-newcomments_q   1
-vote_comment_q  1
-vote_link_q     1
+```bash
+$ cd $REDDIT_HOME/consumer-counts.d
+$ echo 1 > scraper_q
+$ echo 1 > commentstree_q
+$ echo 1 > newcomments_q
+$ echo 1 > vote_comment_q
+$ echo 1 > vote_link_q
 ```
 
 Then, copy the job configuration files from the upstart/ directory to
