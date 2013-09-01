@@ -105,7 +105,7 @@ You must create the keyspace for reddit and the `permacache` column family.
 
 ```
 $ cassandra-cli -h localhost
-[default@unknown] create keyspace reddit with strategy_options = [{replication_factor:1}];
+[default@unknown] create keyspace reddit;;
 [default@unknown] use reddit;
 [default@unknown] create column family permacache with column_type = 'Standard' and comparator = 'BytesType';
 ```
@@ -247,7 +247,7 @@ configuration to get started, change the settings according to your configuratio
 export REDDIT_ROOT=$REDDIT_HOME/reddit
 export REDDIT_INI=$REDDIT_HOME/reddit/r2/run.ini
 export REDDIT_USER=$REDDIT_USER
-export REDDIT_CONSUMER_CONFIG=$REDDIT_HOME/consumer-counts
+export REDDIT_CONSUMER_CONFIG=$REDDIT_HOME/consumer-counts.d
 alias wrap-job=$REDDIT_HOME/reddit/scripts/wrap-job
 alias manage-consumers=$REDDIT_HOME/reddit/scripts/manage-consumers
 REDDIT
