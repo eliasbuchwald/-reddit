@@ -45,6 +45,11 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 <tbody>
     <tr>
+        <th colspan="3">Powershell
+    <tr>
+        <td><a href="https://github.com/davotronic5000/PoSh_Reddit">PoSh Reddit</a>
+<tbody>
+    <tr>
         <th colspan="3">NodeJS
     <tr>
         <td><a href="https://github.com/chuckpreslar/rereddit">rereddit</a>
