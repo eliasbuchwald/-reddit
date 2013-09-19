@@ -70,6 +70,13 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/jzelinskie/reddit">reddit</a>
         <td><i>unknown</i>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+<tbody>
+    <tr>
+        <th colspan="3">Java
+    <tr>
+        <td><a href="https://github.com/corydissinger/raw4j">raw4j</a>
+        <td><a href="http://www.reddit.com/user/cordiss">/u/cordiss</a>
+        <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
 </table>
 
 Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
