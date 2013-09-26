@@ -1,6 +1,6 @@
-## Servers
-
 The dependencies below are likely out of date. If you're installing on Ubuntu 12.04 with the reddit PPA set up, the [list of packages installed by the Ubuntu Install Script](https://github.com/reddit/reddit/blob/master/install-reddit.sh#L117-L162) is the most up to date and canonical source of information.
+
+## Servers
 
 Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
