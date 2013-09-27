@@ -9,7 +9,7 @@ Cassandra    | 1.0+    | `cassandra` in [ppa:reddit](https://launchpad.net/~redd
 memcached    | 1.4+    | `memcached`                            | Fast in-memory caching server. Used throughout reddit.
 RabbitMQ     | 2.0+    | `rabbitmq-server`                      | AMQP server. Used for offline processing.
 HAProxy      |         | `haproxy`                              | Load balancer for distributing requests to app servers.
-stunnel      | patched | `stunnel`                              | For HTTPS support. Needs to be a version with the X-Forwarded-For patches on top. (see [ppa:reddit](https://launchpad.net/~reddit/+archive/ppa).
+stunnel      | patched | `stunnel`                              | For HTTPS support. Needs to be a version with the X-Forwarded-For patches on top. (see [ppa:reddit](https://launchpad.net/~reddit/+archive/ppa)).
 
 ## Libraries
 
