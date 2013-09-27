@@ -180,16 +180,6 @@ $ make
     </td>
 </tr>
 <tr>
-    <td>ImportError: No module named rails.asset_tag</td>
-    <td>setup.py installed the wrong versions of some dependencies. You must downgrade them.
-
-```bash
-$ sudo easy_install "Paste==1.7.2-reddit-0.2"
-$ sudo easy_install "webhelpers==0.6.4"
-```
-</td>
-</tr>
-<tr>
     <td>(OperationalError) FATAL:  password authentication failed for user "reddit"</td>
     <td>
         The postgres user "reddit" has the wrong password. You should recreate the postgres user "reddit" with password "password".
