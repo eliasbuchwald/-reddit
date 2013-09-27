@@ -16,7 +16,7 @@ examples accordingly.
 Clone the git repository available here on github.
 
 ```bash
-$ git clone git://github.com/reddit/reddit.git
+$ git clone https://github.com/reddit/reddit.git
 ```
 
 Once this is done, you'll need to install the python module dependencies.
