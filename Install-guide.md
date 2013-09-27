@@ -76,7 +76,7 @@ $ sudo -u postgres postgres -D /usr/local/pgsql/data
 Create a database for reddit's data.
 
 ```bash
-$ createdb -E utf8 reddit
+$ sudo -u postgres createdb -E utf8 reddit
 ```
 
 And a user for the code to connect with.
@@ -92,7 +92,7 @@ Then add reddit's SQL functions to the schema.
 
 ```bash
 $ cd ~/reddit/
-$ psql -U reddit reddit < sql/functions.sql
+$ sudo -u postgres psql reddit < sql/functions.sql
 ```
 
 ## Cassandra
