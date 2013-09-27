@@ -83,8 +83,7 @@ And a user for the code to connect with.
 
 ```bash
 $ sudo -u postgres psql reddit
-> CREATE USER reddit WITH PASSWORD 'reddit';
-> GRANT ALL PRIVILEGES ON DATABASE reddit TO reddit;
+> CREATE USER reddit WITH PASSWORD 'password';
 > \q
 ```
 
