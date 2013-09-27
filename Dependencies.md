@@ -19,6 +19,7 @@ The following libraries are prerequisites before an install can begin. With thes
 
 Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
+Setuptools   | 0.6.16+ | `python-setuptools`                    | Python package management.
 Python       | 2.7.x   | `python-dev`                           | Headers for building python modules.
 libmemcached | 0.32+   | `libmemcached-dev`                     | For communication with memcached.
 libpq        |         | `libpq-dev`                            | C library for PostgreSQL.
