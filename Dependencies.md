@@ -1,3 +1,5 @@
+[reddit has a PPA on launchpad.net](https://launchpad.net/~reddit/+archive/ppa) where packages can be found for Ubuntu 12.04 Precise Pangolin. If a dependency below cannot be satisfied by the Ubuntu 12.04 archives, it will be marked `reddit ppa` and can be fetched from there. Alternative package managers may provide these packages in the right version natively.
+
 ## Servers
 
 In a simple environment, these can all be run on one machine. For a larger site, they will almost certainly need to be split out to different hosts.
@@ -5,11 +7,11 @@ In a simple environment, these can all be run on one machine. For a larger site,
 Dependency   | Version | Ubuntu Package(s)                      | Description
 -------------|---------|----------------------------------------|----------------------------------------------------------
 PostgreSQL   | 9.0+    | `postgresql`                           | Robust RDBMS. Used as primary data store.
-Cassandra    | 1.0+    | `cassandra` in [ppa:reddit](https://launchpad.net/~reddit/+archive/ppa)              | Distributed database. Slowly becoming primary data store. 
+Cassandra    | 1.0+    | `cassandra` in (reddit ppa)            | Distributed database. Slowly becoming primary data store. 
 memcached    | 1.4+    | `memcached`                            | Fast in-memory caching server. Used throughout reddit.
 RabbitMQ     | 2.0+    | `rabbitmq-server`                      | AMQP server. Used for offline processing.
 HAProxy      |         | `haproxy`                              | Load balancer for distributing requests to app servers.
-stunnel      | patched | `stunnel`                              | For HTTPS support. Needs to be a version with the X-Forwarded-For patches on top. (see [ppa:reddit](https://launchpad.net/~reddit/+archive/ppa)).
+stunnel      | patched | `stunnel` (reddit ppa)                 | For HTTPS support. Needs to be a version with the X-Forwarded-For patches on top.
 
 ## Libraries
 
@@ -35,5 +37,5 @@ jpegoptim    |         | `jpegoptim`                            | Used to compre
 psql         |         | `postgresql-client`                    | CLI client for managing PostgreSQL. Used by some processing jobs.
 make         |         | `make`                                 | Build tool.
 gettext      |         | `gettext`                              | Tools for internationalization.
-node.js      |         | `nodejs`                               | Javascript environment.
-less.js      |         | `node-less`                            | CSS Precompiler.
+node.js      | 0.6.19+ | `nodejs` (reddit ppa)                  | Javascript environment.
+less.js      | 1.4+    | `node-less` (reddit ppa)               | CSS Precompiler.
