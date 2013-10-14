@@ -64,7 +64,7 @@ postgres$ createuser -P reddit
 
 ### Do I need to use S3 to run reddit?
 
-At the moment, S3 is required for thumbnails and subreddit images. We are willing to accept patches that would allow you to choose where to store them.
+No, using Amazon S3 is optional. The default install executed by the install script uses a local nginx to host thumbnails and subreddit images. See the `media_provider` option in the configuration and the [`r2/lib/providers/media`](https://github.com/reddit/reddit/blob/master/r2/r2/lib/providers/media) directory in the source.
 
 ### What is the administrator account?
 
