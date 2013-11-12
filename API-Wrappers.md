@@ -36,6 +36,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/andkerosine/snooby">Snooby</a>
         <td><a href="http://www.reddit.com/user/HazierPhonics">/u/HazierPhonics</a>
         <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
+    <tr>
+        <td><a href="https://github.com/samsymons/RedditKit.rb">RedditKit.rb</a>
+        <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 <tbody>
     <tr>
         <th colspan="3">C#
@@ -77,6 +81,13 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/corydissinger/raw4j">raw4j</a>
         <td><a href="http://www.reddit.com/user/cordiss">/u/cordiss</a>
         <td><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a>
+<tbody>
+    <tr>
+        <th colspan="3">Objective-C
+    <tr>
+        <td><a href="https://github.com/samsymons/RedditKit">RedditKit</a>
+        <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 </table>
 
 Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
