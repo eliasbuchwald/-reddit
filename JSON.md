@@ -57,8 +57,9 @@ All `thing`s that implement `created` have these attributes:
 | `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise |
 | `int`     | `gilded`                 | the number of times this comment received reddit gold |
 | `boolean` | `likes`                  | how the logged-in user has voted on the comment - `True` = upvoted, `False` = downvoted, `null` = no vote |
+| `String`  | `link_author`            | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the author of the parent link |
 | `String`  | `link_id`                | ID of the link this comment is in |
-| `String`  | `link_title`             | only present at `/r/subreddit/comments/.json`, contains what it says |
+| `String`  | `link_title`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the title of the parent link |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
