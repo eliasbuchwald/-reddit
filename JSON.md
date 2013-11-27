@@ -62,6 +62,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `link_title`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the title of the parent link |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
+| `boolean` | `saved`                  | true if this post is saved by the logged in user |
 | `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
