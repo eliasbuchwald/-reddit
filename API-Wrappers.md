@@ -67,6 +67,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/timisbusy/handson-reddit">handson-reddit</a>
         <td><i>unknown</i>
         <td><i>unknown</i>
+    <tr>
+        <td><a href="https://github.com/go1dfish/nodewhal">Nodewhal</a>
+        <td><a href="http://www.reddit.com/user/go1dfish">/u/go1dfish</a>
+        <td><a href="http://www.wtfpl.net/">WTFPL</a>
 <tbody>
     <tr>
         <th colspan="3">Go
