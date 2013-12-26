@@ -93,7 +93,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `selftext_html`          | the formatted escaped html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html. Null if not present. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
-| `String`  | `thumbnail`              | full url to the thumbnail for this link; "self" if this is a self post |
+| `String`  | `thumbnail`              | full url to the thumbnail for this link; "self" if this is a self post; "default" if a thumbnail is not available|
 | `String`  | `title`                  | the title of the link. may contain newlines for some reason |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 | `long`    | `edited`                 | Indicates if link has been edited. Will be the edit timestamp if the link has been edited and return false otherwise. https://github.com/reddit/reddit/issues/581 |
