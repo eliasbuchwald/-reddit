@@ -117,8 +117,8 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `public_traffic`         | whether the subreddit's traffic page is publicly-accessible |
 | `long`    | `subscribers`            | the number of redditors subscribed to this subreddit |
 | `String`  | `submission_type`        | the type of submissions the subreddit allows - one of "any", "link" or "self" |
-| `String   | `submit_link_label`      | the subreddit's custom label for the submit link button, if any |
-| `String   | `submit_text_label`      | the subreddit's custom label for the submit text button, if any |
+| `String`   | `submit_link_label`      | the subreddit's custom label for the submit link button, if any |
+| `String`   | `submit_text_label`      | the subreddit's custom label for the submit text button, if any |
 | `String`  | `subreddit_type`         | the subreddit's type - one of "public", "private", "restricted", or in very special cases "gold_restricted" or "archived" |
 | `String`  | `title`                  | title of the main page |
 | `String`  | `url`                    | The relative URL of the subreddit.  Ex: "/r/pics/" |
