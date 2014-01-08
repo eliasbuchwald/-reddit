@@ -43,7 +43,7 @@ Here is example code on using OAuth in various languages:
 
 # What can I do once I have access?
 
-Right now  not quite all of the Reddit API is available to OAuth clients, <strike>furthermore OAuth tokens only last a short amount of time. This is slated to change in the future, but for the meantime this means OAuth is not the ideal solution for things like mobile Reddit apps</strike> (permanent tokens are [now available](http://www.reddit.com/r/changelog/comments/11jab9/reddit_change_permanent_oauth_grants_using/)).
+Right now  not quite all of the Reddit API is available to OAuth clients. Permanent tokens are [now available](http://www.reddit.com/r/changelog/comments/11jab9/reddit_change_permanent_oauth_grants_using/).
 
 You can look at [the Reddit API documentation page](http://www.reddit.com/dev/api) to see if a particular API has oauth support.
 
