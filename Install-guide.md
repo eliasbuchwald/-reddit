@@ -41,11 +41,13 @@ we use many separate database clusters, but for sites with less traffic
 
 This guide assumes you have a working PostgreSQL install running under the unix user `postgres`, and that you can access it with `sudo -u postgres psql`. That's the norm if you installed PostgreSQL on Ubuntu/Debian/Fedora from operating system packages, and on Mac OS X using Homebrew. To test that, copy and paste the following command to your terminal and run it:
 
-    sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)"
+    sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)||', version: '||version()"
 
 It should print:
 
-    connected ok, superuser: true
+    connected ok, superuser: true, version: PostgreSQL 9.3.1
+
+Make sure the PostgreSQL version printed is a reasonable, supported version; see [PostgreSQL's version policy](http://www.postgresql.org/support/versioning/). Mac OS X users need to be particularly wary that the version printed is the same as the version they think they installed, as Apple installs an old version of PostgreSQL as part of Mac OS X.
 
 If you installed PostgreSQL from source code instead of operating system packages or an installer you might need to [create a database cluster](http://www.postgresql.org/docs/current/static/creating-cluster.html) first, as well as install the appropriate startup scripts. It's generally much better to install PostgreSQL from operating system packages. If your OS has only very old versions of PostgreSQL, see [the PostgreSQL download page](http://www.postgresql.org/download/) for alternatives, including [deb (apt)](http://apt.postgresql.org) and [rpm (yum)](http://yum.postgresql.org) packages.
 
