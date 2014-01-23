@@ -39,37 +39,15 @@ on Accounts, Subreddits, Links, Comments, Votes, etc. In production,
 we use many separate database clusters, but for sites with less traffic
 (or test instances) a single postgres database should suffice.
 
-### Initialize postgres
+This guide assumes you have a working PostgreSQL install running under the unix user `postgres`, and that you can access it with `sudo -u postgres psql`. That's the norm if you installed PostgreSQL on Ubuntu/Debian/Fedora from operating system packages, and on Mac OS X using Homebrew. To test that, copy and paste the following command to your terminal and run it:
 
-*This section may be unnecessary on your system. Check if your
-installation of postgres created a default database and start scripts
-for you.*
+    sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)"
 
-If one doesn't already exist, create an account for postgres to run
-under. This guide will assume the name `postgres`.
+It should print:
 
-```bash
-$ adduser postgres
-```
+    connected ok, superuser: true
 
-Create a directory for postgres to store its data in.
-
-```bash
-$ sudo mkdir -p /usr/local/pgsql/data
-$ sudo chown postgres /usr/local/pgsql/data
-```
-
-Then, initialize the database.
-
-```bash
-$ sudo -u postgres initdb -D /usr/local/pgsql/data
-```
-
-Finally, start up the server. 
-
-```bash
-$ sudo -u postgres postgres -D /usr/local/pgsql/data
-```
+If you installed PostgreSQL from source code instead of operating system packages or an installer you might need to [create a database cluster](http://www.postgresql.org/docs/current/static/creating-cluster.html) first, as well as install the appropriate startup scripts. It's generally much better to install PostgreSQL from operating system packages. If your OS has only very old versions of PostgreSQL, see [the PostgreSQL download page](http://www.postgresql.org/download/) for alternatives, including [deb (apt)](http://apt.postgresql.org) and [rpm (yum)](http://yum.postgresql.org) packages.
 
 ### Create the database
 
