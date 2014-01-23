@@ -43,9 +43,11 @@ This guide assumes you have a working PostgreSQL install running under the unix 
 
     sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)||', version: '||version()"
 
-It should print:
+It should print something like:
 
     connected ok, superuser: true, version: PostgreSQL 9.3.1
+
+You want "superuser: true", since you'll be doing some database setup tasks.
 
 Make sure the PostgreSQL version printed is a reasonable, supported version; see [PostgreSQL's version policy](http://www.postgresql.org/support/versioning/). Mac OS X users need to be particularly wary that the version printed is the same as the version they think they installed, as Apple installs an old version of PostgreSQL as part of Mac OS X.
 
