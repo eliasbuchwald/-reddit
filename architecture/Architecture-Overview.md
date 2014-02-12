@@ -64,7 +64,7 @@ more description.
 
 [Apache Cassandra](http://en.wikipedia.org/wiki/Apache_cassandra) is a
 distributed key/value datastore. It offers transparent
-[sharding](http://en.wikipedia.org/wiki/Shard_(database_architecture\)) and is
+[sharding](http://en.wikipedia.org/wiki/Shard_(database_architecture)) and is
 resistant to hardware failures.
 
 ## Memcached
