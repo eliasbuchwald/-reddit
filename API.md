@@ -10,7 +10,11 @@ but they have to obey some rules:
 
 * **Make no more than thirty requests per minute.** This allows some burstiness
   to your requests, but keep it sane. On average, we should see no more than
-  one request every two seconds from you.
+  one request every two seconds from you. Monitor the following response headers
+  to ensure that you're not exceeding the limits:
+    * `X-Ratelimit-Used`: Approximate number of requests used in this period
+    * `X-Ratelimit-Remaining`: Approximate number of requests left to use
+    * `X-Ratelimit-Reset`: Approximate number of seconds to end of period
 * Change your client's User-Agent string to something unique and descriptive,
   preferably referencing your reddit username.
     * Example: `User-Agent: flairbot/1.0 by spladug`
