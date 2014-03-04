@@ -85,7 +85,7 @@ You must create the keyspace for reddit and the `permacache` column family.
 
 ```
 $ cassandra-cli -h localhost
-[default@unknown] create keyspace reddit;;
+[default@unknown] create keyspace reddit;
 [default@unknown] use reddit;
 [default@unknown] create column family permacache with column_type = 'Standard' and comparator = 'BytesType';
 ```
