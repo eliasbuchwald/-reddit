@@ -1,11 +1,11 @@
 These instructions will guide you through the process of setting up a
-reddit clone for the first time. We also have an [[automated install
-script for Ubuntu Linux 12.04|reddit install script for Ubuntu]].
+reddit clone for the first time. We also have an [automated install
+script for Ubuntu Linux 12.04](https://github.com/reddit/reddit/wiki/reddit-install-script-for-Ubuntu).
 
 ## Prerequisites
 
-Before continuing with this guide, make sure you have all of [[reddit's
-many dependencies|Dependencies]] installed.
+Before continuing with this guide, make sure you have all of [reddit's
+many dependencies](https://github.com/reddit/reddit/wiki/Dependencies) installed.
 
 **This guide will assume that you are installing reddit as user `reddit`
 in the directory `/home/reddit`.** If this is not the case, modify the
