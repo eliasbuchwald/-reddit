@@ -87,6 +87,6 @@ in-request while the user is waiting.
 
 ## ZooKeeper
 
-# reddit.com (the site)
+# reddit.com
 
 TODO
