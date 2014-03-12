@@ -60,6 +60,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `link_author`            | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the author of the parent link |
 | `String`  | `link_id`                | ID of the link this comment is in |
 | `String`  | `link_title`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the title of the parent link |
+| `String`  | `link_url`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the url of the parent link |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
