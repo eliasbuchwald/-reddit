@@ -10,6 +10,10 @@ Our anti-cheating/spam code is not public. In the source itself, anything under 
 
 ## Installation Troubleshooting
 
+### Automated Install Script for Ubuntu 12.04:  `nc: connect to localhost port 9160 (tcp) failed: Connection refused`
+
+Cassandra has failed to start. On Ubuntu 12.04 using [the automated installation script](https://github.com/reddit/reddit/wiki/reddit-install-script-for-Ubuntu) this is due to an inadequate stack size in OpenJDK for Cassandra. Confirm by running `cassandra -f`. If you get `The stack size specified is too small, Specify at least 160k`, then open `/etc/cassandra/cassandra-env.sh` and modify Line 154 from `JVM_OPTS="$JVM_OPTS -Xss128k"` to `JVM_OPTS="$JVM_OPTS -Xss160k"` and `sudo /etc/init.d/cassandra start`.
+
 ### How can I figure out which part of the system is broken?
 
 ```bash
