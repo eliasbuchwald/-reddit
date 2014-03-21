@@ -54,7 +54,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `banned_by`              | who removed this comment. null if nobody or you are not a mod |
 | `String`  | `body`                   | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. |
 | `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. **NOTE:** The html string will be escaped. You must unescape to get the raw html. |
-| `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise |
+| `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise. **NOTE:** for some old edited comments on reddit.com, this will be set to `true` instead of edit date. |
 | `int`     | `gilded`                 | the number of times this comment received reddit gold |
 | `boolean` | `likes`                  | how the logged-in user has voted on the comment - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_author`            | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the author of the parent link |
