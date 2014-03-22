@@ -166,8 +166,9 @@ All `thing`s that implement `created` have these attributes:
 | `String`       | `name`                   | The username of the account in question.  This attribute overrides the superclass's `name` attribute.  Do not confuse an account's `name` which is the account's username with a thing's `name` which is the thing's FULLNAME.  See [API: Glossary](API) for details on what FULLNAMEs are. |
 | `boolean`      | `over_18`                | whether this account is set to be over 18 |
 
-Example:
-```Raw account data
+Example of raw account data:
+
+```json
 {	"kind": "t2", 
 	"data": {
 		"has_mail": false, 
@@ -193,8 +194,9 @@ Example:
 | `List<String>` | `children`               | A list of String `id`s that are the additional `thing`s that can be downloaded but are not because there are too many to list. |
 
 
-Example: 
-```Json example of more
+Example of more:
+
+```json
 {
 	"kind": "more",
 	"data": {
