@@ -1,4 +1,4 @@
-*This guide shows example code for a web service that connects to a reddit account. For details on each step, see the [full OAuth2 login docs](/r/redditdev/wiki/oauth2). For a simpler use case, see the [script app quick start guide](/r/redditdev/wiki/oauth2/quickstart).*
+*This guide shows example code for a web service that connects to a reddit account. For details on each step, see the [full OAuth2 login docs](oauth2). For a simpler use case, see the [script app quick start guide](OAuth2-Quick-Start-Example).*
 
 OAuth2 Web App Sample code
 ======================
@@ -6,7 +6,7 @@ OAuth2 Web App Sample code
 First Steps
 ----------
 
-Go to your [app preferences](/prefs/apps). Click the "Create app" or "Create another app" button. Fill out the form like so:
+Go to your [app preferences](https://ssl.reddit.com/prefs/apps). Click the "Create app" or "Create another app" button. Fill out the form like so:
 
 * **name**: My Example App
 * App type: Choose the **web app** option
@@ -120,7 +120,7 @@ Then, add the `get_token(code)` function:
 
 ### You've got the token, now use it!
 
-Alright, take a deep breath. The hard part is over. Now you have a token, and your app can use it to make requests to the reddit API on behalf of that user until it expires. (If it expires, the user will need to re-authorize your app. Alternatively, if you need to have ongoing access on behalf of the user, you could use a [refresh token](/r/redditdev/wiki/oauth2#wiki_refreshing_the_token). That flow is beyond the scope of this example.)
+Alright, take a deep breath. The hard part is over. Now you have a token, and your app can use it to make requests to the reddit API on behalf of that user until it expires. (If it expires, the user will need to re-authorize your app. Alternatively, if you need to have ongoing access on behalf of the user, you could use a [refresh token](oauth2#wiki_refreshing_the_token). That flow is beyond the scope of this example.)
 
 As an example, we'll request the user's name and display it to them as the content of the page we show the user after they authorize the app. First, change the last part of the callback function one more time from:
 
