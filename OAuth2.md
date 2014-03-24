@@ -23,7 +23,8 @@ Authorization
 
 In order to make requests to reddit's API via OAuth, you must act in the context of a user. The user has to let reddit.com know that they're ok with your app performing certain actions on their behalf, such as reading their subreddit subscriptions or sending a private message. In order to do so, your website or app should send the user to the authorization URL:
 
-    https://ssl.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&state=RANDOM_STRING&redirect_uri=URI&duration=DURATION&scope=SCOPE_STRING
+    https://ssl.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
+        state=RANDOM_STRING&redirect_uri=URI&duration=DURATION&scope=SCOPE_STRING
 
 Parameter | Values | Description
 ----------|---------|---------
