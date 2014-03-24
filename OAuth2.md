@@ -105,7 +105,7 @@ The response from this request, if successful, will be JSON of the following for
 Refreshing the token
 ------------------
 
-Access tokens expire after one hour. If your app requires access after that time, it must request a refresh token by including `duration=permanent` with the authorization request (see above). When the current access token expires, your app should send make another POST request to the access token URL:
+Access tokens expire after one hour. If your app requires access after that time, it must request a refresh token by including `duration=permanent` with the authorization request (see above). When the current access token expires, your app should send another POST request to the access token URL:
 
     https://ssl.reddit.com/api/v1/access_token
 
