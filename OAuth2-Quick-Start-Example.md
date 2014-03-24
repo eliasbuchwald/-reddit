@@ -1,4 +1,4 @@
-*This is a stripped down, quick start guide to getting a script to make OAuth2 API requests. If you want more details, see the [full OAuth2 login docs](/r/redditdev/wiki/oauth2).*
+*This is a stripped down, quick start guide to getting a script to make OAuth2 API requests. If you want more details, see the [full OAuth2 login docs](OAuth2).*
 
 First Steps
 ----------
@@ -11,7 +11,7 @@ Go to your [app preferences](https://ssl.reddit.com/prefs/apps). Click the "Crea
 * **about url**: You can leave this blank
 * **redirect url**: http://www.reddit.com/unused/redirect/uri (We won't be using this as a redirect)
 
-Note: These examples **will only work for `script` type apps,** which will ONLY have access to accounts registered as "developers" of the app and require the application to know the user's password. Read more about [app types](oauth2/app-types).
+Note: These examples **will only work for `script` type apps,** which will ONLY have access to accounts registered as "developers" of the app and require the application to know the user's password. Read more about [app types](OAuth-App-Types).
 
 Hit the "create app" button. Make note of the client ID and client secret. For the rest of this page, it will be assumed that:
 
