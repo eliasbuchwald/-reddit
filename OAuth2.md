@@ -39,9 +39,13 @@ Error | Cause | Resolution
 User sees 403 error in browser | client_id is missing or invalid | Verify that client_id is set and correct for your app
 User sees 403 error in browser | redirect_uri is invalid | Verify that redirect_uri is set and matches what is set for your app
 
-When you send the user to the authorization URL, they will be shown what parts of their account you want access to based on the requested scopes. You will only be able to acquire a bearer token if the user decides they trust your app with the permissions (scopes) you've requested, so be sure to limit your permission request to only those that encompass the API endpoints you required.
-
 \* *Note*: This is a slight deviation from the OAuth 2.0 specification, which states scopes should normally be space-separated.
+
+When you send the user to the authorization URL, they will be shown what parts of their account you want access to based on the requested scopes:
+
+![](http://i.imgur.com/1ufhEwN.png)
+
+You will only be able to acquire a bearer token if the user decides they trust your app with the permissions (scopes) you've requested, so be sure to limit your permission request to only those that encompass the API endpoints you required.
 
 Token Retrieval
 --------------
