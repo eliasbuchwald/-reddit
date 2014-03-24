@@ -1,6 +1,3 @@
-reddit OAuth 2.0 Application Types
-=========================
-
 When creating an [OAuth 2](oauth2) app, the most important decision to make is "what kind of application am I?" Different application types have different API access patterns, and there are differences in how the reddit servers treat your app.
 
 Web app
