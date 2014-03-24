@@ -139,4 +139,4 @@ Then add the `get_username` function:
         me_json = response.json()
         return me_json['name']
 
-That's it! Now you can run your app. [See the full source file](OAuth2-Python-Example-Source)
+That's it! Now you can run your app. [See the full source file](https://gist.github.com/kemitche/9749639)
