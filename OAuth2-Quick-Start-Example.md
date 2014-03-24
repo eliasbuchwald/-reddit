@@ -6,7 +6,7 @@ First Steps
 Go to your [app preferences](https://ssl.reddit.com/prefs/apps). Click the "Create app" or "Create another app" button. Fill out the form like so:
 
 * **name**: My Example App
-* App type: Choose the **script** option
+* **App type**: Choose the **script** option
 * **description**: You can leave this blank
 * **about url**: You can leave this blank
 * **redirect url**: http://www.reddit.com/unused/redirect/uri (We won't be using this as a redirect)
