@@ -19,6 +19,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
     <tr>
         <th colspan="3">Java
     <tr>
+        <td><a href="https://github.com/karan/jReddit">jReddit</a>
+        <td><a href="http://www.reddit.com/user/karangoeluw">/u/karangoeluw</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
         <td><a href="https://github.com/corydissinger/raw4j">raw4j</a>
         <td><a href="http://www.reddit.com/user/cordiss">/u/cordiss</a>
         <td><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2</a>
