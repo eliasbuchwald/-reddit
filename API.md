@@ -26,9 +26,6 @@ but they have to obey some rules:
     * **NEVER lie about your user-agent.** This includes spoofing popular
       browsers and spoofing other bots. We will ban liars with extreme
       prejudice.
-* Most pages are cached for 30 seconds, so you won't get fresh data if you
-  request the same page that often. Don't hit the same page more than once
-  per 30 seconds.
 * Requests for multiple resources at a time are always better than requests for
   single-resources in a loop. Talk to us on the mailing list or in #reddit-dev
   if we don't have a batch API for what you're trying to do.
