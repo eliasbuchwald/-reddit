@@ -96,6 +96,13 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/andkerosine/snooby">Snooby</a>
         <td><a href="http://www.reddit.com/user/HazierPhonics">/u/HazierPhonics</a>
         <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
+<tbody>
+    <tr>
+        <th colspan="3">Groovy
+    <tr>
+        <td><a href="https://github.com/Steveice10/Greddit">Greddit</a>
+        <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 </table>
 
 Also, see [this](http://www.reddit.com/r/redditdev/comments/nd521/list_of_existing_reddit_api_wrappers/) reddit post
