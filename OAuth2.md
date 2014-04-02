@@ -105,7 +105,7 @@ The response from this request, if successful, will be JSON of the following for
 
     Authorization: bearer TOKEN
 
-**API requests with a bearer token should be made to `http://oauth.reddit.com`, NOT ssl.reddit.com.**
+**API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT ssl.reddit.com.**
 
 Refreshing the token
 ------------------
