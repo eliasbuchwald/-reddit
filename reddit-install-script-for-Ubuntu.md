@@ -10,7 +10,7 @@ $ chmod +x install-reddit.sh
 $ editor install-reddit.sh
 ```
 
-Seriously, stop here and *read* the script. It's got some helpful information that can prevent common issues. This is also where you can change the domain name for your local reddit install. Resolving to the appropriate domain name is beyond the scope of this document, but the easiest thing is probably editing `/etc/hosts`. Then just run the script.
+Seriously, stop here and *read* the script. It's got some helpful information that can prevent common issues. Resolving to the appropriate domain name is beyond the scope of this document, but the easiest thing is probably editing `/etc/hosts` on the host machine. Then just run the script.
 
 ```bash
 $ sudo ./install-reddit.sh
