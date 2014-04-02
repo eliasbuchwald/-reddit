@@ -23,8 +23,7 @@ reddit is now available and listening on port 80. If you used the default domain
 To populate the database with test data, including a variety of Accounts, Subreddits, Links and Comments do the following.
 
 ```bash
-$ cd ~reddit/reddit/r2
-$ sudo -u reddit paster shell run.ini
+$ reddit-shell
 ```
 ```python
 >>> from r2.models import populatedb
