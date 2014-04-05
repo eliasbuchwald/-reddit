@@ -36,9 +36,8 @@ Parameter | Values | Description
 `scope` | A comma-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs]. Scope Values: `modposts`, `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
 
 
+See [http://www.reddit.com/dev/api/oauth](http://www.reddit.com/dev/api/oauth) for a breakdown of which API endpoints require which scopes.
 
-(http://www.reddit.com/dev/api/oauth)` 
-for a breakdown of which API endpoints require which scopes.
 
 Error | Cause | Resolution
 -----|--------|--------
