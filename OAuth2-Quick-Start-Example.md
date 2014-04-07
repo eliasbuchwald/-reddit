@@ -77,7 +77,7 @@ Python example
 **Use the token.** Notice that for *using* the token, requests are made to `https://oauth.reddit.com`.
 
     In [7]: headers = {"Authorization": "bearer fhTdafZI-0ClEzzYORfBSCR7x3M"}
-    In [8]: response = requests.get("https://ssl.reddit.com/api/v1/me", headers=headers)
+    In [8]: response = requests.get("https://oauth.reddit.com", headers=headers)
     In [9]: response.json()
     Out[9]: 
     {u'comment_karma': 0,
