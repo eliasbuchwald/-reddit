@@ -14,8 +14,10 @@ Installed app
 
 An app installed on a computer that you don't own or control. Select this if:
 
-* Your app won't be able to keep a client secret safe and secure. For example, Android, Windows or iOS apps that access the reddit API should choose this app type, as anyone who installs the app would be able to figure out your client secret.
+* Your app won't be able to keep a client secret safe and secure. For example, Android, Windows or iOS apps that access the reddit API should choose this app type, as anyone who installs the app would be able to figure out your client secret.\*
 * You want to reddit to redirect the user to an arbitrary URI after they grant your app permissions, such as `my-cool-app:/my/redirect/uri`
+
+\* Note: For relevant requests, you should *still* send and use the client secret like normal. The reddit servers will simply not make the assumption that an installed app sending a secret has "proven" to be a request on behalf of that app.
 
 Script
 ------
