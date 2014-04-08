@@ -11,7 +11,7 @@ First you need an application id and secret so Reddit knows your application. Yo
 When registering your app, it's important to choose the correct and relevant app "type," as the type determines what authentication paths your app may take. Read more on [app types](oauth2-app-types).
 
 * Web app: Runs as part of a web service on a server you control. Can keep a secret.
-* Installed app: Runs on devices you don't control, such as the user's mobile phone. *Cannot* keep a secret.
+* Installed app: Runs on devices you don't control, such as the user's mobile phone. *Cannot* keep a secret. (You should still use the client ID and secret like normal, but the reddit servers won't hold it against you if a nefarious party gets a hold of your secret)
 * Script app: Runs on hardware you control, such as your own laptop or server. Can keep a secret. Only has access to your account.
 
 Be sure to give the app a reasonable name and description. The redirect uri is important - for web apps, it points to a URL on a webserver that you control.
