@@ -115,7 +115,7 @@ Access tokens expire after one hour. If your app requires access after that time
 
 Include the following information in your POST data (NOT as part of the URL)
 
-    grant_type=authorization_code&code=CODE&redirect_uri=URI
+    grant_type=refresh_token&refresh_token=TOKEN
 
 Parameter | Values | Description
 ----------|---------|---------
