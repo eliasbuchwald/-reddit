@@ -68,6 +68,7 @@ Error | Cause | Resolution
 `access_denied` | User chose not to grant your app permissions | Fail gracefully - let the user know you cannot continue, and be respectful of their choice to decline to use your app
 `unsupported_response_type` | Invalid `response_type` parameter in initial Authorization | Ensure that the `response_type` parameter is one of the allowed values
 `invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a comma-separated list of valid scopes
+`invalid_request` | There was an issue with the request sent to `/api/v1/authorize` | Double check the parameters being sent during the request to `/api/v1/authorize` above.
 
 If you didn't get an `error` and the `state` value checks out, you may then make a POST request with `code` to the following URL to retrieve your access token:
 
