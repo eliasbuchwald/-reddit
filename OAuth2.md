@@ -146,6 +146,7 @@ Here is example code on using OAuth in various languages:
 * [Python Web Server Example](OAuth2-Python-Example)
 * [Python (with PRAW)](https://praw.readthedocs.org/en/latest/pages/oauth.html)
 * [PHP](OAuth2-PHP-Example)
+* [Java Server Example](https://gist.github.com/GitTom/10493132)
 
 # What can I do once I have access?
 
