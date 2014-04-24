@@ -30,7 +30,7 @@ All `thing`s that implement `votable` have these attributes:
 | **type**  | **name**                 | **description** |
 |:----------|:-------------------------|:----------------|
 | `int`     | `ups`                    | the number of upvotes. (includes own) |
-| `int`     | `downs`                  | the number of downvote. (includes own) |
+| `int`     | `downs`                  | the number of downvotes. (includes own) |
 | `Boolean` | `likes`                  | `true` if thing is liked by the user, `false` if thing is disliked, `null` if the user has not voted or you are not logged in. Certain languages such as Java may need to use a boolean wrapper that supports null assignment.|
 
 ## created (implementation) #
@@ -53,14 +53,14 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `author_flair_text`      | the text of the author's flair.  subreddit specific |
 | `String`  | `banned_by`              | who removed this comment. null if nobody or you are not a mod |
 | `String`  | `body`                   | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. |
-| `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in html list format. **NOTE:** The html string will be escaped. You must unescape to get the raw html. |
+| `String`  | `body_html`              | the formatted HTML text as displayed on reddit. For example, text that is emphasised by `*` will now have `<em>` tags wrapping it. Additionally, bullets and numbered lists will now be in HTML list format. **NOTE:** The HTML string will be escaped. You must unescape to get the raw HTML. |
 | `special` | `edited`                 | `false` if not edited, edit date in UTC epoch-seconds otherwise. **NOTE:** for some old edited comments on reddit.com, this will be set to `true` instead of edit date. |
 | `int`     | `gilded`                 | the number of times this comment received reddit gold |
 | `boolean` | `likes`                  | how the logged-in user has voted on the comment - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_author`            | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the author of the parent link |
 | `String`  | `link_id`                | ID of the link this comment is in |
 | `String`  | `link_title`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the title of the parent link |
-| `String`  | `link_url`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the url of the parent link |
+| `String`  | `link_url`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the URL of the parent link |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
@@ -87,14 +87,14 @@ All `thing`s that implement `created` have these attributes:
 | `Object`  | `media_embed`            | Used for streaming video. Technical embed specific information is found here. |
 | `int`     | `num_comments`           | the number of comments that belong to this link. includes removed comments. |
 | `boolean` | `over_18`                | true if the post is tagged as NSFW.  False if otherwise |
-| `String`  | `permalink`              | relative url of the permanent link for this link |
+| `String`  | `permalink`              | relative URL of the permanent link for this link |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
 | `int`     | `score`                  | the net-score of the link.  **note:** A submission's score is simply the number of upvotes minus the number of downvotes. If five users like the submission and three users don't it will have a score of 2. Please note that the vote numbers are not "real" numbers, they have been "fuzzed" to prevent spam bots etc. So taking the above example, if five users upvoted the submission, and three users downvote it, the upvote/downvote numbers may say 23 upvotes and 21 downvotes, or 12 upvotes, and 10 downvotes. The points score is correct, but the vote totals are "fuzzed".|
 | `String`  | `selftext`               | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. Empty if not present. |
-| `String`  | `selftext_html`          | the formatted escaped html text.  this is the html formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in html list format. ***NOTE:*** The html string will be escaped.  You must unescape to get the raw html. Null if not present. |
+| `String`  | `selftext_html`          | the formatted escaped HTML text.  this is the HTML formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in HTML list format. ***NOTE:*** The HTML string will be escaped.  You must unescape to get the raw HTML. Null if not present. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
-| `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
-| `String`  | `thumbnail`              | full url to the thumbnail for this link; "self" if this is a self post; "default" if a thumbnail is not available|
+| `String`  | `subreddit_id`           | the ID of the subreddit which is the thing is located in |
+| `String`  | `thumbnail`              | full URL to the thumbnail for this link; "self" if this is a self post; "default" if a thumbnail is not available|
 | `String`  | `title`                  | the title of the link. may contain newlines for some reason |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
 | `long`    | `edited`                 | Indicates if link has been edited. Will be the edit timestamp if the link has been edited and return false otherwise. https://github.com/reddit/reddit/issues/581 |
@@ -134,7 +134,7 @@ All `thing`s that implement `created` have these attributes:
 |:----------|:-------------------------|:----------------|
 | `String`  | `author`                 |  |
 | `String`  | `body`                   | the message itself |
-| `String`  | `body_html`              | the message itself with html formatting |
+| `String`  | `body_html`              | the message itself with HTML formatting |
 | `String`  | `context`                | does not seem to return null but an empty string instead. |
 | `Message`?| `first_message`          | either null or the first message's ID represented as base 10 (wtf) |
 | `boolean` | `likes`                  | how the logged-in user has voted on the message - `True` = upvoted, `False` = downvoted, `null` = no vote |
