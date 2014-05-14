@@ -169,7 +169,8 @@ All `thing`s that implement `created` have these attributes:
 Example of raw account data:
 
 ```json
-{	"kind": "t2", 
+{
+	"kind": "t2", 
 	"data": {
 		"has_mail": false, 
 		"name": "fooBar", 
@@ -180,7 +181,7 @@ Example of raw account data:
 		"comment_karma": 557, 
 		"is_gold": false, 
 		"is_mod": false, 
-                "has_verified_email": false, 
+		"has_verified_email": false, 
 		"id": "5sryd", 
 		"has_mod_mail": false
 	}
