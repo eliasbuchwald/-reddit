@@ -148,12 +148,10 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `was_comment`            |  |
 
 ***
-### account ###
+### account (implements created) ###
 | **type**       | **name**                 | **description** |
 |:---------------|:-------------------------|:----------------|
 | `int`          | `comment_karma`          | user's comment karma |
-| `long`         | `created`                | registration date in epoch-seconds, local |
-| `long`         | `created_utc`            | registration date in epoch-seconds, UTC |
 | `boolean`      | `has_mail`               | user has unread mail? null if not your account |
 | `boolean`      | `has_mod_mail`           | user has unread mod mail? null if not your account |
 | `boolean`      | `has_verified_email`     | user has provided an email address and got it verified? |
