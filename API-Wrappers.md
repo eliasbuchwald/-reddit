@@ -49,6 +49,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://bitbucket.org/Doctor_McKay/raw.js">raw.js</a>
         <td><a href="http://www.reddit.com/user/Doctor_McKay">/u/Doctor_McKay</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
+        <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a>
+        <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 
 <tbody>
     <tr>
@@ -56,6 +60,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
     <tr>
         <td><a href="https://github.com/sahilm/reddit.js">Reddit.js</a>
         <td><a href="http://www.reddit.com/user/sahilmuthoo">/u/sahilmuthoo</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
+        <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a>
+        <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 <tbody>
     <tr>
