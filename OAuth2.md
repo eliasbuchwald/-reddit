@@ -78,15 +78,14 @@ Include the following information in your POST data (NOT as part of the URL)
 
     grant_type=authorization_code&code=CODE&redirect_uri=URI
 
+You must supply your OAuth2 client's credentials via [HTTP Basic Auth](https://tools.ietf.org/html/rfc2617
+) for this request. The "user" is the `client_id`, the "password" is the `client_secret`.
+
 Parameter | Values | Description
 ----------|---------|---------
 `grant_type` | `authorization_code` | Indicates that you're using the "standard" code based flow. Other values not relevant to this flow are `refresh_token` (for renewing an access token) and `password` (for script apps only)
 `code` | A string | The `code` your app retrieved above
 `redirect_uri` | The redirect_uri registered to your app | Yes, you need it here again, and yes, it must match exactly.
-
-Also don't forget to set `Authorization` header with `Basic` value in following form:
-
-    Authorization: Basic {base64Encode("clientId:clientSecret")}
 
 Error | Cause | Resolution
 -----|--------|--------
