@@ -84,6 +84,10 @@ Parameter | Values | Description
 `code` | A string | The `code` your app retrieved above
 `redirect_uri` | The redirect_uri registered to your app | Yes, you need it here again, and yes, it must match exactly.
 
+Also don't forget to set `Authorization` header with `Basic` value in following form:
+
+    Authorization: Basic {base64Encode("clientId:clientSecret")}
+
 Error | Cause | Resolution
 -----|--------|--------
 401 response | Client credentials sent as HTTP Basic Authorization were invalid | Verify that you are properly sending HTTP Basic Authorization headers and that your credentials are correct
