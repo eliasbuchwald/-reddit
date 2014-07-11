@@ -15,6 +15,7 @@ but they have to obey some rules:
     * `X-Ratelimit-Used`: Approximate number of requests used in this period
     * `X-Ratelimit-Remaining`: Approximate number of requests left to use
     * `X-Ratelimit-Reset`: Approximate number of seconds to end of period
+* Clients connecting via [[OAuth2]] may make up to 60 requests per minute.
 * Change your client's User-Agent string to something unique and descriptive,
   preferably referencing your reddit username.
     * Example: `User-Agent: flairbot/1.0 by spladug`
