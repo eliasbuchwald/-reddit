@@ -137,6 +137,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `body_html`              | the message itself with HTML formatting |
 | `String`  | `context`                | does not seem to return null but an empty string instead. |
 | `Message`?| `first_message`          | either null or the first message's ID represented as base 10 (wtf) |
+| `String`  | `first_message_name`     | either null or the first message's fullname |
 | `boolean` | `likes`                  | how the logged-in user has voted on the message - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_title`             | if the message is actually a comment, contains the title of the thread it was posted in |
 | `String`  | `name`                   | ex: "t4_8xwlg" |
