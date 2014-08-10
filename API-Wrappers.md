@@ -101,6 +101,10 @@ Below is a list of unofficial clients for the reddit API for various languages a
     <tr>
         <th colspan="3">Ruby
     <tr>
+        <td><a href="https://github.com/avidw/redd">Redd</a>
+        <td><a href="http://www.reddit.com/user/Mustermind">/u/Mustermind</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+    <tr>
         <td><a href="https://github.com/samsymons/RedditKit.rb">RedditKit.rb</a>
         <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
