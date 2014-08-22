@@ -158,6 +158,8 @@ Include the following information in your POST data (not in the URL):
 
 Your client must be authenticated using HTTP Basic Authentication in the same manner as when requesting the original token.
 
+**Revoking a refresh token will also revoke any related access tokens!**
+
 Parameter | Values | Description
 ----------|---------|---------
 `token` | A refresh or access token | The access token or refresh token that the client wishes to revoke
