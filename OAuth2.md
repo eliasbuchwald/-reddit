@@ -121,6 +121,8 @@ Include the following information in your POST data (NOT as part of the URL)
 
     grant_type=refresh_token&refresh_token=TOKEN
 
+Your client must be authenticated using HTTP Basic Authentication in the same manner as when requesting the original refresh token.
+
 Parameter | Values | Description
 ----------|---------|---------
 `grant_type` | `refresh_token` | Indicates that you're requesting a new access token using a refresh token
@@ -140,6 +142,32 @@ The response will look the same as the initial access token request.
         "expires_in": Unix Epoch Seconds,
         "scope": A scope string,
     }
+
+Manually Revoking a Token
+------------------
+
+While access tokens expire after 1 hour, and the end user can always [revoke a client's tokens](https://ssl.reddit.com/prefs/apps), good clients still clean up after themselves. OAuth2 clients can manually revoke tokens they are finished with - useful for ensuring that tokens, if stolen, aren't usable, and just for acting as a good citizen when the user "logs out" of your website (as an example).
+
+When a client is completely done with a token, it can POST to the following URL to permanently revoke the token:
+
+    https://ssl.reddit.com/api/v1/revoke_token
+
+Include the following information in your POST data (not in the URL):
+
+    token=TOKEN&token_type_hint=TOKEN_TYPE
+
+Your client must be authenticated using HTTP Basic Authentication in the same manner as when requesting the original token.
+
+Parameter | Values | Description
+----------|---------|---------
+`token` | A refresh or access token | The access token or refresh token that the client wishes to revoke
+`token_type_hint` | `refresh_token` or `access_token` | (optional) The type of token being revoked. If not included, the request will still succeed per normal, though may be slower.
+
+Error | Cause | Resolution
+-----|--------|--------
+401 response | Client credentials sent as HTTP Basic Authorization were invalid | Verify that you are properly sending HTTP Basic Authorization headers and that your credentials are correct
+
+Note: Per [RFC 7009](http://tools.ietf.org/html/rfc7009), this request will return a success (204) response even if the passed in `token` was never valid.
 
 # Examples
 
