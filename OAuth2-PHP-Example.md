@@ -15,7 +15,7 @@ $authorizeUrl = 'https://ssl.reddit.com/api/v1/authorize';
 $accessTokenUrl = 'https://ssl.reddit.com/api/v1/access_token';
 $clientId = 'CLIENT_ID';
 $clientSecret = 'CLIENT_SECRET';
-$userAgent = 'ChangeMeClient/yourUsername 0.1';
+$userAgent = 'ChangeMeClient/0.1 by YourUsername';
 
 $redirectUrl = "REDIRECT_URI";
 
