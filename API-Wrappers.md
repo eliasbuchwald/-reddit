@@ -85,6 +85,13 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
 <tbody>
     <tr>
+        <th colspan="3">PHP
+    <tr>
+        <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a>
+        <td><a href="http://www.reddit.com/user/jcleblanc">/u/jcleblanc</a>
+        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
+<tbody>
+    <tr>
         <th colspan="3">Powershell
     <tr>
         <td><a href="https://github.com/davotronic5000/PoSh_Reddit">PoSh Reddit</a>
