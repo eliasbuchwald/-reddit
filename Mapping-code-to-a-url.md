@@ -6,7 +6,9 @@ First, let's take a look at how urls get mapped to controllers, as that will mak
 
 The first place to start is [`routing.py`](https://github.com/reddit/reddit/blob/master/r2/r2/config/routing.py).  As the name suggests, this file contains the primary *routing logic* to decide what code should be called for each request.  While Pylons has [some documentation](http://docs.pylonsproject.org/projects/pylons-webframework/en/v0.9.7/thirdparty/routes.html) on the module, it's not terribly helpful; you'll probably find [the routing section of the tutorial](http://docs.pylonsproject.org/projects/pylons-webframework/en/v0.9.7/tutorials/quickwiki_tutorial.html#routing) easier to understand.
 
-From there, you should be pretty much set - match the `controller` parameter to a file in [the `controllers` directory](https://github.com/reddit/reddit/tree/master/r2/r2/controllers), and `action` to a method in there, and it's on to normal code execution and tracing.
+There's some code in [`controllers/__init__.py`](https://github.com/reddit/reddit/blob/master/r2/r2/controllers/__init__.py) that handles the specifics of mapping `controller` to an actual file, but what you need to know is this: do a case-insensitive search in that file for `<controller name>Controller` and you'll find where it's imported from.
+
+From there, you should be pretty much set - that class should be defined in a file in [the `controllers` directory](https://github.com/reddit/reddit/tree/master/r2/r2/controllers), and the `action` from `routing.py` maps to a method. Now it's on to normal code execution and tracing.
 
 # From code to urls
 
