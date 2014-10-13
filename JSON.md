@@ -135,7 +135,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `author`                 |  |
 | `String`  | `body`                   | the message itself |
 | `String`  | `body_html`              | the message itself with HTML formatting |
-| `String`  | `context`                | does not seem to return null but an empty string instead. |
+| `String`  | `context`                | if the message is a comment, then the permalink to the comment with `?context=3` appended to the end, otherwise an empty string |
 | `Message`?| `first_message`          | either null or the first message's ID represented as base 10 (wtf) |
 | `String`  | `first_message_name`     | either null or the first message's fullname |
 | `boolean` | `likes`                  | how the logged-in user has voted on the message - `True` = upvoted, `False` = downvoted, `null` = no vote |
