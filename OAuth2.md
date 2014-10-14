@@ -204,7 +204,18 @@ Parameter | Values | Description
 
 **What value should I use for `device_id`?**
 
-You should generate a unique ID on your client. The ID should be unique **per-device** or **per-user** of your app; you should retain and re-use the same device_id when renewing your access token. A randomized or pseudo-randomized value is acceptable. **DO NOT** use any personally identifiable information (including non-user-resettable information, such as Android's [TelephonyManager.getDeviceId()](http://developer.android.com/reference/android/telephony/TelephonyManager.html#getDeviceId\(\)).
+You should generate and save unique ID on your client. The ID should be unique **per-device** or **per-user** of your app. A randomized or pseudo-randomized value is acceptable for generating the ID; however, you should retain and re-use the same device_id when renewing your access token. For example:
+
+iOS:
+
+    NSString* uuid = [[NSUUID UUID] UUIDString];
+
+Android:
+
+    import java.util.UUID;
+    String uuid = UUID.randomUUID().toString();
+
+**DO NOT** use any personally identifiable information (including non-user-resettable information, such as Android's [TelephonyManager.getDeviceId()](http://developer.android.com/reference/android/telephony/TelephonyManager.html#getDeviceId\(\)) or Apple's [IDFA](https://developer.apple.com/LIBRARY/ios/documentation/AdSupport/Reference/ASIdentifierManager_Ref/index.html)).
 
 reddit *may* choose to use this ID to generate aggregate data about user counts. Clients that wish to remain anonymous should use the value `DO_NOT_TRACK_THIS_DEVICE`.
 
