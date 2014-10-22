@@ -80,7 +80,7 @@ Most browsers won't deal with cookies from a domain that doesn't contain dots. F
 
 ### How do I create a subreddit?
 
-By default, the link to the form for subreddit creation is hidden for accounts newer than 30 days. This was done because a large number of new users were confused about what creating a reddit meant and would use the form to try and post links. The form can be accessed at any time by going to `/subreddits/create`. It's also possible to configure the minimum age an account must have to be able to see the link by tweaking the [`min_membership_create_community`](https://github.com/reddit/reddit/blob/master/r2/example.ini#L441) property. Setting this value to 0 will allow all users to see the link.
+By default, the link to the form for subreddit creation is hidden for accounts newer than 30 days. This was done because a large number of new users were confused about what creating a reddit meant and would use the form to try and post links. The form can be accessed at any time by going to `/subreddits/create`. It's also possible to configure the minimum age an account must have to be able to see the link by tweaking the [`min_membership_create_community`](https://github.com/reddit/reddit/blob/master/r2/example.ini#L320) property. Setting this value to 0 will allow all users to see the link.
 
 ### How do I make subreddits show up in the top bar?
 
