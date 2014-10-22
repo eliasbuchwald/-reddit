@@ -37,8 +37,8 @@ we don't feel it's the right direction to go down.
 
 - **Please follow the guidelines below in your submissions**
     - [[reddit's Python Import Guidelines|PythonImportGuidelines]]
-    - [PEP-8 (Style Guide for Python)](http://www.python.org/dev/peps/pep-0008/)
-    - [PEP-257 (Docstring Conventions)](http://www.python.org/dev/peps/pep-0257/)
+    - [PEP-8 (Style Guide for Python)](https://github.com/reddit/styleguide/blob/master/python/pep-0008.rst)
+    - [PEP-257 (Docstring Conventions)](https://github.com/reddit/styleguide/blob/master/python/pep-0257.rst)
 
 When you've submitted a pull request, we may respond with bizarre emoticons.
 Read up on [[The Beauty Salon]] for info on our code review process.
