@@ -22,7 +22,7 @@ Used to [paginate](http://en.wikipedia.org/wiki/Pagination) content that is too 
 | `String`  | `before`                 | The fullname of the listing that follows before this page.  `null` if there is no previous page. |
 | `String`  | `after`                  | The fullname of the listing that follows after this page. `null` if there is no next page. |
 | `String`  | `modhash`                | This modhash is not the same modhash provided upon login.  You do not need to update your user's modhash everytime you get a new modhash.  You can reuse the modhash given upon login. |
-| `List<thing>`|  `data`               | A list of `thing`s that this Listing wraps. |
+| `List<thing>`|  `children`           | A list of `thing`s that this Listing wraps. |
 
 ## votable (implementation) ##
 All `thing`s that implement `votable` have these attributes:
