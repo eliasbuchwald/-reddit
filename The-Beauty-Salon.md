@@ -1,4 +1,4 @@
-Here at reddit, we use the slightly batty and entirely made up Beauty Salon Code Review Method™.  This consists of a few beauty-related [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
+Here at reddit, we use the slightly batty and entirely made up Beauty Salon Code Review Method™.  This consists of a few [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
 
 ***
 
@@ -32,3 +32,7 @@ Internal Use Only
 ***
 
 The [bot that runs in the #reddit-dev IRC channel](https://github.com/spladug/harold) will announce to the channel any time these symbols are used during review of a pull request.  This helps remind us that there's stuff to do.  You'll probably see us use these symbols during review of your pull requests. Please feel free to use the appropriate ones in response.
+
+***
+
+Where did this all come from, you ask? Truth be told, it's pretty much just a random smattering of emoji that we cobbled together over time.
