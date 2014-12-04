@@ -177,10 +177,10 @@ Application Only OAuth
 In some cases, 3rd party app clients may wish to make API requests without a user context. App clients can request a "user-less" Authorization token via either the standard `client_credentials` grant, or the reddit specific extension to this grant, `https://oauth.reddit.com/grants/installed_client`. Which grant type an app uses depends on the app-type and its use case:
 
 * `https://oauth.reddit.com/grants/installed_client`:
-** Installed app types (as these apps are considered "non-confidential", have no secret, and thus, are ineligible for `client_credentials` grant.
-** Other apps acting on behalf of one or more "logged out" users.
+    * Installed app types (as these apps are considered "non-confidential", have no secret, and thus, are ineligible for `client_credentials` grant.
+    * Other apps acting on behalf of one or more "logged out" users.
 * `client_credentials`:
-** Confidential clients (web apps / scripts) not acting on behalf of one or more logged out users.
+    * Confidential clients (web apps / scripts) not acting on behalf of one or more logged out users.
 
 For both grant types, the app should make a request to the following endpoint to retrieve your access token:
 
