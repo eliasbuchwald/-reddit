@@ -241,6 +241,7 @@ Here is example code on using OAuth in various languages:
 
 * [Simple Script Example](OAuth2-Quick-Start-Example)
 * [Python Web Server Example](OAuth2-Python-Example)
+* [Native iOS Example](OAuth2-iOS-Example)
 * [Python (with PRAW)](https://praw.readthedocs.org/en/latest/pages/oauth.html)
 * [PHP](OAuth2-PHP-Example)
 * [Java Server Example](https://gist.github.com/GitTom/10493132)
