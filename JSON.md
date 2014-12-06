@@ -67,7 +67,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
 | `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
-| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://bit.ly/ZYI47B|
+| `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://redd.it/19ak1b|
 
 ***
 ### link (implements votable | created) ###
