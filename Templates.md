@@ -15,3 +15,5 @@ So then, when you see a line like this:
     PasswordChangeEmail(user=user).render(style='email')
 
 you should look for [`templates/passwordchangeemail.email`](https://github.com/reddit/reddit/blob/master/r2/r2/templates/passwordchangeemail.email).  Simple enough once you know!
+
+One more thing: since it's common to want to render the same data a number of ways (desktop-oriented HTML, mobile web, JSON, etc.), there's [a mapping of extensions](https://github.com/reddit/reddit/blob/master/r2/r2/config/extensions.py#L35-L50) that force rendering to happen with a particular style.  So if you tack on `.compact` to a url, it will render with `whatever.compact` instead of `whatever.html`, without you having to write code to switch based on that.
