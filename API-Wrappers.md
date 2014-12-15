@@ -55,7 +55,7 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
     <tr>
         <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a>
-        <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a>
+        <td><a href="http://www.reddit.com/user/tsenior/">/u/tsenior</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 
 <tbody>
@@ -67,7 +67,7 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
     <tr>
         <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a>
-        <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a>
+        <td><a href="http://www.reddit.com/user/tsenior/">/u/tsenior</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
 <tbody>
     <tr>
