@@ -4,7 +4,7 @@ OAuth2 support allows you to use Reddit to authenticate on non-Reddit websites a
 
 # Getting Started
 
-First you need an application id and secret so Reddit knows your application. You get this information by going to https://ssl.reddit.com/prefs/apps and clicking "are you a developer? create an app..."
+First you need an application id and secret so Reddit knows your application. You get this information by going to https://www.reddit.com/prefs/apps and clicking "are you a developer? create an app..."
 
 ![App Information Screen](http://i.imgur.com/e2kOR1a.png)
 
@@ -23,15 +23,15 @@ Authorization
 
 In order to make requests to reddit's API via OAuth, you must acquire an Authorization token, either on behalf of a user or for your client (see Application Only OAuth, below). To act on behalf of a user, the user has to let reddit.com know that they're ok with your app performing certain actions for them, such as reading their subreddit subscriptions or sending a private message. In order to do so, your website or app should send the user to the authorization URL:
 
-    https://ssl.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
+    https://www.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
         state=RANDOM_STRING&redirect_uri=URI&duration=DURATION&scope=SCOPE_STRING
 
 Parameter | Values | Description
 ----------|---------|---------
-`client_id` | The Client ID generated during app [registration](https://ssl.reddit.com/prefs/apps) | Tells reddit.com which app is making the request
+`client_id` | The Client ID generated during app [registration](https://www.reddit.com/prefs/apps) | Tells reddit.com which app is making the request
 `response_type` | `code` | Must be the string "code". For implicit grants, see below.
 `state` | A string of your choosing | You should generate a unique, possibly random, string for each authorization request. This value will be returned to you when the user visits your REDIRECT_URI after allowing your app access - you should verify that it matches the one you sent. This ensures that only authorization requests you've started are ones you finish. (You may also use this value to, for example, tell your webserver what action to take after receiving the OAuth2 bearer token)
-`redirect_uri` | The redirect_uri you have specified during [registration](https://ssl.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
+`redirect_uri` | The redirect_uri you have specified during [registration](https://www.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
 `duration` | Either `temporary` or `permanent` | Indicates whether or not your app needs a permanent token. All bearer tokens expire after 1 hour. If you indicate you need `permanent` access to a user's account, you will additionally receive a `refresh_token` when acquiring the bearer token. You may use the `refresh_token` to acquire a new bearer token after your current token expires. Choose `temporary` if you're completing a one-time request for the user (such as analyzing their recent comments); choose `permanent` if you will be performing ongoing tasks for the user, such as notifying them whenever they receive a private message. **The implicit grant flow does not allow permanent tokens.**
 `scope` | A comma-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `modposts`, `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
 
@@ -72,7 +72,7 @@ Error | Cause | Resolution
 
 If you didn't get an `error` and the `state` value checks out, you may then make a POST request with `code` to the following URL to retrieve your access token:
 
-    https://ssl.reddit.com/api/v1/access_token
+    https://www.reddit.com/api/v1/access_token
 
 Include the following information in your POST data (NOT as part of the URL)
 
@@ -108,14 +108,14 @@ The response from this request, if successful, will be JSON of the following for
 
     Authorization: bearer TOKEN
 
-**API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT ssl.reddit.com.**
+**API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT www.reddit.com.**
 
 Refreshing the token
 ------------------
 
 Access tokens expire after one hour. If your app requires access after that time, it must request a refresh token by including `duration=permanent` with the authorization request (see above). When the current access token expires, your app should send another POST request to the access token URL:
 
-    https://ssl.reddit.com/api/v1/access_token
+    https://www.reddit.com/api/v1/access_token
 
 Include the following information in your POST data (NOT as part of the URL)
 
@@ -148,15 +148,15 @@ Authorization (Implicit grant flow)
 
 In order to make requests to reddit's API via OAuth, you must acquire an Authorization token, either on behalf of a user or for your client (see Application Only OAuth, below). To act on behalf of a user, the user has to let reddit.com know that they're ok with your app performing certain actions for them, such as reading their subreddit subscriptions or sending a private message. In order to do so, your website or app should send the user to the authorization URL:
 
-    https://ssl.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
+    https://www.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
         state=RANDOM_STRING&redirect_uri=URI&scope=SCOPE_STRING
 
 Parameter | Values | Description
 ----------|---------|---------
-`client_id` | The Client ID generated during app [registration](https://ssl.reddit.com/prefs/apps) | Tells reddit.com which app is making the request
+`client_id` | The Client ID generated during app [registration](https://www.reddit.com/prefs/apps) | Tells reddit.com which app is making the request
 `response_type` | `token` | Must be the string "token".
 `state` | A string of your choosing | You should generate a unique, possibly random, string for each authorization request. This value will be returned to you when the user visits your REDIRECT_URI after allowing your app access - you should verify that it matches the one you sent. This ensures that only authorization requests you've started are ones you finish. (You may also use this value to, for example, tell your webserver what action to take after receiving the OAuth2 bearer token)
-`redirect_uri` | The redirect_uri you have specified during [registration](https://ssl.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
+`redirect_uri` | The redirect_uri you have specified during [registration](https://www.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
 `scope` | A comma-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `modposts`, `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
 
 
@@ -202,16 +202,16 @@ You may now make API requests to reddit's servers on behalf of that user, by inc
 
     Authorization: bearer TOKEN
 
-**API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT ssl.reddit.com.**
+**API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT www.reddit.com.**
 
 Manually Revoking a Token
 ------------------
 
-While access tokens expire after 1 hour, and the end user can always [revoke a client's tokens](https://ssl.reddit.com/prefs/apps), good clients still clean up after themselves. OAuth2 clients can manually revoke tokens they are finished with - useful for ensuring that tokens, if stolen, aren't usable, and just for acting as a good citizen when the user "logs out" of your website (as an example).
+While access tokens expire after 1 hour, and the end user can always [revoke a client's tokens](https://www.reddit.com/prefs/apps), good clients still clean up after themselves. OAuth2 clients can manually revoke tokens they are finished with - useful for ensuring that tokens, if stolen, aren't usable, and just for acting as a good citizen when the user "logs out" of your website (as an example).
 
 When a client is completely done with a token, it can POST to the following URL to permanently revoke the token:
 
-    https://ssl.reddit.com/api/v1/revoke_token
+    https://www.reddit.com/api/v1/revoke_token
 
 Include the following information in your POST data (not in the URL):
 
@@ -245,7 +245,7 @@ In some cases, 3rd party app clients may wish to make API requests without a use
 
 For both grant types, the app should make a request to the following endpoint to retrieve your access token:
 
-    https://ssl.reddit.com/api/v1/access_token
+    https://www.reddit.com/api/v1/access_token
 
 For `client_credentials` grants include the following information in your POST data (NOT as part of the URL)
 
