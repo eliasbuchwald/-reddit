@@ -146,6 +146,8 @@ The response will look the same as the initial access token request.
 Authorization (Implicit grant flow)
 ------------
 
+**Note**: *Only apps [created as](https://www.reddit.com/prefs/apps) "installed" type apps may use the implicit flow. "web" and "script" type apps are considered "confidential" (i.e., they have secrets). Since you cannot safely send a secret via the implicit flow, we have elected to disallow implicit access to apps with secrets.*
+
 In order to make requests to reddit's API via OAuth, you must acquire an Authorization token, either on behalf of a user or for your client (see Application Only OAuth, below). To act on behalf of a user, the user has to let reddit.com know that they're ok with your app performing certain actions for them, such as reading their subreddit subscriptions or sending a private message. In order to do so, your website or app should send the user to the authorization URL:
 
     https://www.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
