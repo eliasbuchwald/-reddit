@@ -66,7 +66,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
 | `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
-| `String`  | `subreddit_id`           | the id of the subreddit which is the thing is located in |
+| `String`  | `subreddit_id`           | the id of the subreddit in which the thing is located |
 | `String`  | `distinguished`          | to allow determining whether they have been distinguished by moderators/admins. `null` = not distinguished. `moderator` = the green [M]. `admin` = the red [A]. `special` = various other special distinguishes http://redd.it/19ak1b|
 
 ***
@@ -93,7 +93,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `selftext`               | the raw text.  this is the unformatted text which includes the raw markup characters such as `**` for bold. `<`, `>`, and `&` are escaped. Empty if not present. |
 | `String`  | `selftext_html`          | the formatted escaped HTML text.  this is the HTML formatted version of the marked up text.  Items that are boldened by `**` or `***` will now have `<em>` or `***` tags on them. Additionally, bullets and numbered lists will now be in HTML list format. ***NOTE:*** The HTML string will be escaped.  You must unescape to get the raw HTML. Null if not present. |
 | `String`  | `subreddit`              | subreddit of thing excluding the /r/ prefix. "pics" |
-| `String`  | `subreddit_id`           | the ID of the subreddit which is the thing is located in |
+| `String`  | `subreddit_id`           | the id of the subreddit in which the thing is located |
 | `String`  | `thumbnail`              | full URL to the thumbnail for this link; "self" if this is a self post; "default" if a thumbnail is not available|
 | `String`  | `title`                  | the title of the link. may contain newlines for some reason |
 | `String`  | `url`                    | the link of this post.  the permalink if this is a self-post |
