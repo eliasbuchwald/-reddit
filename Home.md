@@ -41,7 +41,7 @@ we don't feel it's the right direction to go down.
     - [PEP-257 (Docstring Conventions)](https://github.com/reddit/styleguide/blob/master/python/pep-0257.rst)
 
 When you've submitted a pull request, we may respond with bizarre emoticons.
-Read up on [[The Beauty Salon]] for info on our code review process.
+Read up on [[The Code Salon]] for info on our code review process.
 
 ## Discuss reddit
 * Subscribe to [/r/redditdev](http://www.reddit.com/r/redditdev).
