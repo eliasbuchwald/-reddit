@@ -1,4 +1,4 @@
-Here at reddit, we use entirely made up Code Salon Review Method™.  This consists of a few [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
+Here at reddit, we use the entirely made up Code Salon Review Method™.  This consists of a few [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
 
 ***
 
