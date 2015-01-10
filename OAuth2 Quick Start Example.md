@@ -3,7 +3,7 @@
 First Steps
 ----------
 
-Go to your [app preferences](https://ssl.reddit.com/prefs/apps). Click the "Create app" or "Create another app" button. Fill out the form like so:
+Go to your [app preferences](https://www.reddit.com/prefs/apps). Click the "Create app" or "Create another app" button. Fill out the form like so:
 
 * **name**: My Example App
 * **App type**: Choose the **script** option
@@ -25,9 +25,9 @@ Hit the "create app" button. Make note of the client ID and client secret. For t
 Curl Example
 -----------
 
-**Request a token.** Notice that for *acquiring* a token, requests are made to `https://ssl.reddit.com`
+**Request a token.** Notice that for *acquiring* a token, requests are made to `https://www.reddit.com`
 
-    reddit@reddit-VirtualBox:~$ curl -X POST -d 'grant_type=password&username=reddit_bot&password=snoo' --user 'p-jcoLKBynTLew:gko_LXELoV07ZBNUXrvWZfzE3aI' https://ssl.reddit.com/api/v1/access_token
+    reddit@reddit-VirtualBox:~$ curl -X POST -d 'grant_type=password&username=reddit_bot&password=snoo' --user 'p-jcoLKBynTLew:gko_LXELoV07ZBNUXrvWZfzE3aI' https://www.reddit.com/api/v1/access_token
     {
         "access_token": "J1qK1c18UUGJFAzz9xnH56584l4", 
         "expires_in": 3600, 
@@ -60,13 +60,13 @@ Python example
 
 *This example uses the Python [requests library](http://docs.python-requests.org/en/latest/).* An [IPython](http://ipython.org) prompt is shown instead of the standard python prompt.
 
-**Request a token.** Notice that for *acquiring* a token, requests are made to `https://ssl.reddit.com`.
+**Request a token.** Notice that for *acquiring* a token, requests are made to `https://www.reddit.com`.
 
     In [1]: import requests
     In [2]: import requests.auth
     In [3]: client_auth = requests.auth.HTTPBasicAuth('p-jcoLKBynTLew', 'gko_LXELoV07ZBNUXrvWZfzE3aI')
     In [4]: post_data = {"grant_type": "password", "username": "reddit_bot", "password": "snoo"}
-    In [5]: response = requests.post("https://ssl.reddit.com/api/v1/access_token", auth=client_auth, data=post_data)
+    In [5]: response = requests.post("https://www.reddit.com/api/v1/access_token", auth=client_auth, data=post_data)
     In [6]: response.json()
     Out[6]: 
     {u'access_token': u'fhTdafZI-0ClEzzYORfBSCR7x3M',
