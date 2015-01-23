@@ -18,15 +18,14 @@ but they have to obey some rules:
     * `X-Ratelimit-Reset`: Approximate number of seconds to end of period
 * Clients connecting via [[OAuth2]] may make up to 60 requests per minute.
 * Change your client's User-Agent string to something unique and descriptive,
-  preferably referencing your reddit username.
-    * Example: `User-Agent: flairbot/1.0 by spladug`
+  including the target platform, a unique application identifier, a version string,
+  and your username as contact information, in the following format:  
+  `<platform>:<app ID>:<version string> (by /u/<reddit username>)`  
+    * Example: `User-Agent: android:com.example.myredditapp:v1.2.3 (by /u/kemitche)`
     * Many default User-Agents (like "Python/urllib" or "Java") are drastically
       limited to encourage unique and descriptive user-agent strings.
-    * If you're making an application for others to use, please use the following format,
-      including a unique application identifier and version string. This allows us to block buggy versions
-      without blocking all versions of your app.  
-      `<platform>:<app ID>:<version string> (by /u/<reddit username>)`  
-      For example: `User-Agent: android:com.example.myredditapp:v1.2.3 (by /u/kemitche)`
+    * Including the version number and updating it as your build your application allows us
+      to safely block old buggy/broken versions of your app.
     * **NEVER lie about your user-agent.** This includes spoofing popular
       browsers and spoofing other bots. We will ban liars with extreme
       prejudice.
