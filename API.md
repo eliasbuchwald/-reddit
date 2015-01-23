@@ -8,6 +8,7 @@
 We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts,
 but they have to obey some rules:
 
+* Please ensure that all API clients are following reddit's [licensing guidelines](http://www.reddit.com/wiki/licensing)
 * **Make no more than thirty requests per minute.** This allows some burstiness
   to your requests, but keep it sane. On average, we should see no more than
   one request every two seconds from you. Monitor the following response headers
@@ -21,9 +22,10 @@ but they have to obey some rules:
     * Example: `User-Agent: flairbot/1.0 by spladug`
     * Many default User-Agents (like "Python/urllib" or "Java") are drastically
       limited to encourage unique and descriptive user-agent strings.
-    * If you're making an application for others to use, please include a
-      version number in the user agent. This allows us to block buggy versions
-      without blocking all versions of your app.
+    * If you're making an application for others to use, please use the following format,
+      including a unique application identifier and version string. This allows us to block buggy versions
+      without blocking all versions of your app. `<platform>:<app ID>:<version string> (by /u/<username>)`,
+      for example: `User-Agent: android:com.example.myredditapp/v1.2.3 (by /u/kemitche)`
     * **NEVER lie about your user-agent.** This includes spoofing popular
       browsers and spoofing other bots. We will ban liars with extreme
       prejudice.
