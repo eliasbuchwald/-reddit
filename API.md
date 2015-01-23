@@ -25,8 +25,8 @@ but they have to obey some rules:
     * If you're making an application for others to use, please use the following format,
       including a unique application identifier and version string. This allows us to block buggy versions
       without blocking all versions of your app.  
-      `<platform>:<app ID>:<version string> (by /u/<username>)`,
-      for example: `User-Agent: android:com.example.myredditapp/v1.2.3 (by /u/kemitche)`
+      `<platform>:<app ID>:<version string> (by /u/<reddit username>)`  
+      For example: `User-Agent: android:com.example.myredditapp:v1.2.3 (by /u/kemitche)`
     * **NEVER lie about your user-agent.** This includes spoofing popular
       browsers and spoofing other bots. We will ban liars with extreme
       prejudice.
