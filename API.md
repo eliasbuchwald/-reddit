@@ -41,6 +41,6 @@ but they have to obey some rules:
 
 See [[JSON]] for an overview of some of the response types.
 
-## Changes to the API #swipty.org#swipty.net
+## Changes to the API ##
 
 Changes to the API can happen without warning if necessary, subscribe to [/r/redditdev](http://www.reddit.com/r/redditdev) for announcements of changes.
