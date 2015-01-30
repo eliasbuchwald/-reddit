@@ -1,11 +1,11 @@
 ## Resources
 * reddit's built-in [live API documentation](http://www.reddit.com/dev/api)
 * The [Apigee API console](https://apigee.com/console/reddit)
-* reddit supports [[OAuth for authentication|OAuth2]].
+* reddit requires [[OAuth for authentication|OAuth2]].
 * Don't forget the list of [[API Wrappers]].
 
 <h2 id="rules">Rules</h2>
-We're happy to have API clients, crawlers, scrapers, and Greasemonkey scripts,
+We're happy to have API clients, crawlers, scrapers, and browser extensions,
 but they have to obey some rules:
 
 * Please ensure that all API clients are following reddit's [licensing guidelines](http://www.reddit.com/wiki/licensing)
