@@ -30,7 +30,7 @@ but they have to obey some rules:
       browsers and spoofing other bots. We will ban liars with extreme
       prejudice.
 * Requests for multiple resources at a time are always better than requests for
-  single-resources in a loop. Talk to us on the mailing list or in #reddit-dev
+  single-resources in a loop. Talk to us on [/r/redditdev](http://www.reddit.com/r/redditdev)
   if we don't have a batch API for what you're trying to do.
 * Our robots.txt is for search engines, not API clients. Obey these rules for
   API clients instead.
