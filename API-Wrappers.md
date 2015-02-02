@@ -34,17 +34,9 @@ Below is a list of unofficial clients for the reddit API for various languages a
     <tr>
         <th colspan="3">NodeJS
     <tr>
-        <td><a href="https://github.com/timisbusy/handson-reddit">handson-reddit</a>
-        <td><i>unknown</i>
-        <td><i>unknown</i>
-    <tr>
         <td><a href="https://github.com/go1dfish/nodewhal">Nodewhal</a>
         <td><a href="http://www.reddit.com/user/go1dfish">/u/go1dfish</a>
         <td><a href="http://www.wtfpl.net/">WTFPL</a>
-    <tr>
-        <td><a href="https://github.com/Stebon24/redwrap">redwrap</a>
-        <td><a href="http://www.reddit.com/user/Stebon24">/u/Stebon24</a>
-        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
     <tr>
         <td><a href="https://github.com/chuckpreslar/rereddit">rereddit</a>
         <td><i>unknown</i>
@@ -104,10 +96,6 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="https://github.com/praw-dev/praw">PRAW</a>
         <td><a href="http://www.reddit.com/user/bboe">/u/bboe</a>
         <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
-    <tr>
-        <td><a href="https://github.com/derv82/reddiwrap/">ReddiWrap</a>
-        <td><a href="http://www.reddit.com/user/freshbreath">/u/freshbreath</a>
-        <td><a href="http://opensource.org/licenses/GPL-2.0">GPL v2</a>
 <tbody>
     <tr>
         <th colspan="3">Ruby
@@ -120,17 +108,9 @@ Below is a list of unofficial clients for the reddit API for various languages a
         <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
     <tr>
-        <td><a href="https://github.com/jamescook/RubyRedditAPI">Ruby reddit client</a>
-        <td><i>unknown</i>
-        <td><a href="http://opensource.org/licenses/MIT">MIT</a>
-    <tr>
         <td><a href="https://github.com/paradox460/snoo">Snoo</a>
         <td><a href="http://www.reddit.com/user/Paradox">/u/Paradox</a>
         <td><a href="http://opensource.org/licenses/MIT">MIT</a>
-    <tr>
-        <td><a href="https://github.com/andkerosine/snooby">Snooby</a>
-        <td><a href="http://www.reddit.com/user/HazierPhonics">/u/HazierPhonics</a>
-        <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a>
 <tbody>
     <tr>
         <th colspan="3">Groovy
