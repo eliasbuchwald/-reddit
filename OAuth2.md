@@ -1,10 +1,10 @@
-OAuth2 support allows you to use Reddit to authenticate on non-Reddit websites and applications.
+OAuth2 support allows you to use reddit to authenticate on non-reddit websites and applications.
 
 *Looking to jump right in? See the [Quick Start Example](OAuth2-Quick-Start-Example), for bots and personal scripts only*
 
 # Getting Started
 
-First you need an application id and secret so Reddit knows your application. You get this information by going to https://www.reddit.com/prefs/apps and clicking "are you a developer? create an app..."
+First you need an application id and secret so reddit knows your application. You get this information by going to https://www.reddit.com/prefs/apps and clicking "are you a developer? create an app..."
 
 ![App Information Screen](http://i.imgur.com/e2kOR1a.png)
 
@@ -311,7 +311,7 @@ Here is example code on using OAuth in various languages:
 
 # What can I do once I have access?
 
-You can look at [the Reddit API documentation page](http://www.reddit.com/dev/api) to see if a particular API has OAuth support and what scope it requires.
+You can look at [the reddit API documentation page](http://www.reddit.com/dev/api) to see if a particular API has OAuth support and what scope it requires.
 
 # Other resources
 
