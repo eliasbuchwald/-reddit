@@ -1,101 +1,112 @@
 A list of unofficial clients for the reddit API.
 
-## Complete API Clients
+## API Clients
 
 The clients in this list:
 
 - Support OAuth2 for authentication.
 - Support most endpoints available.
 
+Please read the documentation for each project - this page may be outdated.
+
+#### Java
+
 <table>
   <tbody>
     <tr>
-      <th colspan="3">Java</th>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
     </tr>
     <tr>
       <td><a href="https://github.com/thatJavaNerd/JRAW">JRAW</a></td>
       <td><a href="http://www.reddit.com/user/thatJavaNerd">/u/thatJavaNerd</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>No</td>
     </tr>
   </tbody>
+</table>
+
+#### JavaScript
+
+<table>
   <tbody>
     <tr>
-      <th colspan="3">JavaScript</th>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
     </tr>
     <tr>
       <td><a href="https://bitbucket.org/Doctor_McKay/raw.js">raw.js</a> (Node.js)</td>
       <td><a href="http://www.reddit.com/user/Doctor_McKay">/u/Doctor_McKay</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Yes</td>
     </tr>
     <tr>
       <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a> (Node.js & Browser)</td>
       <td><a href="http://www.reddit.com/user/tsenior/">/u/tsenior</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Yes</td>
     </tr>
   </tbody>
+</table>
+
+
+#### PHP
+
+<table>
   <tbody>
     <tr>
-      <th colspan="3">PHP</th>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
     </tr>
     <tr>
       <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/jcleblanc">/u/jcleblanc</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Yes</td>
     </tr>
   </tbody>
+</table>
+
+#### Python
+
+<table>
   <tbody>
     <tr>
-      <th colspan="3" style="text-align: left">Python</th>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
     </tr>
     <tr>
       <td><a href="https://github.com/praw-dev/praw">PRAW</a></td>
       <td><a href="http://www.reddit.com/user/bboe">/u/bboe</a></td>
       <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
+      <td>Yes</td>
     </tr>
   </tbody>
+</table>
+
+
+#### Ruby
+
+<table>
   <tbody>
     <tr>
-      <th colspan="3">Ruby</th>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
     </tr>
     <tr>
       <td><a href="https://github.com/avidw/redd">Redd</a></td>
       <td><a href="http://www.reddit.com/user/Mustermind">/u/Mustermind</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
 
-## Incomplete (Work in progress) API Clients
-
-What can make an API wrapper incomplete depends on the client. Some reasons may include:
-
-- Experimental / very few endpoints supported.
-- Have unstabble API's / in flux.
-
-<table>
-  <tbody>
-    <tr>
-      <th colspan="3">Go</th>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/jzelinskie/reddit">reddit</a></td>
-      <td><i>unknown</i></td>
-      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-    </tr>
-    </tr>
-  </tbody>
-</table>
-
-## Deprecated API Clients
+## Non-OAuth API Clients
 
 The clients in this list only support cookie based login, or no login at all. Unauthenticated calls will **require** OAuth (See [*Application only OAuth*](https://github.com/reddit/reddit/wiki/OAuth2#application-only-oauth)). These libraries will no longer be usable after **August 3, 2015**. See [this post](https://www.reddit.com/r/redditdev/comments/2ujhkr/important_api_licensing_terms_clarified/) for more information.
 
+_If any of these libraries **do** support OAuth, please move them to the list above_
+
 
 <table>
   <tbody>
-    <tr>
-      <th colspan="3">C#</th>
-    </tr>
+    <tr><th colspan="3">C#</th></tr>
     <tr>
       <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a></td>
       <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a></td>
@@ -103,9 +114,24 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
+    <tr><th colspan="3">Go</th></tr>
     <tr>
-      <th colspan="3">Java</th>
+      <td><a href="https://github.com/jzelinskie/reddit">reddit</a></td>
+      <td><i>unknown</i></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
     </tr>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr><th colspan="3">Groovy</th></tr>
+    <tr>
+      <td><a href="https://github.com/Steveice10/Greddit">Greddit</a></td>
+      <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr><th colspan="3">Java</th></tr>
     <tr>
       <td><a href="https://github.com/karan/jReddit">jReddit</a></td>
       <td><a href="http://www.reddit.com/user/karangoeluw">/u/karangoeluw</a></td>
@@ -118,9 +144,7 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="3">JavaScript</th>
-    </tr>
+    <tr><th colspan="3">JavaScript</th></tr>
     <tr>
       <td><a href="https://github.com/go1dfish/nodewhal">Nodewhal</a> (Node.js)</td>
       <td><a href="http://www.reddit.com/user/go1dfish">/u/go1dfish</a></td>
@@ -138,9 +162,7 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="3">Objective-C</th>
-    </tr>
+    <tr><th colspan="3">Objective-C</th></tr>
     <tr>
       <td><a href="https://github.com/samsymons/RedditKit">RedditKit</a></td>
       <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a></td>
@@ -148,9 +170,7 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="3">Perl</th>
-    </tr>
+    <tr><th colspan="3">Perl</th></tr>
     <tr>
       <td><a href="https://github.com/three18ti/Reddit.pm">Perl reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/three18ti">/u/three18ti</a></td>
@@ -158,9 +178,7 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="3">Powershell</th>
-    </tr>
+    <tr><th colspan="3">Powershell</th></tr>
     <tr>
       <td><a href="https://github.com/davotronic5000/PoSh_Reddit">PoSh Reddit</a></td>
       <td><a href="http://www.reddit.com/user/davotronic5000">/u/davotronic5000</a></td>
@@ -168,9 +186,7 @@ The clients in this list only support cookie based login, or no login at all. Un
     </tr>
   </tbody>
   <tbody>
-    <tr>
-      <th colspan="3">Ruby</th>
-    </tr>
+    <tr><th colspan="3">Ruby</th></tr>
     <tr>
       <td><a href="https://github.com/samsymons/RedditKit.rb">RedditKit.rb</a></td>
       <td><a href="http://www.reddit.com/user/samsymons">/u/samsymons</a></td>
@@ -179,16 +195,6 @@ The clients in this list only support cookie based login, or no login at all. Un
     <tr>
       <td><a href="https://github.com/paradox460/snoo">Snoo</a></td>
       <td><a href="http://www.reddit.com/user/Paradox">/u/Paradox</a></td>
-      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr>
-      <th colspan="3">Groovy</th>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/Steveice10/Greddit">Greddit</a></td>
-      <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
     </tr>
   </tbody>
