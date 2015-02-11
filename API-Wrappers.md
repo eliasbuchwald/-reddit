@@ -124,7 +124,7 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
     <tr><th colspan="3">Go</th></tr>
     <tr>
       <td><a href="https://github.com/jzelinskie/reddit">reddit</a></td>
-      <td><i>unknown</i></td>
+      <td><a href="http://www.reddit.com/user/jzelinskie">/u/jzelinskie</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
     </tr>
     </tr>
