@@ -9,6 +9,21 @@ The clients in this list:
 
 Please read the documentation for each project - this page may be outdated.
 
+<h4>C#</h4>
+<table>
+  <tbody>
+    <tr>
+      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a></td>
+      <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
 #### Java
 
 <table>
@@ -105,14 +120,6 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
 
 
 <table>
-  <tbody>
-    <tr><th colspan="3">C#</th></tr>
-    <tr>
-      <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a></td>
-      <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a></td>
-      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-    </tr>
-  </tbody>
   <tbody>
     <tr><th colspan="3">Go</th></tr>
     <tr>
