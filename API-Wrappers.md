@@ -107,7 +107,7 @@ Please read the documentation for each project - this page may be outdated.
       <td><a href="https://github.com/avidw/redd">Redd</a></td>
       <td><a href="http://www.reddit.com/user/Mustermind">/u/Mustermind</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>No</td>
+      <td>Yes</td>
     </tr>
   </tbody>
 </table>
