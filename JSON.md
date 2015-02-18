@@ -157,6 +157,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean`      | `has_mod_mail`           | user has unread mod mail? null if not your account |
 | `boolean`      | `has_verified_email`     | user has provided an email address and got it verified? |
 | `String`       | `id`                     | ID of the account; prepend `t2_` to get fullname |
+| `int`          | `inbox_count`            | Number of unread messages in the inbox. Not present if not your account |
 | `boolean`      | `is_friend`              | whether the logged-in user has this user set as a friend |
 | `boolean`      | `is_gold`                | reddit gold status |
 | `boolean`      | `is_mod`                 | whether this account moderates any subreddits |
