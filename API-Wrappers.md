@@ -121,6 +121,15 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
 
 <table>
   <tbody>
+    <tr><th colspan="3">Common Lisp</th></tr>
+    <tr>
+      <td><a href="https://github.com/jperson/cl-reddit">cl-reddit</a></td>
+      <td><i>unknown</i></td>
+      <td><a href="http://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a></td>
+    </tr>
+    </tr>
+  </tbody>
+  <tbody>
     <tr><th colspan="3">Go</th></tr>
     <tr>
       <td><a href="https://github.com/jzelinskie/reddit">reddit</a></td>
