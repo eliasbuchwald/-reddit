@@ -55,7 +55,7 @@ Please read the documentation for each project - this page may be outdated.
     </tr>
     <tr>
       <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a> (Node.js & Browser)</td>
-      <td><a href="http://www.reddit.com/user/tsenior/">/u/tsenior</a></td>
+      <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Yes</td>
     </tr>
