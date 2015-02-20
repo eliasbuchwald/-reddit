@@ -20,3 +20,7 @@ You may find yourself running into a Postgres connection limit error, eg `remain
     [$]> sudo initctl emit reddit-start
 
 See also [the Pylons](http://docs.pylonsproject.org/projects/pylons-webframework/en/v0.9.7/testing.html) and [nose](http://nose.readthedocs.org/en/latest/) docs.
+
+# Writing Tests
+
+For the most part, you should use the general [`unittest.TestCase`](https://docs.python.org/2/library/unittest.html#unittest.TestCase).  If you're getting errors about the environment, check out the helpers in [`tests/__init__.py`](https://github.com/reddit/reddit/blob/master/r2/r2/tests/__init__.py).
