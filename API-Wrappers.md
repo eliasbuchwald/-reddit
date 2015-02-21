@@ -9,105 +9,66 @@ The clients in this list:
 
 Please read the documentation for each project - this page may be outdated.
 
-<h4>C#</h4>
 <table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">C#</th></tr>
     <tr>
       <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a></td>
       <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Yes</td>
+      <td>Stable</t4>
+    </tr>
     </tr>
   </tbody>
-</table>
-
-#### Java
-
-<table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">Java</th></tr>
     <tr>
       <td><a href="https://github.com/thatJavaNerd/JRAW">JRAW</a></td>
       <td><a href="http://www.reddit.com/user/thatJavaNerd">/u/thatJavaNerd</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>No</td>
+      <td>Unstable</td>
     </tr>
   </tbody>
-</table>
-
-#### JavaScript
-
-<table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">Javascript</th></tr>
     <tr>
       <td><a href="https://bitbucket.org/Doctor_McKay/raw.js">raw.js</a> (Node.js)</td>
       <td><a href="http://www.reddit.com/user/Doctor_McKay">/u/Doctor_McKay</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Yes</td>
+      <td>Stable</td>
     </tr>
     <tr>
       <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a> (Node.js & Browser)</td>
       <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Yes</td>
+      <td>Stable</td>
     </tr>
   </tbody>
-</table>
-
-
-#### PHP
-
-<table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">PHP</th></tr>
     <tr>
       <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/jcleblanc">/u/jcleblanc</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Yes</td>
+      <td>Stable</td>
     </tr>
   </tbody>
-</table>
-
-#### Python
-
-<table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">Python</th></tr>
     <tr>
       <td><a href="https://github.com/praw-dev/praw">PRAW</a></td>
       <td><a href="http://www.reddit.com/user/bboe">/u/bboe</a></td>
       <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
-      <td>Yes</td>
+      <td>Stable</td>
     </tr>
   </tbody>
-</table>
-
-
-#### Ruby
-
-<table>
   <tbody>
-    <tr>
-      <th>Client Name</th><th>Reddit Username</th><th>License</th><th>Stable?</th>
-    </tr>
+    <tr><th colspan="4">Ruby</th></tr>
     <tr>
       <td><a href="https://github.com/avidw/redd">Redd</a></td>
       <td><a href="http://www.reddit.com/user/Mustermind">/u/Mustermind</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Yes</td>
+      <td>Stable</td>
     </tr>
   </tbody>
 </table>
