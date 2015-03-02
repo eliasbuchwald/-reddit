@@ -179,12 +179,8 @@ postgres$ createuser -P reddit
 For testing purposes, you can generate random test data for your reddit install.
 
 ```bash
-$ cd ~/reddit/r2
-$ paster shell example.ini
-```
-```python
->>> from r2.models import populatedb
->>> populatedb.populate()
+$ cd ~/reddit
+$ reddit-run scripts/inject_test_data.py -c 'inject_test_data()'
 ```
 
 Note: this will also create a reddit account named `reddit` with password

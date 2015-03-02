@@ -72,7 +72,7 @@ No, using Amazon S3 is optional. The default install executed by the install scr
 
 ### What is the administrator account?
 
-By default, there are no accounts. Create an account and add it to the `admins` line in `example.ini`. If you populate the database using `populatedb` it will generate an account called `reddit` with password `password` which is in the list of admins by default.
+By default, there are no accounts. Create an account and add it to the `admins` line in `example.ini`. If you populate the database using `inject_test_data.py` it will generate an account called `reddit` with password `password` which is in the list of admins by default.
 
 ### Why can't I log in to my reddit?
 
