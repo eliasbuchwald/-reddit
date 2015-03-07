@@ -113,7 +113,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `header_img`             | full URL to the header image, or null |
 | `array`   | `header_size`            | width and height of the header image, or null |
 | `String`  | `header_title`           | description of header image shown on hover, or null |
-| `boolean` | `over18`                 | is_nsfw? |
+| `boolean` | `over18`                 | whether the subreddit is marked as NSFW |
 | `String`  | `public_description`     | Description shown in subreddit search results? |
 | `boolean` | `public_traffic`         | whether the subreddit's traffic page is publicly-accessible |
 | `long`    | `subscribers`            | the number of redditors subscribed to this subreddit |
