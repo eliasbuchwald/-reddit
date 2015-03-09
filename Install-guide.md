@@ -2,6 +2,9 @@ These instructions will guide you through the process of setting up a
 reddit clone for the first time. We also have an [automated install
 script for Ubuntu Linux 12.04](https://github.com/reddit/reddit/wiki/reddit-install-script-for-Ubuntu).
 
+### Vagrant
+We also currently maintain a [vagrant build of the reddit environment](https://github.com/reddit/reddit-vagrant) that can help reduce the number of setup steps.
+
 ## Prerequisites
 
 Before continuing with this guide, make sure you have all of [reddit's
