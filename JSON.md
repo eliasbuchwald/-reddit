@@ -63,6 +63,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `link_url`             | present if the comment is being displayed outside its thread (user pages, `/r/subreddit/comments/.json`, etc.). Contains the URL of the parent link |
 | `int`     | `num_reports`            | how many times this comment has been reported, null if not a mod |
 | `String`  | `parent_id`              | ID of the thing this comment is a reply to, either the link or a comment in it |
+| `List<thing>` | `replies`            | A list of replies to this comment |
 | `boolean` | `saved`                  | true if this post is saved by the logged in user |
 | `int` | `score`           | the net-score of the comment |
 | `boolean` | `score_hidden`           | Whether the comment's score is currently hidden. |
@@ -80,7 +81,6 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `clicked`                | probably always returns false |
 | `String`  | `domain`                 | the domain of this link.  Self posts will be `self.reddit.com` while other examples include `en.wikipedia.org` and `s3.amazon.com` |
 | `boolean` | `hidden`                 | true if the post is hidden by the logged in user.  false if not logged in or not hidden. |
-| `List<thing>` | `replies`            | A list of replies to this comment |
 | `boolean` | `is_self`                | true if this link is a selfpost |
 | `boolean` | `likes`                  | how the logged-in user has voted on the link - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_flair_css_class`   | the CSS class of the link's flair. |
