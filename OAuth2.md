@@ -26,6 +26,8 @@ In order to make requests to reddit's API via OAuth, you must acquire an Authori
     https://www.reddit.com/api/v1/authorize?client_id=CLIENT_ID&response_type=TYPE&
         state=RANDOM_STRING&redirect_uri=URI&duration=DURATION&scope=SCOPE_STRING
 
+*Note: Use `/api/v1/authorize.compact?` for a page that's friendlier to small screens.*
+
 Parameter | Values | Description
 ----------|---------|---------
 `client_id` | The Client ID generated during app [registration](https://www.reddit.com/prefs/apps) | Tells reddit.com which app is making the request
