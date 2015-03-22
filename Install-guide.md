@@ -154,12 +154,7 @@ the installation.
 <tr>
     <td>ImportError: No module named wrapped</td>
     <td>
-         You need to compile the Cython modules.
-
-```bash
-$ cd ~/reddit/r2
-$ make
-```
+         You need to compile the Cython modules. `cd ~/reddit/r2 && make`
     </td>
 </tr>
 <tr>
