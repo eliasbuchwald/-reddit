@@ -149,6 +149,11 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
   <tbody>
     <tr><th colspan="3">Perl</th></tr>
     <tr>
+      <td><a href="https://github.com/jsober/Reddit-API">Reddit::Client</a></td>
+      <td><a href="http://www.reddit.com/user/jsober">/u/jsober</a></td>
+      <td><a href="http://opensource.org/licenses/GPL-1.0">GPL</a> or <a href="http://opensource.org/licenses/artistic-license-1.0">Artistic</a></td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/three18ti/Reddit.pm">Perl reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/three18ti">/u/three18ti</a></td>
       <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
