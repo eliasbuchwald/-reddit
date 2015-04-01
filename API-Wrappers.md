@@ -21,6 +21,16 @@ Please read the documentation for each project - this page may be outdated.
     </tr>
   </tbody>
   <tbody>
+    <tr><th colspan="4">Dart</th></tr>
+    <tr>
+      <td><a href="https://github.com/stevenroose/dart-reddit">reddit</a></td>
+      <td><a href="http://reddit.com/user/sroose">/u/sroose</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Stable</t4>
+    </tr>
+    </tr>
+  </tbody>
+  <tbody>
     <tr><th colspan="4">Java</th></tr>
     <tr>
       <td><a href="https://github.com/thatJavaNerd/JRAW">JRAW</a></td>
