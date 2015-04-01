@@ -1,4 +1,4 @@
-In describing the architecture of reddit, it is useful to make a distinction between "reddit" the software and "reddit.com" the main user and developer of that software. reddit is able to run on a single machine up through data center with hundreds of machines. reddit.com is at the latter end of the spectrum and employs a few tricks that are outside of the reddit software itself as well. This architectural overview starts by describing what is intrinsic to reddit, and then goes on to explain what is currently set up for reddit.com.
+In describing the architecture of reddit, it is useful to make a distinction between "reddit" the software and "reddit.com" the main user and developer of that software. reddit is able to run on a single machine, or through a data center with hundreds of machines. reddit.com is at the latter end of the spectrum and employs a few tricks that are outside of the reddit software itself as well. This architectural overview starts by describing what is intrinsic to reddit, and then goes on to explain what is currently set up for reddit.com.
 
 # reddit (the software)
 
