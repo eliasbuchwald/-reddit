@@ -147,6 +147,11 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
       <td><a href="http://www.reddit.com/user/sahilmuthoo">/u/sahilmuthoo</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
     </tr>
+    <tr>
+      <td><a href="https://github.com/Mobilpadde/NRAW.js">NRAW.js</a> (Node.js)</td>
+      <td><a href="http://www.reddit.com/user/Mobilpadde">/u/Mobilpadde</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+    </tr>
   </tbody>
   <tbody>
     <tr><th colspan="3">Objective-C</th></tr>
