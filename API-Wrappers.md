@@ -173,6 +173,11 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
       <td><a href="http://www.reddit.com/user/three18ti">/u/three18ti</a></td>
       <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
     </tr>
+    <tr>
+      <td><a href="https://github.com/aggrolite/Mojo-Snoo">Mojo::Snoo</a></td>
+      <td><a href="http://www.reddit.com/user/aggrolite">/u/aggrolite</a></td>
+      <td><a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause</a></td>
+    </tr>
   </tbody>
   <tbody>
     <tr><th colspan="3">Powershell</th></tr>
