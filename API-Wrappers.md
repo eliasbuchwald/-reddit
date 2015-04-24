@@ -18,7 +18,6 @@ Please read the documentation for each project - this page may be outdated.
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Stable</t4>
     </tr>
-    </tr>
   </tbody>
   <tbody>
     <tr><th colspan="4">Dart</th></tr>
@@ -27,7 +26,6 @@ Please read the documentation for each project - this page may be outdated.
       <td><a href="http://reddit.com/user/sroose">/u/sroose</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Stable</t4>
-    </tr>
     </tr>
   </tbody>
   <tbody>
@@ -49,7 +47,7 @@ Please read the documentation for each project - this page may be outdated.
     </tr>
     <tr>
       <td><a href="https://github.com/trevorsenior/snoocore">Snoocore</a> (Node.js & Browser)</td>
-      <td><a href="http://www.reddit.com/user/trevorsenior/">/u/trevorsenior</a></td>
+      <td><a href="http://www.reddit.com/user/tsenior/">/u/tsenior</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Stable</td>
     </tr>
@@ -98,7 +96,6 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
       <td><i>unknown</i></td>
       <td><a href="http://opensource.org/licenses/BSD-2-Clause">BSD-2-Clause</a></td>
     </tr>
-    </tr>
   </tbody>
   <tbody>
     <tr><th colspan="3">Go</th></tr>
@@ -106,7 +103,6 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
       <td><a href="https://github.com/jzelinskie/geddit">geddit</a></td>
       <td><a href="http://www.reddit.com/user/jzelinskie">/u/jzelinskie</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-    </tr>
     </tr>
   </tbody>
   <tbody>
