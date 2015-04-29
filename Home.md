@@ -17,6 +17,7 @@ our community, and we want to let our community improve our technology.
     - [[API overview and rules|API]]
     - [API documentation](http://www.reddit.com/dev/api)
     - [[API wrapper libraries|API Wrappers]]
+    - [[oEmbed API|oEmbed]]
 - **Code**
     - [[Cron Jobs]]
     - [[Services]]
