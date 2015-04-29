@@ -81,7 +81,7 @@ $ sudo -u postgres psql reddit < sql/functions.sql
 
 ## Cassandra
 
-Cassandra is a vital component the reddit architecture that stores many
+Cassandra is a vital component of the reddit architecture that stores many
 pieces of data used throughout the site.
 
 You must create the keyspace for reddit and the `permacache` column family.
