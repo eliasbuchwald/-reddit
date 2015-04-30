@@ -30,5 +30,5 @@ The oEmbed endpoint also accepts two non-standard parameters to help make better
 
 More on embeds here: https://www.reddit.com/wiki/embeds
 
-Presently, non-permalinks to comments will 404. When we add support for post embeds, we'll also support them in oEmbed format.
+Presently, only permalinks to comments are available - requests for oEmbeds of other URLs will result in a 404 response. When we add support for post embeds, we'll also support them in oEmbed format.
 
