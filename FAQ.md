@@ -34,19 +34,19 @@ This is where all of the services' logs are sent and should give you a stack tra
     <td>
          You need to compile the Cython modules.
 
-```bash
+<pre>
 $ cd ~/reddit/r2
 $ make
-```
+</pre>
     </td>
 </tr>
 <tr>
     <td>ImportError: No module named rails.asset_tag</td>
     <td>setup.py installed the wrong version of webhelpers. You must downgrade it.
 
-```bash
+<pre>
 $ sudo easy_install "webhelpers==0.6.4"
-```
+</pre>
 </td>
 </tr>
 <tr>
@@ -54,11 +54,11 @@ $ sudo easy_install "webhelpers==0.6.4"
     <td>
         The postgres user "reddit" has the wrong password. You should recreate the postgres user "reddit" with password "reddit".
 
-```bash
+<pre>
 reddit$ su postgres
 postgres$ dropuser reddit
 postgres$ createuser -P reddit
-```
+</pre>
     </td>
 </tr>
 </tbody>
@@ -86,7 +86,9 @@ By default, the link to the form for subreddit creation is hidden for accounts n
 
 `update_reddits` needs to be run. See [[Cron Jobs]] for more information on what this does. To run it manually:
 
-    sudo start reddit-job-update_reddits 
+```bash
+sudo start reddit-job-update_reddits 
+```
 
 ### What if the top bar isn't showing up at all?
 
