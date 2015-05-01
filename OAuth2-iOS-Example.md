@@ -44,7 +44,7 @@ Once OAuth is complete, you will receive a callback with a URL that looks someth
 
 You will need to parse out the `code` from the query string. Below is a sample of what that the AppDelegate method looks like:
 
-```
+```objective-c
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
     if ([url.scheme isEqualToString:@"myappscheme"]) {
@@ -69,7 +69,7 @@ Since this is an installed application, you always want to request `duration=per
 
 Example:
 
-```
+```objective-c
 NSURL *authorizationURL = [NSURL URLWithString:@"https://ssl.reddit.com/api/v1/authorize?client_id=Bq9yaGfIVdJXTQ&response_type=code&state=TEST&redirect_uri=myappscheme://response&duration=permanent&scope=read"];
 NSURLRequest *request = [NSURLRequest requestWithURL:authorizationURL];
 [self.webView loadRequest:request];
