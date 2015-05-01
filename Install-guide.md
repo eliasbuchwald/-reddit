@@ -44,7 +44,9 @@ we use many separate database clusters, but for sites with less traffic
 
 This guide assumes you have a working PostgreSQL install running under the unix user `postgres`, and that you can access it with `sudo -u postgres psql`. That's the norm if you installed PostgreSQL on Ubuntu/Debian/Fedora from operating system packages, and on Mac OS X using Homebrew. To test that, copy and paste the following command to your terminal and run it:
 
-    sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)||', version: '||version()"
+```bash
+sudo -u postgres psql -qAt -c "SELECT 'connected ok, superuser: ' || (select usesuper from pg_user where usename = CURRENT_USER)||', version: '||version()"
+```
 
 It should print something like:
 
@@ -86,7 +88,7 @@ pieces of data used throughout the site.
 
 You must create the keyspace for reddit and the `permacache` column family.
 
-```
+```bash
 $ cassandra-cli -h localhost
 [default@unknown] create keyspace reddit;
 [default@unknown] use reddit;
@@ -154,7 +156,11 @@ the installation.
 <tr>
     <td>ImportError: No module named wrapped</td>
     <td>
-         You need to compile the Cython modules. <code>cd ~/reddit/r2 && make</code>
+         You need to compile the Cython modules.
+
+<pre lang="bash">
+cd ~/reddit/r2 && make</code>
+</pre>
     </td>
 </tr>
 <tr>
@@ -162,11 +168,11 @@ the installation.
     <td>
         The postgres user "reddit" has the wrong password. You should recreate the postgres user "reddit" with password "password".
 
-```bash
+<pre lang="bash">
 reddit$ su postgres
 postgres$ dropuser reddit
 postgres$ createuser -P reddit
-```
+</pre>
     </td>
 </tr>
 </tbody>
