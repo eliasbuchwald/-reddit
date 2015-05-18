@@ -66,9 +66,10 @@ Python example
     In [2]: import requests.auth
     In [3]: client_auth = requests.auth.HTTPBasicAuth('p-jcoLKBynTLew', 'gko_LXELoV07ZBNUXrvWZfzE3aI')
     In [4]: post_data = {"grant_type": "password", "username": "reddit_bot", "password": "snoo"}
-    In [5]: response = requests.post("https://www.reddit.com/api/v1/access_token", auth=client_auth, data=post_data)
-    In [6]: response.json()
-    Out[6]: 
+    In [5]: headers = {"User-Agent": "ChangeMeClient/0.1 by YourUsername"}
+    In [6]: response = requests.post("https://www.reddit.com/api/v1/access_token", auth=client_auth, data=post_data, headers=headers)
+    In [7]: response.json()
+    Out[7]: 
     {u'access_token': u'fhTdafZI-0ClEzzYORfBSCR7x3M',
      u'expires_in': 3600,
      u'scope': u'*',
