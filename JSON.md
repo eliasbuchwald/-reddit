@@ -79,7 +79,7 @@ All `thing`s that implement `created` have these attributes:
 | `String`  | `author_flair_css_class` | the CSS class of the author's flair.  subreddit specific |
 | `String`  | `author_flair_text`      | the text of the author's flair.  subreddit specific |
 | `boolean` | `clicked`                | probably always returns false |
-| `String`  | `domain`                 | the domain of this link.  Self posts will be `self.reddit.com` while other examples include `en.wikipedia.org` and `s3.amazon.com` |
+| `String`  | `domain`                 | the domain of this link.  Self posts will be `self.<subreddit>` while other examples include `en.wikipedia.org` and `s3.amazon.com` |
 | `boolean` | `hidden`                 | true if the post is hidden by the logged in user.  false if not logged in or not hidden. |
 | `boolean` | `is_self`                | true if this link is a selfpost |
 | `boolean` | `likes`                  | how the logged-in user has voted on the link - `True` = upvoted, `False` = downvoted, `null` = no vote |
