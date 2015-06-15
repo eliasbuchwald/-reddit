@@ -178,12 +178,12 @@ postgres$ createuser -P reddit
 <tr>
     <td>  File "/usr/lib/python2.7/dist-packages/gunicorn/config.py", line 356, in validate_group
     raise ConfigError("No such group: '%s'" % val)
-gunicorn.errors.ConfigError: No such group: '<NAME>'</td>
+gunicorn.errors.ConfigError: No such group: 'NAME'</td>
     <td>
          gunicorn tries to use a group with name equivalent to your USER_NAME. Simple way to fix is to create a group named <NAME> and add your user to it.
 
 <pre lang="bash">
-groupadd <NAME> && useradd -a -G <NAME> <NAME> </code>
+groupadd NAME && useradd -a -G NAME NAME </code>
 </pre>
     </td>
 </tr>
