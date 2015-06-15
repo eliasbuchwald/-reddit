@@ -175,6 +175,16 @@ postgres$ createuser -P reddit
 </pre>
     </td>
 </tr>
+<tr>
+    <td>TypeError: cannot concatenate 'str' and 'tuple' objects</td>
+    <td>
+         You may have a bad version of Python requests.
+
+<pre lang="bash">
+easy_install requests==0.14.2</code>
+</pre>
+    </td>
+</tr>
 </tbody>
 </table>
 
