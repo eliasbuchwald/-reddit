@@ -176,6 +176,18 @@ postgres$ createuser -P reddit
     </td>
 </tr>
 <tr>
+    <td>  File "/usr/lib/python2.7/dist-packages/gunicorn/config.py", line 356, in validate_group
+    raise ConfigError("No such group: '%s'" % val)
+gunicorn.errors.ConfigError: No such group: '<NAME>'</td>
+    <td>
+         gunicorn tries to use a group with name equivalent to your USER_NAME. Simple way to fix is to create a group named <NAME> and add your user to it.
+
+<pre lang="bash">
+groupadd <NAME> && useradd -a -G <NAME> <NAME> </code>
+</pre>
+    </td>
+</tr>
+<tr>
     <td>TypeError: cannot concatenate 'str' and 'tuple' objects</td>
     <td>
          You may have a bad version of Python requests.
