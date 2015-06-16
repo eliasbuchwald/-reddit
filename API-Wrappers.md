@@ -53,6 +53,15 @@ Please read the documentation for each project - this page may be outdated.
     </tr>
   </tbody>
   <tbody>
+    <tr><th colspan="4">Perl</th></tr>
+    <tr>
+      <td><a href="https://github.com/aggrolite/Mojo-Snoo">Mojo::Snoo</a></td>
+      <td><a href="http://www.reddit.com/user/aggrolite">/u/aggrolite</a></td>
+      <td><a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause</a></td>
+      <td>Unstable</td>
+    </tr>
+  </tbody>
+  <tbody>
     <tr><th colspan="4">PHP</th></tr>
     <tr>
       <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a></td>
@@ -168,11 +177,6 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
       <td><a href="https://github.com/three18ti/Reddit.pm">Perl reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/three18ti">/u/three18ti</a></td>
       <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/aggrolite/Mojo-Snoo">Mojo::Snoo</a></td>
-      <td><a href="http://www.reddit.com/user/aggrolite">/u/aggrolite</a></td>
-      <td><a href="http://opensource.org/licenses/BSD-2-Clause">BSD 2-Clause</a></td>
     </tr>
   </tbody>
   <tbody>
