@@ -18,8 +18,7 @@ Be sure to give the app a reasonable name and description. The redirect uri is i
 
 The part underlined in red is your client secret. *You should never share this.* Non-confidential clients (installed apps) *do not* have a secret.
 
-Authorization
-------------
+# Authorization
 
 In order to make requests to reddit's API via OAuth, you must acquire an Authorization token, either on behalf of a user or for your client (see Application Only OAuth, below). To act on behalf of a user, the user has to let reddit.com know that they're ok with your app performing certain actions for them, such as reading their subreddit subscriptions or sending a private message. In order to do so, your website or app should send the user to the authorization URL:
 
@@ -54,8 +53,10 @@ When you send the user to the authorization URL, they will be shown what parts o
 
 You will only be able to acquire a bearer token if the user decides they trust your app with the permissions (scopes) you've requested, so be sure to limit your permission request to only those that encompass the API endpoints you required.
 
-Token Retrieval (`code` flow)
---------------
+
+# Token Retrieval (`code` flow)
+
+### Allowing the user to authorize your application
 
 If the user chooses to allow your application, their browser will be instructed to redirect to your app's registered `redirect_uri`. The redirect URI will have the information below attached as query parameters. You should parse the query parameters for the URI for use in the next step.
 
@@ -72,6 +73,8 @@ Error | Cause | Resolution
 `invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a comma-separated list of valid scopes
 `invalid_request` | There was an issue with the request sent to `/api/v1/authorize` | Double check the parameters being sent during the request to `/api/v1/authorize` above.
 
+
+### Retrieving the access token
 If you didn't get an `error` and the `state` value checks out, you may then make a POST request with `code` to the following URL to retrieve your access token:
 
     https://www.reddit.com/api/v1/access_token
@@ -80,8 +83,10 @@ Include the following information in your POST data (NOT as part of the URL)
 
     grant_type=authorization_code&code=CODE&redirect_uri=URI
 
-You must supply your OAuth2 client's credentials via [HTTP Basic Auth](https://tools.ietf.org/html/rfc2617
-) for this request. The "user" is the `client_id`. The "password" for confidential clients is the `client_secret`. The "password" for non-confidential clients (installed apps) is an empty string.
+
+Header | Values | Description
+----------|---------|---------
+Authorization | [HTTP Basic Auth](https://tools.ietf.org/html/rfc2617) | The "user" is the `client_id`. The "password" for confidential clients is the `client_secret`. The "password" for non-confidential clients (installed apps) is an empty string.
 
 Parameter | Values | Description
 ----------|---------|---------
@@ -112,8 +117,7 @@ The response from this request, if successful, will be JSON of the following for
 
 **API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT www.reddit.com.**
 
-Refreshing the token
-------------------
+# Refreshing the token
 
 Access tokens expire after one hour. If your app requires access after that time, it must request a refresh token by including `duration=permanent` with the authorization request (see above). When the current access token expires, your app should send another POST request to the access token URL:
 
@@ -123,7 +127,9 @@ Include the following information in your POST data (NOT as part of the URL)
 
     grant_type=refresh_token&refresh_token=TOKEN
 
-Your client must be authenticated using HTTP Basic Authentication in the same manner as when requesting the original refresh token.
+Header | Values | Description
+----------|---------|---------
+Authorization | [HTTP Basic Auth](https://tools.ietf.org/html/rfc2617) | Must be the same HTTP Basic Authentication as when requesting the original refresh token.
 
 Parameter | Values | Description
 ----------|---------|---------
@@ -145,8 +151,7 @@ The response will look the same as the initial access token request.
         "scope": A scope string,
     }
 
-Authorization (Implicit grant flow)
-------------
+# Authorization (Implicit grant flow)
 
 **Note**: *Only apps [created as](https://www.reddit.com/prefs/apps) "installed" type apps may use the implicit flow. "web" and "script" type apps are considered "confidential" (i.e., they have secrets). Since you cannot safely send a secret via the implicit flow, we have elected to disallow implicit access to apps with secrets.*
 
@@ -180,8 +185,7 @@ When you send the user to the authorization URL, they will be shown what parts o
 
 You will only be able to acquire a bearer token if the user decides they trust your app with the permissions (scopes) you've requested, so be sure to limit your permission request to only those that encompass the API endpoints you required.
 
-Token Retrieval (Implicit grant flow)
---------------
+# Token Retrieval (Implicit grant flow)
 
 If the user chooses to allow your application, their browser will be instructed to redirect to your app's registered `redirect_uri`. The redirect URI will have the information below encoded into the fragment portion of the URL.
 
@@ -208,8 +212,7 @@ You may now make API requests to reddit's servers on behalf of that user, by inc
 
 **API requests with a bearer token should be made to `https://oauth.reddit.com`, NOT www.reddit.com.**
 
-Manually Revoking a Token
-------------------
+# Manually Revoking a Token
 
 While access tokens expire after 1 hour, and the end user can always [revoke a client's tokens](https://www.reddit.com/prefs/apps), good clients still clean up after themselves. OAuth2 clients can manually revoke tokens they are finished with - useful for ensuring that tokens, if stolen, aren't usable, and just for acting as a good citizen when the user "logs out" of your website (as an example).
 
@@ -236,8 +239,7 @@ Error | Cause | Resolution
 
 Note: Per [RFC 7009](http://tools.ietf.org/html/rfc7009), this request will return a success (204) response even if the passed in `token` was never valid.
 
-Application Only OAuth
-----------------------
+# Application Only OAuth
 
 In some cases, 3rd party app clients may wish to make API requests without a user context. App clients can request a "user-less" Authorization token via either the standard `client_credentials` grant, or the reddit specific extension to this grant, `https://oauth.reddit.com/grants/installed_client`. Which grant type an app uses depends on the app-type and its use case:
 
