@@ -40,3 +40,4 @@ make         |         | `make`                                 | Build tool.
 gettext      |         | `gettext`                              | Tools for internationalization.
 node.js      | 0.6.19+ | `nodejs` (reddit ppa)                  | Javascript environment.
 less.js      | 1.4+    | `node-less` (reddit ppa)               | CSS Precompiler.
+uglify.js    | 1.3+    | `node-uglify` (reddit ppa)             | Javascript compression
