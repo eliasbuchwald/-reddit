@@ -88,6 +88,15 @@ Please read the documentation for each project - this page may be outdated.
       <td>Stable</td>
     </tr>
   </tbody>
+  <tbody>
+    <tr><th colspan="4">Groovy</th></tr>
+    <tr>
+      <td><a href="https://github.com/Steveice10/Greddit">Greddit</a></td>
+      <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Stable</td>
+    </tr>
+  </tbody>
 </table>
 
 ## Non-OAuth API Clients
@@ -111,14 +120,6 @@ _If any of these libraries **do** support OAuth, please move them to the list ab
     <tr>
       <td><a href="https://github.com/jzelinskie/geddit">geddit</a></td>
       <td><a href="http://www.reddit.com/user/jzelinskie">/u/jzelinskie</a></td>
-      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-    </tr>
-  </tbody>
-  <tbody>
-    <tr><th colspan="3">Groovy</th></tr>
-    <tr>
-      <td><a href="https://github.com/Steveice10/Greddit">Greddit</a></td>
-      <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
     </tr>
   </tbody>
