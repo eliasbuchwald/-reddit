@@ -23,4 +23,4 @@ See also [the Pylons](http://docs.pylonsproject.org/projects/pylons-webframework
 
 # Writing Tests
 
-For the most part, you should use the general [`unittest.TestCase`](https://docs.python.org/2/library/unittest.html#unittest.TestCase).  If you're getting errors about the environment, check out the helpers in [`tests/__init__.py`](https://github.com/reddit/reddit/blob/master/r2/r2/tests/__init__.py).
+For the most part, you should use the general [`unittest.TestCase`](https://docs.python.org/2/library/unittest.html#unittest.TestCase).  If you're getting errors about the environment, make sure your test file has `from r2.tests import RedditTestCase` before you try to import any models.
