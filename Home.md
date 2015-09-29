@@ -36,10 +36,7 @@ fixes, etc.) you're welcome to send unsolicited pull requests. For larger, more
 core, changes make sure to check with us first so you don't waste any time if
 we don't feel it's the right direction to go down.
 
-- **Please follow the guidelines below in your submissions**
-    - [[reddit's Python Import Guidelines|PythonImportGuidelines]]
-    - [PEP-8 (Style Guide for Python)](https://github.com/reddit/styleguide/blob/master/python/pep-0008.rst)
-    - [PEP-257 (Docstring Conventions)](https://github.com/reddit/styleguide/blob/master/python/pep-0257.rst)
+**[Please follow reddit's styleguides in your submissions.](https://github.com/reddit/styleguide)**
 
 When you've submitted a pull request, we may respond with bizarre emoticons.
 Read up on [[The Code Salon]] for info on our code review process.
