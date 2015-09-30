@@ -1,8 +1,8 @@
 ## Resources
 * reddit's built-in [live API documentation](http://www.reddit.com/dev/api)
-* The [Apigee API console](https://apigee.com/console/reddit)
+* The [Apigee API console](https://apigee.com/console/reddit) Protip: Don't forget to specify a unique UserAgent in the Headers tab.
 * reddit requires [[OAuth for authentication|OAuth2]].
-* Don't forget the list of [[API Wrappers]].
+* Don't forget the list of [[API Wrappers]]
 
 <h2 id="rules">Rules</h2>
 We're happy to have API clients, crawlers, scrapers, and browser extensions,
