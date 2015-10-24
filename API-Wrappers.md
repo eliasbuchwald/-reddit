@@ -75,6 +75,12 @@ Please read the documentation for each project - this page may be outdated.
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Stable</td>
     </tr>
+    <tr>
+      <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a></td>
+      <td><a href="http://www.reddit.com/user/jcleblanc">/u/jcleblanc</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Unstable</td>
+    </tr>
   </tbody>
   <tbody>
     <tr><th colspan="4">Python</th></tr>
