@@ -23,7 +23,7 @@ our community, and we want to let our community improve our technology.
     - [[Services]]
 
 ## Install reddit
-For Ubuntu 12.04 (Precise Pangolin) we have an [automated install script](reddit install script for Ubuntu) that sets up a suitable development environment. 
+For Ubuntu 14.04 (Trusty Tahr) we have an [automated install script](reddit install script for Ubuntu) that sets up a suitable development environment. 
 
 Alternatively, you can see our [[Install Guide]] for instructions on setting up
 reddit from scratch. Many frequently asked questions regarding local reddit
