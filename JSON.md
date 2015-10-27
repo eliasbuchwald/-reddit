@@ -85,6 +85,7 @@ All `thing`s that implement `created` have these attributes:
 | `boolean` | `likes`                  | how the logged-in user has voted on the link - `True` = upvoted, `False` = downvoted, `null` = no vote |
 | `String`  | `link_flair_css_class`   | the CSS class of the link's flair. |
 | `String`  | `link_flair_text`        | the text of the link's flair. |
+| `boolean` | `locked`                 | whether the link is locked (closed to new comments) or not. |
 | `Object`  | `media`                  | Used for streaming video. Detailed information about the video and it's origins are placed here |
 | `Object`  | `media_embed`            | Used for streaming video. Technical embed specific information is found here. |
 | `int`     | `num_comments`           | the number of comments that belong to this link. includes removed comments. |
