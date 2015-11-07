@@ -97,7 +97,7 @@ Parameter | Values | Description
 Error | Cause | Resolution
 -----|--------|--------
 401 response | Client credentials sent as HTTP Basic Authorization were invalid | Verify that you are properly sending HTTP Basic Authorization headers and that your credentials are correct
-`unsupported_grant_type` | `grant_type` parameter was invalid | Verify that the `grant_type` sent is supported
+`unsupported_grant_type` | `grant_type` parameter was invalid or Http Content type was not set correctly | Verify that the `grant_type` sent is supported and make sure the content type off the http message is set to `application/x-www-form-urlencoded`
 `NO_TEXT` for field `code` | You didn't include the `code` parameter | Include the `code` parameter in the POST data
 `invalid_grant` | The `code` has expired or already been used | Ensure that you are not attempting to re-use old `code`s - they are one time use.
 
