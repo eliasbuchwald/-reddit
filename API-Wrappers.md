@@ -70,6 +70,11 @@ Please read the documentation for each project - this page may be outdated.
   <tbody>
     <tr><th colspan="4">PHP</th></tr>
     <tr>
+      <td><a href="https://github.com/rotorcowboy/Phapper">Phapper for reddit</a></td>
+      <td><a href="https://www.reddit.com/user/rotorcowboy">/u/rotorcowboy</a></td>
+      <td><a href="https://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Stable</td>
+    <tr>
       <td><a href="https://github.com/jcleblanc/reddit-php-sdk">PHP Reddit API Wrapper</a></td>
       <td><a href="http://www.reddit.com/user/jcleblanc">/u/jcleblanc</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
