@@ -312,6 +312,7 @@ Here is example code on using OAuth in various languages:
 * [Python (with PRAW)](https://praw.readthedocs.org/en/latest/pages/oauth.html)
 * [PHP](OAuth2-PHP-Example)
 * [Java Server Example](https://gist.github.com/GitTom/10493132)
+* [Android Example](https://github.com/pratik98/Reddit-OAuth)
 
 # What can I do once I have access?
 
