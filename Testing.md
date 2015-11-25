@@ -23,4 +23,6 @@ See also [the Pylons](http://docs.pylonsproject.org/projects/pylons-webframework
 
 # Writing Tests
 
-For the most part, you should use the general [`unittest.TestCase`](https://docs.python.org/2/library/unittest.html#unittest.TestCase).  If you're getting errors about the environment, make sure your test file has `from r2.tests import RedditTestCase` before you try to import any models.
+For the most part, you should use the general [`unittest.TestCase`](https://docs.python.org/2/library/unittest.html#unittest.TestCase).  This will allow nose to figure out which things are tests that need to be run.  Additionally, it provides you with [a large set of assertion helpers](https://docs.python.org/2/library/unittest.html#unittest.TestCase.assertEqual); it's always preferable to use `self.assertLess(a, b)` over `self.assertTrue(a < b)`, as the former produces more useful output when the test fails.
+
+> If you're getting errors about the environment, make sure your test file has `from r2.tests import RedditTestCase` before you try to import any models.
