@@ -60,12 +60,13 @@ The second incredibly helpful tool from `mock` is [`patch`](https://docs.python.
     from library import prettify_user
 
     class TestLibrary(unittest.TestCase):
-        # We have to patch the version of `Account` that's been imported into `library`,
-        # so we specify *that* instead of 'r2.models.Account' (where it's defined).
+        # We have to patch the version of `Account` that's been imported into
+        # `library`, so we specify *that* instead of 'r2.models.Account' (where
+        # it's defined).
         @patch('library.Account')
         def test_prettify_user(self, Account):
-            # Inside `library`, Account is now a `MagicMock`; thus, we can modify what
-            # its functions return.
+            # Inside `library`, Account is now a `MagicMock`; thus, we can modify
+            # what its functions return.
             Account._by_name('bob').pref_no_pretties = True
             self.assertEqual(prettify_user('bob'), 'bob')
 
