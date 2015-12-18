@@ -8,15 +8,12 @@
 We're happy to have API clients, crawlers, scrapers, and browser extensions,
 but they have to obey some rules:
 
-* Please ensure that all API clients are following reddit's [licensing guidelines](http://www.reddit.com/wiki/licensing)
-* **Make no more than thirty requests per minute.** This allows some burstiness
-  to your requests, but keep it sane. On average, we should see no more than
-  one request every two seconds from you. Monitor the following response headers
-  to ensure that you're not exceeding the limits:
+* Please ensure that all API clients follow Reddit's [API terms](http://www.reddit.com/wiki/api)
+* **Clients must authenticate with [[OAuth2]]**
+* * Clients connecting via [[OAuth2]] may make up to 60 requests per minute. Monitor the following response headers to ensure that you're not exceeding the limits:
     * `X-Ratelimit-Used`: Approximate number of requests used in this period
     * `X-Ratelimit-Remaining`: Approximate number of requests left to use
     * `X-Ratelimit-Reset`: Approximate number of seconds to end of period
-* Clients connecting via [[OAuth2]] may make up to 60 requests per minute.
 * Change your client's User-Agent string to something unique and descriptive,
   including the target platform, a unique application identifier, a version string,
   and your username as contact information, in the following format:  
