@@ -10,7 +10,7 @@ but they have to obey some rules:
 
 * Please ensure that all API clients follow Reddit's [API terms](http://www.reddit.com/wiki/api)
 * **Clients must authenticate with [[OAuth2]]**
-* * Clients connecting via [[OAuth2]] may make up to 60 requests per minute. Monitor the following response headers to ensure that you're not exceeding the limits:
+* Clients connecting via [[OAuth2]] may make up to 60 requests per minute. Monitor the following response headers to ensure that you're not exceeding the limits:
     * `X-Ratelimit-Used`: Approximate number of requests used in this period
     * `X-Ratelimit-Remaining`: Approximate number of requests left to use
     * `X-Ratelimit-Reset`: Approximate number of seconds to end of period
