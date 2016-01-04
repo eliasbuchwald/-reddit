@@ -3,7 +3,7 @@ reddit clone for the first time. We also have an [automated install
 script for Ubuntu Linux 14.04](https://github.com/reddit/reddit/wiki/reddit-install-script-for-Ubuntu).
 
 ### Vagrant
-We also currently maintain a [vagrant build of the reddit environment](https://github.com/reddit/reddit-vagrant) that can help reduce the number of setup steps.
+We also currently maintain a [Vagrantfile](https://github.com/reddit/reddit/blob/master/Vagrantfile) that can help reduce the number of setup steps.
 
 ## Prerequisites
 
