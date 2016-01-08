@@ -34,7 +34,7 @@ Parameter | Values | Description
 `state` | A string of your choosing | You should generate a unique, possibly random, string for each authorization request. This value will be returned to you when the user visits your REDIRECT_URI after allowing your app access - you should verify that it matches the one you sent. This ensures that only authorization requests you've started are ones you finish. (You may also use this value to, for example, tell your webserver what action to take after receiving the OAuth2 bearer token)
 `redirect_uri` | The redirect_uri you have specified during [registration](https://www.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
 `duration` | Either `temporary` or `permanent` | Indicates whether or not your app needs a permanent token. All bearer tokens expire after 1 hour. If you indicate you need `permanent` access to a user's account, you will additionally receive a `refresh_token` when acquiring the bearer token. You may use the `refresh_token` to acquire a new bearer token after your current token expires. Choose `temporary` if you're completing a one-time request for the user (such as analyzing their recent comments); choose `permanent` if you will be performing ongoing tasks for the user, such as notifying them whenever they receive a private message. **The implicit grant flow does not allow permanent tokens.**
-`scope` | A comma-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
+`scope` | A space-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
 
 
 See [http://www.reddit.com/dev/api/oauth](http://www.reddit.com/dev/api/oauth) for a breakdown of which API endpoints require which scopes. Also see [https://www.reddit.com/api/v1/scopes](https://www.reddit.com/api/v1/scopes) for a list of all available scopes.
@@ -45,7 +45,7 @@ Error | Cause | Resolution
 User sees 403 error in browser | client_id is missing or invalid | Verify that client_id is set and correct for your app
 User sees 403 error in browser | redirect_uri is invalid | Verify that redirect_uri is set and matches what is set for your app
 
-\* *Note*: This is a slight deviation from the OAuth 2.0 specification, which states scopes should normally be space-separated.
+\* *Note*: Commas are supported too.
 
 When you send the user to the authorization URL, they will be shown what parts of their account you want access to based on the requested scopes:
 
@@ -70,7 +70,7 @@ Error | Cause | Resolution
 -----|--------|--------
 `access_denied` | User chose not to grant your app permissions | Fail gracefully - let the user know you cannot continue, and be respectful of their choice to decline to use your app
 `unsupported_response_type` | Invalid `response_type` parameter in initial Authorization | Ensure that the `response_type` parameter is one of the allowed values
-`invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a comma-separated list of valid scopes
+`invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a space-separated list of valid scopes
 `invalid_request` | There was an issue with the request sent to `/api/v1/authorize` | Double check the parameters being sent during the request to `/api/v1/authorize` above.
 
 
@@ -166,7 +166,7 @@ Parameter | Values | Description
 `response_type` | `token` | Must be the string "token".
 `state` | A string of your choosing | You should generate a unique, possibly random, string for each authorization request. This value will be returned to you when the user visits your REDIRECT_URI after allowing your app access - you should verify that it matches the one you sent. This ensures that only authorization requests you've started are ones you finish. (You may also use this value to, for example, tell your webserver what action to take after receiving the OAuth2 bearer token)
 `redirect_uri` | The redirect_uri you have specified during [registration](https://www.reddit.com/prefs/apps) | If this does not match the registered redirect_uri, the authorization request will fail. If authorization succeeds, the user's browser will be instructed to redirect to this location.
-`scope` | A comma-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
+`scope` | A space-separated\* list of [scope strings](http://www.reddit.com/dev/api/oauth) | All bearer tokens are limited in what functions they may perform. You must explicitly request access to areas of the api, such as private messaging or moderator actions. See our [automatically generated API docs](https://www.reddit.com/dev/api/oauth). Scope Values: `identity`, `edit`, `flair`, `history`, `modconfig`, `modflair`, `modlog`, `modposts`, `modwiki`,   `mysubreddits`, `privatemessages`, `read`, `report`, `save`, `submit`, `subscribe`, `vote`, `wikiedit`, `wikiread`.
 
 
 See [http://www.reddit.com/dev/api/oauth](http://www.reddit.com/dev/api/oauth) for a breakdown of which API endpoints require which scopes. Also see [https://www.reddit.com/api/v1/scopes](https://www.reddit.com/api/v1/scopes) for a list of all available scopes.
@@ -193,7 +193,7 @@ Error | Cause | Resolution
 -----|--------|--------
 `access_denied` | User chose not to grant your app permissions | Fail gracefully - let the user know you cannot continue, and be respectful of their choice to decline to use your app
 `unsupported_response_type` | Invalid `response_type` parameter in initial Authorization | Ensure that the `response_type` parameter is one of the allowed values
-`invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a comma-separated list of valid scopes
+`invalid_scope` | Invalid `scope` parameter in initial Authorization | Ensure that the `scope` parameter is a space-separated list of valid scopes
 `invalid_request` | There was an issue with the request sent to `/api/v1/authorize` | Double check the parameters being sent during the request to `/api/v1/authorize` above.
 
 The response from this request, if successful, will be form encoded into the fragment with the following values:
