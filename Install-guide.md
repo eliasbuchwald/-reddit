@@ -113,6 +113,11 @@ $ sudo rabbitmqctl add_user reddit reddit
 $ sudo rabbitmqctl set_permissions -p / reddit ".*" ".*" ".*"
 ```
 
+The rabbitmq web management interface is accessible on port 15672 
+with the credentials `guest:guest`.  If you are using the 
+Vagrantfile for setup, you can also access the interface on your
+host machine on the same port.
+
 ## memcached
 
 Almost everything in reddit depends on memcached running, and you won't
