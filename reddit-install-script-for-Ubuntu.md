@@ -2,21 +2,19 @@ The reddit install script is a bash script designed for use on Ubuntu Linux. It 
 
 ## Usage
 1. Get the [latest version of the install script](https://github.com/reddit/reddit/blob/master/install-reddit.sh).
-2. Run the script as root.
+2. Run the script. (It doesn't need to be invoked as root, but it'll ask for `sudo` as it runs)
 
 ```bash
 $ wget https://raw.github.com/reddit/reddit/master/install-reddit.sh
 $ chmod +x install-reddit.sh
-$ less install-reddit.sh
+$ ./install-reddit.sh
 ```
 
-Seriously, stop here and *read* the script. It's got some helpful information that can prevent common issues. Resolving to the appropriate domain name is beyond the scope of this document, but the easiest thing is probably editing `/etc/hosts` on the host machine. Then just run the script.
+_Read the instructions that this script prints_, making sure that the pre-defined environmental variables are set properly.  
 
-```bash
-$ sudo ./install-reddit.sh
-```
+This script will download the installer and config from [the reddit github repository](https://github.com/reddit/reddit/tree/master/install).  The downloaded config (`install/install.cfg`) and the main installer script (`install/reddit.sh`) that come with running that command have got some helpful information that can prevent common issues. 
 
-reddit is now available and listening on port 80. If you used the default domain and have name resolution working correctly, try going to http://reddit.local/
+Reddit is now available and listening on port 80.  Resolving to the appropriate domain name is beyond the scope of this document, but the easiest thing is probably editing `/etc/hosts` on the host machine.  If you used the default domain and have name resolution working correctly, try going to http://reddit.local/
 
 ## Test data
 
