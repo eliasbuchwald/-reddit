@@ -32,6 +32,12 @@ Please read the documentation for each project - this page may be outdated.
     <tr><th colspan="4">Java</th></tr>
     <tr>
       <td><a href="https://github.com/thatJavaNerd/JRAW">JRAW</a></td>
+      <td>none</td>
+      <td><a href="https://opensource.org/licenses/LGPL-3.0">LGPL-3.0</a></td>
+      <td>Unstable</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/euparkeria/RedditJerk">RedditJerk</a></td>
       <td><a href="http://www.reddit.com/user/thatJavaNerd">/u/thatJavaNerd</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Unstable</td>
