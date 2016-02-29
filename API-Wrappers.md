@@ -46,6 +46,12 @@ Please read the documentation for each project - this page may be outdated.
   <tbody>
     <tr><th colspan="4">Javascript</th></tr>
     <tr>
+      <td><a href="https://github.com/not-an-aardvark/snoowrap">snoowrap</a> (Node.js & Browser)</td>
+      <td><a href="https://reddit.com/user/not_an_aardvark">/u/not_an_aardvark</a></td>
+      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
+      <td>Stable</td>
+    </tr>
+    <tr>
       <td><a href="https://bitbucket.org/Doctor_McKay/raw.js">raw.js</a> (Node.js)</td>
       <td><a href="http://www.reddit.com/user/Doctor_McKay">/u/Doctor_McKay</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
