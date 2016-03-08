@@ -7,7 +7,7 @@ The reddit install script is a bash script designed for use on Ubuntu Linux. It 
 ```bash
 $ wget https://raw.github.com/reddit/reddit/master/install-reddit.sh
 $ chmod +x install-reddit.sh
-$ ./install-reddit.sh
+$ sudo ./install-reddit.sh
 ```
 
 _Read the instructions that this script prints_, making sure that the pre-defined environmental variables are set properly.  
