@@ -77,10 +77,10 @@ Python example
 
 **Use the token.** Notice that for *using* the token, requests are made to `https://oauth.reddit.com`.
 
-    In [7]: headers = {"Authorization": "bearer fhTdafZI-0ClEzzYORfBSCR7x3M", "User-Agent": "ChangeMeClient/0.1 by YourUsername"}
-    In [8]: response = requests.get("https://oauth.reddit.com/api/v1/me", headers=headers)
-    In [9]: response.json()
-    Out[9]: 
+    In [8]: headers = {"Authorization": "bearer fhTdafZI-0ClEzzYORfBSCR7x3M", "User-Agent": "ChangeMeClient/0.1 by YourUsername"}
+    In [9]: response = requests.get("https://oauth.reddit.com/api/v1/me", headers=headers)
+    In [10]: response.json()
+    Out[10]: 
     {u'comment_karma': 0,
      u'created': 1389649907.0,
      u'created_utc': 1389649907.0,
