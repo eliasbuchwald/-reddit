@@ -11,7 +11,7 @@ Now you can run `nosetests` to run the tests:
 
     [$]> nosetests                             # Run all available tests in r2/tests.
     [$]> nosetests unit/lib                    # Run only the unit tests.
-    [$]> nosetests --tests unit.lib.utils_test # Run only the utils unit tests.
+    [$]> nosetests unit/lib/utils_test.py      # Run only the utils unit tests.
 
 You may find yourself running into a Postgres connection limit error, eg `remaining connection slots are reserved for non-replication superuser connections`.  An easy way to deal with this is to stop the server, run your tests, then start the server once again when you want to view the website:
 
