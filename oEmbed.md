@@ -22,11 +22,13 @@ When embedded, the embed will look like:
 
 ![geraffes](http://i.imgur.com/QaUs3s0.png)
 
-The oEmbed endpoint also accepts two non-standard parameters to help make better embeds:
+The oEmbed endpoint also accepts some non-standard parameters to help make better embeds:
 
 1. **parent** - boolean - include the parent in the embed.
 
 2. **live** - boolean - allow edits made to this comment to be showed immediately.
+
+3. **omitscript** - boolean - when embedding, do not append the javascript necessary to load the embed (useful when loading multiple embeds)
 
 More on embeds here: https://www.reddit.com/wiki/embeds
 
