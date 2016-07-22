@@ -13,8 +13,8 @@ Please read the documentation for each project - this page may be outdated.
   <tbody>
     <tr><th colspan="4">C#</th></tr>
     <tr>
-      <td><a href="https://github.com/SirCmpwn/RedditSharp">RedditSharp</a></td>
-      <td><a href="http://reddit.com/user/SirCmpwn">/u/SirCmpwn</a></td>
+      <td><a href="https://github.com/CrustyJew/RedditSharp">RedditSharp</a></td>
+      <td><a href="http://reddit.com/user/Meepster23">/u/Meepster23</a></td>
       <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
       <td>Stable</t4>
     </tr>
