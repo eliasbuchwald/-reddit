@@ -1,5 +1,13 @@
 *This is a stripped down, quick start guide to getting a script to make OAuth2 API requests. If you want more details, see the [full OAuth2 login docs](OAuth2).*
 
+Testing Locally
+--------------
+
+All of the steps below work when testing against a local version of reddit with 2 changes.
+
+1. Replace ```www.reddit.com``` or ```oauth.reddit.com``` with ```reddit.local``` if you are running the app with Vagrant or whatever you normally use to point to your local server.
+2. Send the ```-k``` flag with all curl commands.
+
 First Steps
 ----------
 
