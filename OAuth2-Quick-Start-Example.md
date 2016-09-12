@@ -5,8 +5,9 @@ Testing Locally
 
 All of the steps below work when testing against a local version of reddit with 2 changes.
 
-1. Replace ```www.reddit.com``` or ```oauth.reddit.com``` with ```reddit.local``` if you are running the app with Vagrant or whatever you normally use to point to your local server.
-2. Send the ```-k``` flag with all curl commands.
+1. Create the app on your server.
+2. Replace ```www.reddit.com``` or ```oauth.reddit.com``` with ```reddit.local``` if you are running the app with Vagrant or whatever you normally use to point to your local server.
+3. Send the ```-k``` flag with all curl commands.
 
 First Steps
 ----------
