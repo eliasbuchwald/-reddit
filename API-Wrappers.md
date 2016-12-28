@@ -122,15 +122,6 @@ Please read the documentation for each project - this page may be outdated.
     </tr>
   </tbody>
   <tbody>
-    <tr><th colspan="4">Groovy</th></tr>
-    <tr>
-      <td><a href="https://github.com/Steveice10/Greddit">Greddit</a></td>
-      <td><a href="http://www.reddit.com/user/Steveice10">/u/Steveice10</a></td>
-      <td><a href="http://opensource.org/licenses/MIT">MIT</a></td>
-      <td>Stable</td>
-    </tr>
-  </tbody>
-  <tbody>
     <tr><th colspan="4">Swift</th></tr>
     <tr>
       <td><a href="https://github.com/sonsongithub/reddift">reddift</a></td>
