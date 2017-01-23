@@ -108,7 +108,7 @@ Please read the documentation for each project - this page may be outdated.
     <tr>
       <td><a href="https://github.com/praw-dev/praw">PRAW</a></td>
       <td><a href="http://www.reddit.com/user/bboe">/u/bboe</a></td>
-      <td><a href="http://opensource.org/licenses/GPL-3.0">GPL v3</a></td>
+      <td><a href="https://opensource.org/licenses/BSD-2-Clause">BSD-2-CLAUSE</a></td>
       <td>Stable</td>
     </tr>
   </tbody>
