@@ -5,7 +5,7 @@ While there's always manual testing involved in programming, automated tests can
 First off, you'll need a `test.ini`.  The easiest way to go about creating one of these is to reuse the file you're using for the server:
 
     [$]> cd /path/to/r2
-    [$]> ln -s development.ini test.ini
+    [$]> ln -s run.ini test.ini
 
 Now you can run `nosetests` to run the tests:
 
