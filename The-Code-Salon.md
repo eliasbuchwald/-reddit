@@ -2,15 +2,16 @@ Here at reddit, we use the entirely made up Code Salon Review Method™.  This c
 
 ***
 
-* ![nail care](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/nail_care.png?v5) :nail_care:
+* ![nail care](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/nail_care.png?v5) :nail_care:<br /> `:nail_care:`
 
   by a reviewer: "I've finished my review pass and am awaiting your responses."
 
-* ![haircut](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/haircut.png?v5) :haircut:
+* ![haircut](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/haircut.png?v5) :haircut:<br /> `:haircut:`
 
   by the author: "I've responded or made appropriate changes and am ready for further review."
 
-* ![fish](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/fish.png?v5) :fish:
+* ![fish](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/fish.png?v5) :fish:<br />
+`:fish:`
 
   by a reviewer: "I think this pull request is ready for merging."
 
@@ -18,15 +19,18 @@ Here at reddit, we use the entirely made up Code Salon Review Method™.  This c
 
 Internal Use Only
 
-* ![eyeglasses](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/eyeglasses.png?v5) :eyeglasses:
+* ![eyeglasses](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/eyeglasses.png?v5) :eyeglasses:<br />
+`:eyeglasses:`
 
   followed by a list of @github-username mentions: "[mentioned users] please review this pull request"
 
-* ![running](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/running.png?v5) :running:
+* ![running](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/running.png?v5) :running:<br />
+`:running:`
 
   by a reviewer: "I don't have time to review this at the moment, please find someone else."
 
-* ![no bell](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/no_bell.png?v5) :no_bell:
+* ![no bell](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/no_bell.png?v5) :no_bell:<br />
+`:no_bell:`
 
   by a reviewer: "This is just a comment and requires no action."
 ***
