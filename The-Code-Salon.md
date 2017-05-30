@@ -35,7 +35,7 @@ Internal Use Only
   by a reviewer: "This is just a comment and requires no action."
 ***
 
-The [bot that runs in the #reddit-dev IRC channel](https://github.com/spladug/harold) will announce to the channel any time these symbols are used during review of a pull request.  This helps remind us that there's stuff to do.  You'll probably see us use these symbols during review of your pull requests. Please feel free to use the appropriate ones in response.
+The [bot that runs in the #salon and #salon-* Slack channels](https://github.com/spladug/harold) will announce to the channel any time these symbols are used during review of a pull request.  This helps remind us that there's stuff to do.  You'll probably see us use these symbols during review of your pull requests. Please feel free to use the appropriate ones in response.
 
 ***
 
