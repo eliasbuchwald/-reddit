@@ -1,4 +1,6 @@
-Here at reddit, we use the entirely made up Code Salon Review Method™.  This consists of a few [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
+We use the entirely made up Code Salon Review Method™.  This consists of a few [emoji](http://www.emoji-cheat-sheet.com/) that we use to indicate states of the review process.  Those emoji are, in roughly the order they'd be seen in review:
+
+If using the emojis below, they must be entered into a free-standing comment, not in a reply to a comment. This way, the bot will notice them and post a notification to in the appropriate "salon" to tell reviewers to take another look. 
 
 ***
 
@@ -8,7 +10,7 @@ Here at reddit, we use the entirely made up Code Salon Review Method™.  This c
 
 * ![haircut](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/haircut.png?v5) :haircut:<br /> `:haircut:`
 
-  by the author: "I've responded or made appropriate changes and am ready for further review."
+  by the author: "I've responded or made appropriate changes and am ready for further review." Tip: don't :haircut: individual reviews. Finally an entire review pass, then enter :haircut: into a new comment on the PR (not a reply).
 
 * ![fish](https://a248.e.akamai.net/assets.github.com/images/icons/emoji/fish.png?v5) :fish:<br />
 `:fish:`
